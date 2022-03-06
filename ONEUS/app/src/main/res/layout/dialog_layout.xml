@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/newAlbumName"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:textAlignment="center"
+        android:hint="Enter album's name"
+        android:layout_height="wrap_content">
+    </EditText>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="20dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btnChoose"
+            android:text="Choose Image"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/imageChosen"
+            android:layout_width="100dp"
+            android:background="@color/green_deep"
+            android:src="@drawable/icon_image"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/RoundImage"
+            android:layout_height="100dp">
+        </com.google.android.material.imageview.ShapeableImageView>
+    </LinearLayout>
+
+</LinearLayout>
