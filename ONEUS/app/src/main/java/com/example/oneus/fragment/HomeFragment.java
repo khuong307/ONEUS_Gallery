@@ -35,8 +35,6 @@ public class HomeFragment extends Fragment{
     AlbumAdapter albumAdapter;
     ImageButton addBtn;
 
-    ImageView imageChosen;
-
 
     public HomeFragment() {
         // Required empty public constructor
