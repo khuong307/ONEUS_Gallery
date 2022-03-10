@@ -1,12 +1,15 @@
 package com.example.oneus.SubAdapter;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -36,9 +39,17 @@ public class FavoriteImageAdapter extends RecyclerView.Adapter<FavoriteImageAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.imageView.setImageURI(Uri.fromFile(new File(String.valueOf(mList.get(position).getImage()))));
         holder.textView.setText(mList.get(position).getText());
+        holder.favBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mList.get(position).getImage().delete();
+                remove(position);
+                Toast.makeText(context.getApplicationContext(), "Undo Favorite Image", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -50,11 +61,18 @@ public class FavoriteImageAdapter extends RecyclerView.Adapter<FavoriteImageAdap
 
         ImageView imageView;
         TextView textView;
+        ImageButton favBtn;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.image_favorite);
             textView = itemView.findViewById(R.id.txt);
+            favBtn = itemView.findViewById(R.id.favBtn);
         }
+    }
+
+    private void remove(int position) {
+        mList.remove(position);
+        notifyItemRemoved(position);
     }
 }

@@ -1,5 +1,7 @@
 package com.example.oneus.subClasses;
 
+import android.util.Log;
+
 import java.io.File;
 
 public class ImageAlbum {
@@ -26,5 +28,10 @@ public class ImageAlbum {
 
     public void setThumbnail(File thumbnail) {
         this.thumbnail = thumbnail;
+    }
+
+    public int getQuantity(){
+        File parentFolder = new File(this.thumbnail.getParent());
+        return parentFolder.listFiles().length;
     }
 }

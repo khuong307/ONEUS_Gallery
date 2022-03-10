@@ -4,15 +4,18 @@ import android.Manifest;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,13 +50,12 @@ import java.net.URI;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
-public class DialogNewAlbum extends DialogFragment {
+public class DialogNewAlbum extends AppCompatDialogFragment {
     private EditText newAlbumName;
     private Button btnChoose;
     private ImageView imageChosen;
 
-    private static final int IMAGE_PICK_CODE = 1000;
-    private static final int PERMISSION_CODE = 1001;
+    private DialogNewAlbumListener listener;
 
     @NonNull
     @Override
@@ -73,31 +75,29 @@ public class DialogNewAlbum extends DialogFragment {
         });
 
 
-
-        builder.setView(view).setTitle("New Album").setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        builder.setView(view);
+        builder.setTitle("New Album");
+        builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
 
             }
-        }).setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
+        });
+        builder.setPositiveButton("Confirm", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
-                //create new folder.
-                if(ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                     String albumName = newAlbumName.getText().toString();
                     createSubsDirectory(albumName);
-                    String sourcePath = imageChosen.getTag().toString();
-                    File file = new File(sourcePath);
-                    String newPathAlbum = Environment.getExternalStorageDirectory() +"/ONEUS/" + albumName +"/"+file.getName();
-                    File inputPath = new File (Environment.getExternalStorageDirectory()+"/Pictures", file.getName());
-                    long size = inputPath.length();
-                    Toast.makeText(getActivity(), size+"", Toast.LENGTH_SHORT).show();
+                    String[] sourcePath = imageChosen.getTag().toString().split("raw:");
+                    File inputPath = new File(sourcePath[1]);
+                    String newPathAlbum = Environment.getExternalStorageDirectory() + "/ONEUS/" + albumName + "/" + inputPath.getName();
                     try {
                         copy(inputPath, new File(newPathAlbum));
+                        Toast.makeText(getActivity(), "Swipe Down To Refresh", Toast.LENGTH_SHORT).show();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-
                 }
             }
         });
@@ -124,10 +124,10 @@ public class DialogNewAlbum extends DialogFragment {
             }
     });
 
+    //copy a binary files.
     public void copy(File src, File dst) throws IOException {
         try (InputStream in = new FileInputStream(src)) {
             try (OutputStream out = new FileOutputStream(dst)) {
-                // Transfer bytes from in to out
                 byte[] buf = new byte[1024];
                 int len;
                 while ((len = in.read(buf)) > 0) {
@@ -137,4 +137,18 @@ public class DialogNewAlbum extends DialogFragment {
         }
     }
 
+
+    public interface DialogNewAlbumListener{
+        void onConfirmClicked(String albumName);
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        try {
+            listener = (DialogNewAlbumListener) context;
+        }catch (ClassCastException e){
+            e.printStackTrace();
+        }
+    }
 }

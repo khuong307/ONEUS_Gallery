@@ -4,6 +4,7 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -33,6 +34,7 @@ public class HomeFragment extends Fragment{
     RecyclerView recyclerView;
     List<ImageAlbum> mList;
     AlbumAdapter albumAdapter;
+    SwipeRefreshLayout swipeRefreshLayout;
     ImageButton addBtn;
 
 
@@ -40,12 +42,7 @@ public class HomeFragment extends Fragment{
         // Required empty public constructor
     }
 
-
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        Log.d("State", "Reload");
-        super.onCreate(savedInstanceState);
+    public void setAlbumList(){
         mList = new ArrayList<>();
         String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS";
         File directory = new File (path);
@@ -59,10 +56,12 @@ public class HomeFragment extends Fragment{
         }
     }
 
-    public void openDialog(){
-        DialogNewAlbum dialogNewAlbum = new DialogNewAlbum();
-        dialogNewAlbum.show(getFragmentManager(), "New Album Dialog");
-        getFragmentManager().beginTransaction().detach(HomeFragment.this).attach(HomeFragment.this).commit();
+
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setAlbumList();
     }
 
     @Override
@@ -74,7 +73,26 @@ public class HomeFragment extends Fragment{
         recyclerView.setAdapter(albumAdapter);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
+        swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefresh);
         addBtn = (ImageButton) view.findViewById(R.id.btnAdd);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                setAlbumList();
+                albumAdapter = new AlbumAdapter(getContext(), mList);
+                recyclerView.setAdapter(albumAdapter);
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        swipeRefreshLayout.setRefreshing(false);
+                    }
+                }, 2000);
+            }
+        });
         return view;
     }
+
+
 }
