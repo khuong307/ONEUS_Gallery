@@ -2,7 +2,9 @@ package com.example.oneus.SubAdapter;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -11,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,11 +23,11 @@ import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.MainActivity;
 import com.example.oneus.R;
 import com.example.oneus.subClasses.DialogNewAlbum;
 import com.example.oneus.subClasses.ImageAlbum;
-import com.example.oneus.subClasses.onClickInterface;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -70,10 +73,25 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
             holder.album_name.setText(mList.get(position).getAlbum());
             holder.quantity.setText(Integer.toString(mList.get(position).getQuantity()));
 
+            holder.linearLayout.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    onClickViewListImage(mList.get(position).getAlbum());
+                }
+            });
+
             //set transparent 2 thumbnails.
             holder.thumbnail.setImageAlpha(128);
             holder.thumbnail1.setImageAlpha(128);
         }
+    }
+
+    private void onClickViewListImage(String albumName){
+        Intent intent = new Intent(context, ListImageOfAlbum.class);
+        Bundle bundle = new Bundle();
+        bundle.putString("AlbumName", albumName);
+        intent.putExtras(bundle);
+        context.startActivity(intent);
     }
 
     @Override
@@ -91,6 +109,8 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         TextView quantity;
         ImageButton addBtn;
 
+        LinearLayout linearLayout;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -100,6 +120,8 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
             album_name = itemView.findViewById(R.id.albumName);
             quantity = itemView.findViewById(R.id.quantity_image);
             addBtn = (ImageButton) itemView.findViewById(R.id.btnAdd);
+
+            linearLayout = itemView.findViewById(R.id.listAlbum);
         }
     }
 

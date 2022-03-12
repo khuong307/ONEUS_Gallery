@@ -1,5 +1,6 @@
 package com.example.oneus.fragment;
 
+import android.app.AlertDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -20,9 +21,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.oneus.R;
 import com.example.oneus.SubAdapter.AlbumAdapter;
-import com.example.oneus.SubAdapter.FavoriteImageAdapter;
 import com.example.oneus.subClasses.DialogNewAlbum;
-import com.example.oneus.subClasses.FavImage;
 import com.example.oneus.subClasses.ImageAlbum;
 
 import java.io.File;
@@ -36,32 +35,21 @@ public class HomeFragment extends Fragment{
     AlbumAdapter albumAdapter;
     SwipeRefreshLayout swipeRefreshLayout;
     ImageButton addBtn;
+    DialogNewAlbum dialogNewAlbum;
 
 
     public HomeFragment() {
         // Required empty public constructor
     }
 
-    public void setAlbumList(){
-        mList = new ArrayList<>();
-        String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS";
-        File directory = new File (path);
-        if (directory.exists()){
-            File[] folder = directory.listFiles();
-            for (int i = 0; i < folder.length; i++){
-                File[] images = folder[i].listFiles();
-                if (images.length != 0)
-                    mList.add(new ImageAlbum(folder[i].getName(),images[0]));
-            }
-        }
-    }
+
 
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setAlbumList();
+        mList = ImageAlbum.setAlbumList();
     }
 
     @Override
@@ -78,7 +66,7 @@ public class HomeFragment extends Fragment{
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                setAlbumList();
+                mList = ImageAlbum.setAlbumList();
                 albumAdapter = new AlbumAdapter(getContext(), mList);
                 recyclerView.setAdapter(albumAdapter);
 
@@ -91,8 +79,8 @@ public class HomeFragment extends Fragment{
                 }, 2000);
             }
         });
+
+
         return view;
     }
-
-
 }

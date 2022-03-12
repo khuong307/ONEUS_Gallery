@@ -22,6 +22,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
@@ -33,9 +34,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatDialogFragment;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.MainActivity;
 import com.example.oneus.R;
+import com.example.oneus.SubAdapter.AlbumAdapter;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -50,12 +54,11 @@ import java.net.URI;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 
-public class DialogNewAlbum extends AppCompatDialogFragment {
+public class DialogNewAlbum extends DialogFragment {
     private EditText newAlbumName;
     private Button btnChoose;
     private ImageView imageChosen;
 
-    private DialogNewAlbumListener listener;
 
     @NonNull
     @Override
@@ -66,6 +69,7 @@ public class DialogNewAlbum extends AppCompatDialogFragment {
         newAlbumName = (EditText) view.findViewById(R.id.newAlbumName);
         btnChoose = (Button) view.findViewById(R.id.btnChoose);
         imageChosen = (ImageView) view.findViewById(R.id.imageChosen);
+
 
         btnChoose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,7 +98,9 @@ public class DialogNewAlbum extends AppCompatDialogFragment {
                     String newPathAlbum = Environment.getExternalStorageDirectory() + "/ONEUS/" + albumName + "/" + inputPath.getName();
                     try {
                         copy(inputPath, new File(newPathAlbum));
-                        Toast.makeText(getActivity(), "Swipe Down To Refresh", Toast.LENGTH_SHORT).show();
+                        RecyclerView recyclerView = getActivity().findViewById(R.id.recycle_view_album);
+                        AlbumAdapter albumAdapter = new AlbumAdapter(getContext(), ImageAlbum.setAlbumList());
+                        recyclerView.setAdapter(albumAdapter);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
@@ -134,21 +140,6 @@ public class DialogNewAlbum extends AppCompatDialogFragment {
                     out.write(buf, 0, len);
                 }
             }
-        }
-    }
-
-
-    public interface DialogNewAlbumListener{
-        void onConfirmClicked(String albumName);
-    }
-
-    @Override
-    public void onAttach(@NonNull Context context) {
-        super.onAttach(context);
-        try {
-            listener = (DialogNewAlbumListener) context;
-        }catch (ClassCastException e){
-            e.printStackTrace();
         }
     }
 }

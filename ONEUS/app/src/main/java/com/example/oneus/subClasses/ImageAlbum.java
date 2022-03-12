@@ -1,8 +1,11 @@
 package com.example.oneus.subClasses;
 
+import android.os.Environment;
 import android.util.Log;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ImageAlbum {
     String albumName;
@@ -33,5 +36,22 @@ public class ImageAlbum {
     public int getQuantity(){
         File parentFolder = new File(this.thumbnail.getParent());
         return parentFolder.listFiles().length;
+    }
+
+    public static List<ImageAlbum> setAlbumList(){
+        List<ImageAlbum> mList = new ArrayList<>();
+        String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS";
+        File directory = new File (path);
+        if (directory.exists()){
+            File[] folder = directory.listFiles();
+            for (int i = 0; i < folder.length; i++){
+                if(folder[i].isDirectory() == true){
+                    File[] images = folder[i].listFiles();
+                    if (images.length != 0)
+                        mList.add(new ImageAlbum(folder[i].getName(),images[0]));
+                }
+            }
+        }
+        return mList;
     }
 }
