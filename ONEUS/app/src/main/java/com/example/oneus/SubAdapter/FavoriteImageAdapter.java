@@ -45,9 +45,10 @@ public class FavoriteImageAdapter extends RecyclerView.Adapter<FavoriteImageAdap
         holder.favBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String imageName = mList.get(position).getText();
                 mList.get(position).getImage().delete();
                 remove(position);
-                Toast.makeText(context.getApplicationContext(), "Undo Favorite Image", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context.getApplicationContext(), "Remove " + imageName, Toast.LENGTH_SHORT).show();
             }
         });
     }
