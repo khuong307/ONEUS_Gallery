@@ -1,5 +1,6 @@
 package com.example.oneus.SubAdapter;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -57,7 +58,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull AlbumAdapter.MyViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull AlbumAdapter.MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         if(position == mList.size()) {
             holder.addBtn.setOnClickListener(new View.OnClickListener() {
                 @Override

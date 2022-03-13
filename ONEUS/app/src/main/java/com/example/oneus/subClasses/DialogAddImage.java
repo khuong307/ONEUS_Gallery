@@ -1,72 +1,59 @@
 package com.example.oneus.subClasses;
 
 import android.Manifest;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
-import android.content.Context;
 import android.content.DialogInterface;
-import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatDialogFragment;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.oneus.MainActivity;
 import com.example.oneus.R;
 import com.example.oneus.SubAdapter.AlbumAdapter;
+import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.net.URI;
-import java.net.URLDecoder;
-import java.nio.charset.StandardCharsets;
 
-public class DialogNewAlbum extends DialogFragment {
-    private EditText newAlbumName;
+public class DialogAddImage extends DialogFragment {
     private Button btnChoose;
     private ImageView imageChosen;
+    private String parentFolder;
 
+    public String getParentFolder() {
+        return parentFolder;
+    }
+
+    public void setParentFolder(String parentFolder) {
+        this.parentFolder = parentFolder;
+    }
 
     @NonNull
     @Override
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.dialog_layout, null);
-        newAlbumName = (EditText) view.findViewById(R.id.newAlbumName);
+        View view = inflater.inflate(R.layout.add_image_dialog_layout, null);
         btnChoose = (Button) view.findViewById(R.id.btnChoose);
         imageChosen = (ImageView) view.findViewById(R.id.imageChosen);
 
@@ -93,7 +80,6 @@ public class DialogNewAlbum extends DialogFragment {
 
             }
         });
-        newAlbumName = (EditText) view.findViewById(R.id.newAlbumName);
         return builder.create();
     }
 
@@ -106,41 +92,30 @@ public class DialogNewAlbum extends DialogFragment {
             positiveButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    String albumName = newAlbumName.getText().toString();
-                    if (albumName.isEmpty()==true){
-                        Toast.makeText(getActivity(), "Please enter album's name!", Toast.LENGTH_SHORT).show();
-                    }else{
-                        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                            if (createSubsDirectory(albumName) == true){
-                                String[] sourcePath = imageChosen.getTag().toString().split("raw:");
-                                File inputPath = new File(sourcePath[1]);
-                                String newPathAlbum = Environment.getExternalStorageDirectory() + "/ONEUS/" + albumName + "/" + inputPath.getName();
-                                try {
-                                    copy(inputPath, new File(newPathAlbum));
-                                    RecyclerView recyclerView = getActivity().findViewById(R.id.recycle_view_album);
-                                    AlbumAdapter albumAdapter = new AlbumAdapter(getContext(), ImageAlbum.setAlbumList());
-                                    recyclerView.setAdapter(albumAdapter);
-                                    dialog.dismiss();
-                                } catch (IOException e) {
-                                    e.printStackTrace();
-                                }
+                    if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                        String[] sourcePath = imageChosen.getTag().toString().split("raw:");
+                        File inputPath = new File(sourcePath[1]);
+                        String parentFolder = getArguments().getString("ParentFolder");
+
+                        File output = new File(parentFolder);
+                        String newPath = Environment.getExternalStorageDirectory() + "/ONEUS/" + output.getName() +"/" + inputPath.getName();
+                        Toast.makeText(getActivity(), "Successfully", Toast.LENGTH_SHORT).show();
+                        try {
+                            if (new File(newPath).exists() == true){
+                                copy(inputPath, new File(newPath+"new"));
+                            }else{
+                                copy(inputPath, new File(newPath));
                             }
+                            RecyclerView recyclerView = getActivity().findViewById(R.id.recycle_view_list_image_of_album);
+                            ImagesOfAlbumAdapter imagesOfAlbumAdapter = new ImagesOfAlbumAdapter(getContext(), Image.setImageList(output.getName()));
+                            recyclerView.setAdapter(imagesOfAlbumAdapter);
+                            dialog.dismiss();
+                        } catch (IOException e) {
+                            e.printStackTrace();
                         }
                     }
                 }
             });
-        }
-    }
-
-
-    boolean createSubsDirectory(String FolderName){
-        File folder = new File(Environment.getExternalStorageDirectory() +"/ONEUS/" + FolderName);
-        if (!folder.exists()){
-            folder.mkdir();
-            return true;
-        }else{
-            Toast.makeText(getActivity(), "Folder already existed!", Toast.LENGTH_SHORT).show();
-            return false;
         }
     }
 
