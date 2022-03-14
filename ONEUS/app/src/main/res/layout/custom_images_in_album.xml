@@ -27,7 +27,6 @@
                 tools:ignore="MissingConstraints">
             </com.google.android.material.imageview.ShapeableImageView>
 
-
             <ImageButton
                 android:layout_margin="5dp"
                 android:id="@+id/editBtn"
@@ -39,7 +38,16 @@
                 app:layout_constraintTop_toTopOf="@id/image_in_album"
                 tools:ignore="MissingConstraints">
             </ImageButton>
+            <RadioButton
+                android:layout_margin="5dp"
+                android:id="@+id/itemIMGChoose"
+                android:layout_width="30dp"
+                android:scaleX="1"
+                android:scaleY="1"
+                app:layout_constraintTop_toTopOf="@id/image_in_album"
+                android:layout_height="30dp"
+                tools:ignore="MissingConstraints">
+            </RadioButton>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-
 </LinearLayout>

@@ -24,6 +24,7 @@ import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
 import com.example.oneus.SubAdapter.AlbumAdapter;
 import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
@@ -107,7 +108,7 @@ public class DialogAddImage extends DialogFragment {
                                 copy(inputPath, new File(newPath));
                             }
                             RecyclerView recyclerView = getActivity().findViewById(R.id.recycle_view_list_image_of_album);
-                            ImagesOfAlbumAdapter imagesOfAlbumAdapter = new ImagesOfAlbumAdapter(getContext(), Image.setImageList(output.getName()));
+                            ImagesOfAlbumAdapter imagesOfAlbumAdapter = new ImagesOfAlbumAdapter((ListImageOfAlbum) getContext(), Image.setImageList(output.getName()));
                             recyclerView.setAdapter(imagesOfAlbumAdapter);
                             dialog.dismiss();
                         } catch (IOException e) {

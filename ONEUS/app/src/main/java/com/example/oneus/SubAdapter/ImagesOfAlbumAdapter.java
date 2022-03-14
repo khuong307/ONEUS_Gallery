@@ -1,6 +1,7 @@
 package com.example.oneus.SubAdapter;
 
 import android.annotation.SuppressLint;
+import android.app.ListActivity;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,9 +10,11 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,6 +24,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
 import com.example.oneus.subClasses.DialogAddImage;
 import com.example.oneus.subClasses.DialogNewAlbum;
@@ -32,10 +36,10 @@ import java.util.List;
 
 public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdapter.MyViewHolder> {
 
-    Context context;
+    ListImageOfAlbum context;
     List<Image> mList;
 
-    public ImagesOfAlbumAdapter(Context context, List<Image> mList) {
+    public ImagesOfAlbumAdapter(ListImageOfAlbum context, List<Image> mList) {
         this.context = context;
         this.mList = mList;
     }
@@ -65,11 +69,12 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
             });
         }
         else{
+            holder.checkImgChosen.setVisibility(View.GONE);
             holder.imageView.setImageURI(Uri.fromFile(new File(String.valueOf(mList.get(position).getImage()))));
             holder.editBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-
+                    Toast.makeText(context, "Edit", Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -84,6 +89,7 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
 
         ImageView imageView;
         ImageButton editBtn;
+        RadioButton checkImgChosen;
 
         ImageButton addImgBtn;
         LinearLayout linearLayout;
@@ -93,6 +99,7 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
             imageView = itemView.findViewById(R.id.image_in_album);
             editBtn = (ImageButton) itemView.findViewById(R.id.editBtn);
             addImgBtn = (ImageButton) itemView.findViewById(R.id.addImgBtn);
+            checkImgChosen = (RadioButton) itemView.findViewById(R.id.itemIMGChoose);
 
             linearLayout = itemView.findViewById(R.id.listImages);
         }
@@ -124,9 +131,26 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                 @Override
                 public void onLongPress(MotionEvent e) {
                     View child = recyclerView.findChildViewUnder(e.getX(), e.getY());
+
+                    int position = recyclerView.getChildPosition(child);
+                    Toast.makeText(context, position+"", Toast.LENGTH_SHORT).show();
+                    clickListener.onLongClick(child, recyclerView.getChildPosition(child));
+//                    itemView.getA
+//                    if(context.position == position){
+//                        RadioButton check = (RadioButton) itemView.findViewById(R.id.itemIMGChoose);
+//                        check.setChecked(true);
+//                    }
+//                     context.startSelection(position);
+//                     context.check(child, position);
+                }
+
+                @Override
+                public boolean onDoubleTap(MotionEvent e) {
+                    View child = recyclerView.findChildViewUnder(e.getX(), e.getY());
                     if (child != null && clickListener != null) {
-                        clickListener.onLongClick(child, recyclerView.getChildPosition(child));
+                        clickListener.onClick(child, recyclerView.getChildPosition(child));
                     }
+                    return super.onDoubleTap(e);
                 }
             });
         }
@@ -136,7 +160,7 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
         public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
             View child = rv.findChildViewUnder(e.getX(), e.getY());
             if (child != null && clickListener != null && gestureDetector.onTouchEvent(e)) {
-                clickListener.onClick(child, rv.getChildPosition(child));
+                //clickListener.onClick(child, rv.getChildPosition(child));
             }
             return false;
         }

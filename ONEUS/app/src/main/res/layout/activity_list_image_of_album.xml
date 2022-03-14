@@ -4,7 +4,39 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".ListImageOfAlbum">
+    tools:context=".ListImageOfAlbum"
+    android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@color/green_deep"
+        android:id="@+id/toolbar"
+        android:layout_height="?attr/actionBarSize">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageButton
+                android:background="@color/green_deep"
+                android:layout_width="wrap_content"
+                android:id="@+id/btnBack"
+                android:gravity="center"
+                android:src="@drawable/icon_back"
+                android:layout_height="wrap_content">
+            </ImageButton>
+            <TextView
+                android:textAlignment="center"
+                android:gravity="center"
+                android:id="@+id/text_toolbar"
+                android:text="0 item selected"
+                android:textSize="15dp"
+                android:fontFamily="@font/icielbccubano"
+                android:textColor="@color/white"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </TextView>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="wrap_content"
