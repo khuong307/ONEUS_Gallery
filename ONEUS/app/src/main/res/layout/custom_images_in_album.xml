@@ -38,16 +38,21 @@
                 app:layout_constraintTop_toTopOf="@id/image_in_album"
                 tools:ignore="MissingConstraints">
             </ImageButton>
-            <RadioButton
-                android:layout_margin="5dp"
+            <CheckBox
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
                 android:id="@+id/itemIMGChoose"
+                android:gravity="center"
                 android:layout_width="30dp"
-                android:scaleX="1"
-                android:scaleY="1"
+                android:buttonTint="@color/white"
+                android:button="@drawable/custom_checkbox"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                app:layout_constraintLeft_toLeftOf="@id/image_in_album"
                 app:layout_constraintTop_toTopOf="@id/image_in_album"
                 android:layout_height="30dp"
                 tools:ignore="MissingConstraints">
-            </RadioButton>
+            </CheckBox>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 </LinearLayout>

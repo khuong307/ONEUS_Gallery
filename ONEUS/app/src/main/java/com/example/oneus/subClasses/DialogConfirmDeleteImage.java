@@ -5,14 +5,12 @@ import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -27,7 +25,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
-import com.example.oneus.SubAdapter.AlbumAdapter;
 import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 
 import java.io.File;
@@ -37,7 +34,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-public class DialogAddImage extends DialogFragment {
+public class DialogConfirmDeleteImage extends DialogFragment {
     private Button btnChoose;
     private ImageView imageChosen;
     private String parentFolder;
@@ -91,8 +88,6 @@ public class DialogAddImage extends DialogFragment {
         final AlertDialog dialog = (AlertDialog)getDialog();
         if(dialog != null) {
             Button positiveButton = (Button) dialog.getButton(Dialog.BUTTON_POSITIVE);
-            dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.rgb(153, 69, 0));
-            dialog.getButton(AlertDialog.BUTTON_POSITIVE).setTextColor(Color.rgb(153, 69, 0));
             positiveButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {

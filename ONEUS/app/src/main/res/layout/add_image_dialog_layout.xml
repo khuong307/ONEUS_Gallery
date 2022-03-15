@@ -12,7 +12,7 @@
         android:fontFamily="@font/icielbccubano"
         android:textAlignment="center"
         android:text="ADD NEW IMAGE"
-        android:textColor="@color/green_deep"
+        android:textColor="@color/dark_brown"
         android:layout_height="wrap_content">
     </TextView>
 
@@ -28,7 +28,7 @@
             android:fontFamily="@font/icielbccubano"
             android:text="Choose Image"
             android:textSize="15dp"
-            android:background="@drawable/custom_add_image_button"
+            android:backgroundTint="@color/dark_brown"
             android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
@@ -38,7 +38,7 @@
             android:layout_marginLeft="20dp"
             android:id="@+id/imageChosen"
             android:layout_width="150dp"
-            android:background="@color/green_deep"
+            android:background="@color/dark_brown"
             android:src="@drawable/icon_image"
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/RoundImage"

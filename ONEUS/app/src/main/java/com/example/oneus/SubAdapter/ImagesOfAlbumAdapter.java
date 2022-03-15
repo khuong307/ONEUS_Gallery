@@ -11,6 +11,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -77,6 +78,13 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                     Toast.makeText(context, "Edit", Toast.LENGTH_SHORT).show();
                 }
             });
+
+            holder.checkImgChosen.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    context.check(view, position);
+                }
+            });
         }
     }
 
@@ -89,7 +97,7 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
 
         ImageView imageView;
         ImageButton editBtn;
-        RadioButton checkImgChosen;
+        CheckBox checkImgChosen;
 
         ImageButton addImgBtn;
         LinearLayout linearLayout;
@@ -99,7 +107,7 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
             imageView = itemView.findViewById(R.id.image_in_album);
             editBtn = (ImageButton) itemView.findViewById(R.id.editBtn);
             addImgBtn = (ImageButton) itemView.findViewById(R.id.addImgBtn);
-            checkImgChosen = (RadioButton) itemView.findViewById(R.id.itemIMGChoose);
+            checkImgChosen = (CheckBox) itemView.findViewById(R.id.itemIMGChoose);
 
             linearLayout = itemView.findViewById(R.id.listImages);
         }
@@ -133,15 +141,7 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                     View child = recyclerView.findChildViewUnder(e.getX(), e.getY());
 
                     int position = recyclerView.getChildPosition(child);
-                    Toast.makeText(context, position+"", Toast.LENGTH_SHORT).show();
                     clickListener.onLongClick(child, recyclerView.getChildPosition(child));
-//                    itemView.getA
-//                    if(context.position == position){
-//                        RadioButton check = (RadioButton) itemView.findViewById(R.id.itemIMGChoose);
-//                        check.setChecked(true);
-//                    }
-//                     context.startSelection(position);
-//                     context.check(child, position);
                 }
 
                 @Override
