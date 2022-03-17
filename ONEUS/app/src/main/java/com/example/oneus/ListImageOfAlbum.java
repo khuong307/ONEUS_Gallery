@@ -36,10 +36,25 @@ public class ListImageOfAlbum extends AppCompatActivity {
     ImageButton btnDelete;
     ImageButton btnMove;
 
+
     public boolean isActionMode = false;
     List<Image> selectionList = new ArrayList<>();
     int counter = 0;
-    int number_del = 0;
+
+    public void updateImageList(){
+        Bundle bundle = getIntent().getExtras();
+        String albumName = bundle.get("AlbumName").toString();
+        imageList.clear();
+        imageList = Image.setImageList(albumName);
+    }
+
+    public void updateImageAdapter(){
+        imageAdapter = new ImagesOfAlbumAdapter(this, imageList);
+    }
+
+    public void updateRecyclerView(){
+        recyclerView.setAdapter(imageAdapter);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -119,7 +134,6 @@ public class ListImageOfAlbum extends AppCompatActivity {
                 for (int i = 0; i < selectionList.size(); i++){
                     //Toast.makeText(ListImageOfAlbum.this, i+"", Toast.LENGTH_SHORT).show();
                     int index = findIndexInList(selectionList.get(i));
-                    Log.d("Index", index+"");
                     remove(index);
                 }
 
@@ -135,7 +149,6 @@ public class ListImageOfAlbum extends AppCompatActivity {
         toolbar.setVisibility(View.GONE);
         textViewToolbar.setText("0 item selected");
         counter = 0;
-        int number_del = selectionList.size();
         selectionList.clear();
 
         for (int i = 0; i < imageList.size(); i++) {
@@ -151,14 +164,13 @@ public class ListImageOfAlbum extends AppCompatActivity {
         holderAddBtn.itemView.findViewById(R.id.addImgBtn).setVisibility(View.VISIBLE);
 
 
-        RecyclerView recyclerView = this.findViewById(R.id.recycle_view_list_image_of_album);
-        ImagesOfAlbumAdapter imagesOfAlbumAdapter = new ImagesOfAlbumAdapter(this, imageList);
-        recyclerView.setAdapter(imagesOfAlbumAdapter);
-//        String folderNames[] = imageList.get(0).getImage().getParent().split("/");
-//        imageList = Image.setImageList(folderNames[folderNames.length-1]);
+        updateImageList();
+        imageAdapter = new ImagesOfAlbumAdapter(this, imageList);
+        recyclerView.setAdapter(imageAdapter);
     }
 
     public void startSelection(int position){
+        Toast.makeText(this, position+"", Toast.LENGTH_SHORT).show();
         if (isActionMode == false){
             isActionMode = true;
             toolbar.setVisibility(View.VISIBLE);
@@ -170,7 +182,6 @@ public class ListImageOfAlbum extends AppCompatActivity {
             for (int i = 0; i < imageList.size(); i++) {
                 RecyclerView.ViewHolder holder =  recyclerView.getChildViewHolder(recyclerView.getChildAt(i));
                 holder.itemView.findViewById(R.id.itemIMGChoose).setVisibility(View.VISIBLE);
-
                 holder.itemView.findViewById(R.id.editBtn).setVisibility(View.GONE);
             }
             RecyclerView.ViewHolder holderAddBtn =  recyclerView.findViewHolderForAdapterPosition(imageList.size());
@@ -205,7 +216,10 @@ public class ListImageOfAlbum extends AppCompatActivity {
     //btn trash - delete item.
 
     private void remove(int index) {
+        Toast.makeText(this, index+"", Toast.LENGTH_SHORT).show();
+        imageList.get(index).getImage().delete();
         imageList.remove(index);
+        Log.d("Index", index+"");
         imageAdapter.notifyItemRemoved(index);
     }
 

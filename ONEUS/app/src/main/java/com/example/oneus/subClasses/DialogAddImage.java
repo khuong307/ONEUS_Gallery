@@ -109,9 +109,10 @@ public class DialogAddImage extends DialogFragment {
                             }else{
                                 copy(inputPath, new File(newPath));
                             }
-                            RecyclerView recyclerView = getActivity().findViewById(R.id.recycle_view_list_image_of_album);
-                            ImagesOfAlbumAdapter imagesOfAlbumAdapter = new ImagesOfAlbumAdapter((ListImageOfAlbum) getContext(), Image.setImageList(output.getName()));
-                            recyclerView.setAdapter(imagesOfAlbumAdapter);
+                            ListImageOfAlbum listImageOfAlbum = (ListImageOfAlbum) getActivity();
+                            listImageOfAlbum.updateImageList();
+                            listImageOfAlbum.updateImageAdapter();
+                            listImageOfAlbum.updateRecyclerView();
                             dialog.dismiss();
                             Toast.makeText(getActivity(), "Import Success", Toast.LENGTH_SHORT).show();
                         } catch (IOException e) {
