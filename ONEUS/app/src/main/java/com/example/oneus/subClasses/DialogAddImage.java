@@ -110,6 +110,7 @@ public class DialogAddImage extends DialogFragment {
                                 copy(inputPath, new File(newPath));
                             }
                             ListImageOfAlbum listImageOfAlbum = (ListImageOfAlbum) getActivity();
+                            listImageOfAlbum.clearActionMode();
                             listImageOfAlbum.updateImageList();
                             listImageOfAlbum.updateImageAdapter();
                             listImageOfAlbum.updateRecyclerView();

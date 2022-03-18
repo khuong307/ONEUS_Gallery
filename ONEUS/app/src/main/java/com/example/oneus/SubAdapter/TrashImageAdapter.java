@@ -8,49 +8,60 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.R;
+import com.example.oneus.fragment.TrashFragment;
 import com.example.oneus.subClasses.FavImage;
+import com.example.oneus.subClasses.TrashImage;
 
 import java.io.File;
 import java.util.List;
 
-public class FavoriteImageAdapter extends RecyclerView.Adapter<FavoriteImageAdapter.MyViewHolder> {
+public class TrashImageAdapter extends RecyclerView.Adapter<TrashImageAdapter.MyViewHolder> {
 
     Context context;
-    List<FavImage> mList;
+    List<TrashImage> mList;
+    TrashFragment trashFragment;
 
-    public FavoriteImageAdapter(Context context, List<FavImage> mList) {
+    public TrashImageAdapter(Context context, List<TrashImage> mList,TrashFragment trashFragment) {
         this.context = context;
         this.mList = mList;
+        this.trashFragment = trashFragment;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater = LayoutInflater.from(context);
-        View view = layoutInflater.inflate(R.layout.custom_favorite_image, parent, false);
+        View view = layoutInflater.inflate(R.layout.custom_trash_image, parent, false);
         return new MyViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
+        holder.checkImgChosen.setVisibility(View.GONE);
         holder.imageView.setImageURI(Uri.fromFile(new File(String.valueOf(mList.get(position).getImage()))));
-        holder.favBtn.setOnClickListener(new View.OnClickListener() {
+        holder.delBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String imageName = mList.get(position).getText();
                 mList.get(position).getImage().delete();
                 remove(position);
                 Toast.makeText(context.getApplicationContext(), "Remove " + imageName, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        holder.checkImgChosen.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                trashFragment.check(view, position);
             }
         });
     }
@@ -63,12 +74,14 @@ public class FavoriteImageAdapter extends RecyclerView.Adapter<FavoriteImageAdap
     public class MyViewHolder  extends RecyclerView.ViewHolder{
 
         ImageView imageView;
-        ImageButton favBtn;
+        ImageButton delBtn;
+        CheckBox checkImgChosen;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.image_favorite);
-            favBtn = itemView.findViewById(R.id.favBtn);
+            imageView = itemView.findViewById(R.id.image_trash);
+            delBtn = itemView.findViewById(R.id.delBtn);
+            checkImgChosen = itemView.findViewById(R.id.itemIMGChoose);
         }
     }
 
@@ -80,9 +93,9 @@ public class FavoriteImageAdapter extends RecyclerView.Adapter<FavoriteImageAdap
 
     public static class RecyclerTouchListener implements RecyclerView.OnItemTouchListener {
         private GestureDetector gestureDetector;
-        private FavoriteImageAdapter.ClickListener clickListener;
+        private TrashImageAdapter.ClickListener clickListener;
 
-        public RecyclerTouchListener(Context context, final RecyclerView recyclerView, final FavoriteImageAdapter.ClickListener clickListener) {
+        public RecyclerTouchListener(Context context, final RecyclerView recyclerView, final TrashImageAdapter.ClickListener clickListener) {
             this.clickListener = clickListener;
             gestureDetector = new GestureDetector(context, new GestureDetector.SimpleOnGestureListener() {
                 @Override

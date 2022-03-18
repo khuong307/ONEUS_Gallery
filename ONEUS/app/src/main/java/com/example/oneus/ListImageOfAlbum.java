@@ -4,23 +4,31 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 import com.example.oneus.fragment.SlideshowDialogFragment;
+import com.example.oneus.subClasses.DialogMoveImage;
 import com.example.oneus.subClasses.Image;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +43,17 @@ public class ListImageOfAlbum extends AppCompatActivity {
     ImageButton btnBack;
     ImageButton btnDelete;
     ImageButton btnMove;
+    String albumName;
+
+    public void setAlbumName(){
+        Bundle bundle = new Bundle();
+        bundle = getIntent().getExtras();
+        String albumName = bundle.get("AlbumName").toString();
+        this.albumName = albumName;
+    }
+    public String getAlbumName(){
+        return this.albumName;
+    }
 
 
     public boolean isActionMode = false;
@@ -80,14 +99,31 @@ public class ListImageOfAlbum extends AppCompatActivity {
 
         btnMove = findViewById(R.id.item_move);
         btnMove.setVisibility(View.GONE);
+        btnMove.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialog();
+            }
+        });
 
 
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        getSupportActionBar().setCustomView(R.layout.action_bar_layout);
+        getSupportActionBar().setCustomView(R.layout.action_bar_view_images);
 
-        Bundle bundle = new Bundle();
-        bundle = getIntent().getExtras();
-        String albumName = bundle.get("AlbumName").toString();
+
+
+        setAlbumName();
+        TextView title = (TextView) findViewById(R.id.albumTitle);
+        title.setText("ALBUM "+albumName);
+
+        ImageButton returnBtn = (ImageButton) findViewById(R.id.btnBackAlbumList);
+        returnBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ListImageOfAlbum.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
 //
         imageList = Image.setImageList(albumName);
         recyclerView = findViewById(R.id.recycle_view_list_image_of_album);
@@ -132,7 +168,11 @@ public class ListImageOfAlbum extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 for (int i = 0; i < selectionList.size(); i++){
-                    //Toast.makeText(ListImageOfAlbum.this, i+"", Toast.LENGTH_SHORT).show();
+                    try {
+                        copy(selectionList.get(i).getImage(), new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash/"+selectionList.get(i).getText()));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                     int index = findIndexInList(selectionList.get(i));
                     remove(index);
                 }
@@ -170,7 +210,6 @@ public class ListImageOfAlbum extends AppCompatActivity {
     }
 
     public void startSelection(int position){
-        Toast.makeText(this, position+"", Toast.LENGTH_SHORT).show();
         if (isActionMode == false){
             isActionMode = true;
             toolbar.setVisibility(View.VISIBLE);
@@ -200,7 +239,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
         updateToolbarText(counter);
     }
 
-    private void updateToolbarText(int counter){
+    public void updateToolbarText(int counter){
         if (counter == 0){
             textViewToolbar.setText("0 item selected");
         }
@@ -215,16 +254,38 @@ public class ListImageOfAlbum extends AppCompatActivity {
 
     //btn trash - delete item.
 
-    private void remove(int index) {
-        Toast.makeText(this, index+"", Toast.LENGTH_SHORT).show();
+    public void remove(int index) {
         imageList.get(index).getImage().delete();
         imageList.remove(index);
         Log.d("Index", index+"");
         imageAdapter.notifyItemRemoved(index);
     }
 
-    private int findIndexInList(Image obj){
+    public int findIndexInList(Image obj){
         int index = imageList.indexOf(obj);
         return index;
+    }
+
+
+    public void openDialog(){
+        DialogMoveImage dialogMoveImage = new DialogMoveImage();
+        FragmentManager manager = (this).getSupportFragmentManager();
+        Bundle bundle = new Bundle();
+        bundle.putString("ParentFolder", albumName);
+        bundle.putSerializable("SelectedItems", (Serializable) selectionList);
+        dialogMoveImage.setArguments(bundle);
+        dialogMoveImage.show((manager), "Move Images");
+    }
+
+    public void copy(File src, File dst) throws IOException {
+        try (InputStream in = new FileInputStream(src)) {
+            try (OutputStream out = new FileOutputStream(dst)) {
+                byte[] buf = new byte[1024];
+                int len;
+                while ((len = in.read(buf)) > 0) {
+                    out.write(buf, 0, len);
+                }
+            }
+        }
     }
 }

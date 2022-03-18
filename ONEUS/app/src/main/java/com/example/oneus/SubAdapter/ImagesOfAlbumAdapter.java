@@ -139,8 +139,6 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                 @Override
                 public void onLongPress(MotionEvent e) {
                     View child = recyclerView.findChildViewUnder(e.getX(), e.getY());
-
-                    int position = recyclerView.getChildPosition(child);
                     clickListener.onLongClick(child, recyclerView.getChildPosition(child));
                 }
 

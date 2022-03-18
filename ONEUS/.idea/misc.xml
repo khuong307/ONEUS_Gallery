@@ -19,7 +19,10 @@
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/ic_launcher_foreground.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/icon_add.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/icon_back.xml" value="0.1" />
+        <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/icon_cancel.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/icon_circle_back.xml" value="0.1" />
+        <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/icon_delete.xml" value="0.11" />
+        <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/icon_delete_01.xml" value="0.11" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/icon_edit.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/icon_favorite.xml" value="0.1365" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/icon_favorite_click.xml" value="0.1365" />
@@ -32,16 +35,19 @@
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/search_click.xml" value="0.1365" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/font/custom_fonts.xml" value="0.10260795211628901" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/action_bar_layout.xml" value="0.1796875" />
+        <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/action_bar_view_images.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/activity_list_image_of_album.xml" value="0.13467293715262932" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/activity_splash.xml" value="0.1796875" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/add_button_home.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/add_image_button.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/add_image_dialog_layout.xml" value="0.14749893116716545" />
+        <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/album_spinner_row.xml" value="0.13467293715262932" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/circel_textview.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/custom_album_image.xml" value="0.2876404494382023" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/custom_favorite_image.xml" value="0.22" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/custom_images_in_album.xml" value="0.3333333333333333" />
+        <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/custom_trash_image.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/dialog_layout.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/fragment_favorite.xml" value="0.1796875" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/fragment_home.xml" value="0.15463917525773196" />
@@ -51,7 +57,9 @@
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/image_fullscreen_preview.xml" value="0.14365113296280463" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/item_user.xml" value="0.1796875" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/menu_bottom_navigation.xml" value="0.1640625" />
+        <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/move_images_dialog_layout.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/new_album_dialog.xml" value="0.1" />
+        <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/return_images_dialog_layout.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/single_photo.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1640625" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/menu/mennu_delete_action.xml" value="0.14749893116716545" />

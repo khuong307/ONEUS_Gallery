@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             tools:ignore="MissingConstraints">
             <com.google.android.material.imageview.ShapeableImageView
-                android:id="@+id/image_favorite"
+                android:id="@+id/image_trash"
                 android:padding="5dp"
                 android:layout_width="wrap_content"
                 android:layout_height="150dp"
@@ -26,13 +26,31 @@
             </com.google.android.material.imageview.ShapeableImageView>
 
             <ImageButton
-                android:id="@+id/favBtn"
-                android:layout_width="25dp"
-                android:src="@drawable/icon_favpic"
-                android:backgroundTint="@color/red_deep"
+                android:id="@+id/delBtn"
+                android:layout_width="30dp"
+                android:src="@drawable/icon_delete_01"
+                android:backgroundTint="@color/black"
                 android:background="@drawable/circle_textview"
-                android:layout_height="25dp">
+                app:layout_constraintRight_toRightOf="@id/image_trash"
+                app:layout_constraintTop_toTopOf="@id/image_trash"
+                android:layout_height="30dp">
             </ImageButton>
+
+            <CheckBox
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/itemIMGChoose"
+                android:gravity="center"
+                android:layout_width="30dp"
+                android:buttonTint="@color/white"
+                android:button="@drawable/custom_checkbox"
+                android:scaleX="1.5"
+                android:scaleY="1.5"
+                app:layout_constraintLeft_toLeftOf="@id/image_trash"
+                app:layout_constraintTop_toTopOf="@id/image_trash"
+                android:layout_height="30dp"
+                tools:ignore="MissingConstraints">
+            </CheckBox>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
 

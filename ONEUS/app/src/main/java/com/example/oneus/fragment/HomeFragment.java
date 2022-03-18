@@ -35,7 +35,6 @@ public class HomeFragment extends Fragment{
     AlbumAdapter albumAdapter;
     SwipeRefreshLayout swipeRefreshLayout;
     ImageButton addBtn;
-    DialogNewAlbum dialogNewAlbum;
 
 
     public HomeFragment() {
@@ -79,8 +78,6 @@ public class HomeFragment extends Fragment{
                 }, 2000);
             }
         });
-
-
         return view;
     }
 }

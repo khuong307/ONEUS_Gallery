@@ -4,6 +4,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -11,12 +12,16 @@ import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 
 import com.example.oneus.R;
 import com.example.oneus.SubAdapter.FavoriteImageAdapter;
+import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 import com.example.oneus.subClasses.FavImage;
+import com.example.oneus.subClasses.Image;
 
 import java.io.File;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -39,6 +44,26 @@ public class FavoriteFragment extends Fragment {
         favoriteImageAdapter = new FavoriteImageAdapter(getContext(), mList);
         recyclerView.setAdapter(favoriteImageAdapter);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 3));
+
+        recyclerView.addOnItemTouchListener(new FavoriteImageAdapter.RecyclerTouchListener(getContext(), recyclerView, new FavoriteImageAdapter.ClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+                Bundle bundle1 = new Bundle();
+                bundle1.putSerializable("imageList", (Serializable) mList);
+                bundle1.putInt("Position", position);
+
+                FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
+                SlideshowDialogFavoriteFragment newFragment = SlideshowDialogFavoriteFragment.newInstance();
+                newFragment.setArguments(bundle1);
+                newFragment.show(ft, "slideshow");
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
+
         return view;
     }
 
