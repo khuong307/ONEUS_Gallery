@@ -6,32 +6,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.fragment.app.FragmentTransaction;
 import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
-import android.content.Context;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.Gravity;
 import android.view.MenuItem;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.oneus.fragment.FavoriteFragment;
-import com.example.oneus.fragment.HomeFragment;
-import com.example.oneus.fragment.SearchFragment;
-import com.example.oneus.fragment.TrashFragment;
-import com.example.oneus.fragment.ViewPagerAdapter;
+import com.example.oneus.SubAdapter.ViewPagerAdapter;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.io.File;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity{
 
     private static final int PERMISSION_REQUEST_CODE = 7;
     private static final String App_Name = "ONEUS";
+
 
     private ViewPager viewPager;
     private BottomNavigationView navigationView;

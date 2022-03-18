@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/icielbccubano"
+        android:textAlignment="center"
+        android:text="ADD NEW IMAGE"
+        android:textColor="@color/dark_brown"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btnChoose"
+            android:fontFamily="@font/icielbccubano"
+            android:text="Choose Image"
+            android:textSize="15dp"
+            android:backgroundTint="@color/dark_brown"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/imageChosen"
+            android:layout_width="150dp"
+            android:background="@color/dark_brown"
+            android:src="@drawable/icon_image"
+            android:scaleType="centerCrop"
+            app:shapeAppearanceOverlay="@style/RoundImage"
+            android:layout_height="150dp">
+        </com.google.android.material.imageview.ShapeableImageView>
+    </LinearLayout>
+
+</LinearLayout>

@@ -3,12 +3,14 @@
     android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
+    android:gravity="center"
     android:layout_height="match_parent">
     <EditText
         android:layout_width="match_parent"
         android:id="@+id/newAlbumName"
         android:padding="20dp"
         android:textSize="20dp"
+        android:fontFamily="@font/icielbccubano"
         android:textAlignment="center"
         android:hint="Enter album's name"
         android:layout_height="wrap_content">
@@ -16,27 +18,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:padding="20dp"
+        android:padding="10dp"
         android:layout_gravity="center"
+        android:gravity="center"
         android:layout_height="wrap_content">
         <Button
             android:layout_gravity="center"
             android:id="@+id/btnChoose"
+            android:fontFamily="@font/icielbccubano"
             android:text="Choose Image"
+            android:textSize="15dp"
+            android:background="@drawable/custom_search_button"
             android:textColor="@color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+            android:layout_width="100dp"
+            android:layout_height="60dp">
         </Button>
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
             android:id="@+id/imageChosen"
-            android:layout_width="100dp"
+            android:layout_width="150dp"
             android:background="@color/green_deep"
             android:src="@drawable/icon_image"
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/RoundImage"
-            android:layout_height="100dp">
+            android:layout_height="150dp">
         </com.google.android.material.imageview.ShapeableImageView>
     </LinearLayout>
 

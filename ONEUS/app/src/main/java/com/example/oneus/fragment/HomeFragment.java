@@ -1,9 +1,11 @@
 package com.example.oneus.fragment;
 
+import android.app.AlertDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,9 +21,7 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.oneus.R;
 import com.example.oneus.SubAdapter.AlbumAdapter;
-import com.example.oneus.SubAdapter.FavoriteImageAdapter;
 import com.example.oneus.subClasses.DialogNewAlbum;
-import com.example.oneus.subClasses.FavImage;
 import com.example.oneus.subClasses.ImageAlbum;
 
 import java.io.File;
@@ -33,9 +33,9 @@ public class HomeFragment extends Fragment{
     RecyclerView recyclerView;
     List<ImageAlbum> mList;
     AlbumAdapter albumAdapter;
+    SwipeRefreshLayout swipeRefreshLayout;
     ImageButton addBtn;
-
-    ImageView imageChosen;
+    DialogNewAlbum dialogNewAlbum;
 
 
     public HomeFragment() {
@@ -44,27 +44,12 @@ public class HomeFragment extends Fragment{
 
 
 
+
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        Log.d("State", "Reload");
         super.onCreate(savedInstanceState);
-        mList = new ArrayList<>();
-        String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS";
-        File directory = new File (path);
-        if (directory.exists()){
-            File[] folder = directory.listFiles();
-            for (int i = 0; i < folder.length; i++){
-                File[] images = folder[i].listFiles();
-                if (images.length != 0)
-                    mList.add(new ImageAlbum(folder[i].getName(),images[0]));
-            }
-        }
-    }
-
-    public void openDialog(){
-        DialogNewAlbum dialogNewAlbum = new DialogNewAlbum();
-        dialogNewAlbum.show(getFragmentManager(), "New Album Dialog");
-        getFragmentManager().beginTransaction().detach(HomeFragment.this).attach(HomeFragment.this).commit();
+        mList = ImageAlbum.setAlbumList();
     }
 
     @Override
@@ -76,7 +61,26 @@ public class HomeFragment extends Fragment{
         recyclerView.setAdapter(albumAdapter);
         recyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
+        swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swipeRefresh);
         addBtn = (ImageButton) view.findViewById(R.id.btnAdd);
+        swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                mList = ImageAlbum.setAlbumList();
+                albumAdapter = new AlbumAdapter(getContext(), mList);
+                recyclerView.setAdapter(albumAdapter);
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        swipeRefreshLayout.setRefreshing(false);
+                    }
+                }, 2000);
+            }
+        });
+
+
         return view;
     }
 }

@@ -1,9 +1,14 @@
-package com.example.oneus.fragment;
+package com.example.oneus.SubAdapter;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
+
+import com.example.oneus.fragment.FavoriteFragment;
+import com.example.oneus.fragment.HomeFragment;
+import com.example.oneus.fragment.SearchFragment;
+import com.example.oneus.fragment.TrashFragment;
 
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
     public ViewPagerAdapter(@NonNull FragmentManager fm, int behavior) {
