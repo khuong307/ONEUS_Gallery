@@ -8,6 +8,7 @@
     <ImageButton
         android:id="@+id/btnBackAlbumList"
         android:layout_width="wrap_content"
+        android:layout_weight="1"
         android:layout_height="match_parent"
         android:layout_marginLeft="4dp"
         android:background="@color/green_deep"
@@ -16,6 +17,7 @@
     </ImageButton>
     <TextView
         android:gravity="center"
+        android:layout_weight="15"
         android:background="@color/green_deep"
         android:id="@+id/albumTitle"
         android:layout_width="match_parent"
@@ -25,5 +27,15 @@
         android:textSize="20dp"
         android:layout_height="match_parent">
     </TextView>
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/green_deep"
+        android:layout_gravity="right"
+        android:src="@drawable/icon_play">
+    </ImageButton>
 
 </LinearLayout>

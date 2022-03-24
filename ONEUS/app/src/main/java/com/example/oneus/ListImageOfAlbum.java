@@ -17,9 +17,12 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 import com.example.oneus.fragment.SlideshowDialogFragment;
+import com.example.oneus.subClasses.DialogAddImage;
+import com.example.oneus.subClasses.DialogEnterTime;
 import com.example.oneus.subClasses.DialogMoveImage;
 import com.example.oneus.subClasses.Image;
 
@@ -44,6 +47,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
     ImageButton btnDelete;
     ImageButton btnMove;
     String albumName;
+
 
     public void setAlbumName(){
         Bundle bundle = new Bundle();
@@ -94,6 +98,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
             }
         });
 
+
         btnDelete = findViewById(R.id.item_delete);
         btnDelete.setVisibility(View.GONE);
 
@@ -122,6 +127,21 @@ public class ListImageOfAlbum extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ListImageOfAlbum.this, MainActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        ImageButton btnPlay = (ImageButton) findViewById(R.id.btnPlay);
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DialogEnterTime dialogEnterTime = new DialogEnterTime();
+                FragmentManager manager = getSupportFragmentManager();
+
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("ImageList", (Serializable) imageList);
+                dialogEnterTime.setArguments(bundle);
+                dialogEnterTime.show((manager), "Enter Time");
+                Toast.makeText(ListImageOfAlbum.this, "Play", Toast.LENGTH_SHORT).show();
             }
         });
 //

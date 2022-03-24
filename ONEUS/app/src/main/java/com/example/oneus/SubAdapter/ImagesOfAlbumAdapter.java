@@ -3,6 +3,7 @@ package com.example.oneus.SubAdapter;
 import android.annotation.SuppressLint;
 import android.app.ListActivity;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.GestureDetector;
@@ -25,6 +26,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.oneus.EditActivity;
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
 import com.example.oneus.subClasses.DialogAddImage;
@@ -75,7 +77,11 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
             holder.editBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context, "Edit", Toast.LENGTH_SHORT).show();
+                    // Khang
+                    Intent intent = new Intent(context, EditActivity.class);
+                    String URI = String.valueOf(mList.get(position).getImage());
+                    intent.putExtra("URI", URI);
+                    context.startActivity(intent);
                 }
             });
 

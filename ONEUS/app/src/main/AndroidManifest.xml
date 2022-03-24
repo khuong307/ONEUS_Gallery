@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ONEUS">
         <activity
+            android:name=".EditActivity"
+            android:exported="false" />
+        <activity
             android:name=".ListImageOfAlbum"
             android:exported="false" />
         <activity
@@ -26,7 +29,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
