@@ -10,12 +10,16 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -25,6 +29,8 @@ import com.example.oneus.subClasses.DialogAddImage;
 import com.example.oneus.subClasses.DialogEnterTime;
 import com.example.oneus.subClasses.DialogMoveImage;
 import com.example.oneus.subClasses.Image;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -40,6 +46,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
     RecyclerView recyclerView;
     List<Image> imageList;
     ImagesOfAlbumAdapter imageAdapter;
+    FloatingActionButton fab;
 
     Toolbar toolbar;
     TextView textViewToolbar;
@@ -95,6 +102,19 @@ public class ListImageOfAlbum extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 clearActionMode();
+            }
+        });
+
+        fab = (FloatingActionButton) findViewById(R.id.btnInfo);
+        fab.setImageTintList(ColorStateList.valueOf(Color.rgb(255, 255, 255)));
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(ListImageOfAlbum.this, R.style.BottomSheetDialogTheme);
+                View bottomSheetView = LayoutInflater.from(getApplicationContext()).inflate(R.layout.layout_bottom_sheet_info, (LinearLayout)findViewById(R.id.bottomSheetInfo));
+                bottomSheetDialog.setContentView(bottomSheetView);
+                bottomSheetDialog.show();
             }
         });
 

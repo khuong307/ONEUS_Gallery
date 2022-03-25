@@ -173,7 +173,6 @@ public class DialogEnterTime extends DialogFragment {
                     bundle.putDouble("Factor", Double.parseDouble(factor_chosen));
                     bundle.putString("Animation", anim_chosen);
                     bundle.putInt("Position", 0);
-                    Toast.makeText(getActivity(), factor_chosen, Toast.LENGTH_SHORT).show();
                     FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                     AutoSlideshowDialogFragment autoSlideshowDialogFragment = new AutoSlideshowDialogFragment();
                     autoSlideshowDialogFragment.setArguments(bundle);
