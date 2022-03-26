@@ -63,19 +63,16 @@
         android:layout_gravity="center"
         android:padding="10dp"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="Double Clicks:"
+        <ImageView
+            android:layout_width="33dp"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:fontFamily="@font/icielbccubano"
-            android:textSize="15dp"
-            android:layout_height="wrap_content">
-        </TextView>
+            android:src="@drawable/double_click_icon"
+            android:layout_height="33dp">
+        </ImageView>
         <TextView
             android:layout_width="wrap_content"
-            android:text="View detail full size"
+            android:text="Double Tap To View Detail"
             android:layout_marginLeft="20dp"
             android:gravity="center"
             android:layout_gravity="center"
@@ -91,19 +88,16 @@
         android:layout_gravity="center"
         android:padding="10dp"
         android:orientation="horizontal">
-        <TextView
-            android:layout_width="wrap_content"
-            android:text="long press:"
+        <ImageView
+            android:layout_width="33dp"
             android:gravity="center"
             android:layout_gravity="center"
-            android:textColor="@color/black"
-            android:fontFamily="@font/icielbccubano"
-            android:textSize="15dp"
-            android:layout_height="wrap_content">
-        </TextView>
+            android:src="@drawable/icon_press"
+            android:layout_height="33dp">
+        </ImageView>
         <TextView
             android:layout_width="wrap_content"
-            android:text="Choose Image"
+            android:text="Hold To Choose Image"
             android:layout_marginLeft="20dp"
             android:gravity="center"
             android:layout_gravity="center"

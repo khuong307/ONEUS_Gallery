@@ -37,13 +37,18 @@
             android:layout_gravity="center"
             android:layout_marginLeft="20dp"
             android:id="@+id/imageChosen"
-            android:layout_width="150dp"
+            android:layout_width="100dp"
             android:background="@color/green_deep"
             android:src="@drawable/icon_image"
             android:scaleType="centerCrop"
             app:shapeAppearanceOverlay="@style/RoundImage"
-            android:layout_height="150dp">
+            android:layout_height="100dp">
         </com.google.android.material.imageview.ShapeableImageView>
     </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_images_chosen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

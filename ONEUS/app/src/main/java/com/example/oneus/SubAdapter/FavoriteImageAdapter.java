@@ -129,6 +129,6 @@ public class FavoriteImageAdapter extends RecyclerView.Adapter<FavoriteImageAdap
 
     private void remove(int position) {
         mList.remove(position);
-        notifyItemRemoved(position);
+        notifyDataSetChanged();
     }
 }

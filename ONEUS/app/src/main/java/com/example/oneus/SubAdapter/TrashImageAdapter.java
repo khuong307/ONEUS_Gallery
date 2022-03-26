@@ -142,6 +142,6 @@ public class TrashImageAdapter extends RecyclerView.Adapter<TrashImageAdapter.My
 
     private void remove(int position) {
         mList.remove(position);
-        notifyItemRemoved(position);
+        notifyDataSetChanged();
     }
 }
