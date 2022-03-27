@@ -1,12 +1,12 @@
 package com.example.oneus;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -17,18 +17,19 @@ import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 import com.example.oneus.fragment.SlideshowDialogFragment;
-import com.example.oneus.subClasses.DialogAddImage;
-import com.example.oneus.subClasses.DialogEnterTime;
-import com.example.oneus.subClasses.DialogMoveImage;
+import com.example.oneus.subClasses.Dialog.DialogDeleteAlbum;
+import com.example.oneus.subClasses.Dialog.DialogEnterTime;
+import com.example.oneus.subClasses.Dialog.DialogMoveImage;
 import com.example.oneus.subClasses.Image;
+import com.example.oneus.subClasses.Path;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -53,6 +54,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
     ImageButton btnBack;
     ImageButton btnDelete;
     ImageButton btnMove;
+    Button chooseAllBtn;
     String albumName;
 
 
@@ -67,8 +69,8 @@ public class ListImageOfAlbum extends AppCompatActivity {
     }
 
 
-    public boolean isActionMode = false;
-    List<Image> selectionList = new ArrayList<>();
+    public static boolean isActionMode = false;
+    public static List<Image> selectionList = new ArrayList<>();
     int counter = 0;
 
     public void updateImageList(){
@@ -92,10 +94,23 @@ public class ListImageOfAlbum extends AppCompatActivity {
         setContentView(R.layout.activity_list_image_of_album);
 
         //center ONEUS in Action Bar
+        isActionMode = false;
         toolbar = findViewById(R.id.toolbar);
         toolbar.setVisibility(View.GONE);
         textViewToolbar = findViewById(R.id.text_toolbar);
         textViewToolbar.setVisibility(View.GONE);
+        chooseAllBtn = findViewById(R.id.chooseAllBtn);
+        chooseAllBtn.setVisibility(View.GONE);
+        chooseAllBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                selectionList.clear();
+                selectionList = new ArrayList<>(imageList);
+                updateToolbarText(imageList.size());
+                chooseAllItem();
+            }
+        });
+
         btnBack = findViewById(R.id.btnBack);
         btnBack.setVisibility(View.GONE);
         btnBack.setOnClickListener(new View.OnClickListener() {
@@ -145,6 +160,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
         returnBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                isActionMode = false;
                 Intent intent = new Intent(ListImageOfAlbum.this, MainActivity.class);
                 startActivity(intent);
             }
@@ -161,10 +177,9 @@ public class ListImageOfAlbum extends AppCompatActivity {
                 bundle.putSerializable("ImageList", (Serializable) imageList);
                 dialogEnterTime.setArguments(bundle);
                 dialogEnterTime.show((manager), "Enter Time");
-                Toast.makeText(ListImageOfAlbum.this, "Play", Toast.LENGTH_SHORT).show();
             }
         });
-//
+
         imageList = Image.setImageList(albumName);
         recyclerView = findViewById(R.id.recycle_view_list_image_of_album);
         imageAdapter = new ImagesOfAlbumAdapter(this, imageList);
@@ -207,18 +222,21 @@ public class ListImageOfAlbum extends AppCompatActivity {
         btnDelete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for (int i = 0; i < selectionList.size(); i++){
-                    try {
-                        copy(selectionList.get(i).getImage(), new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash/"+selectionList.get(i).getText()));
-                    } catch (IOException e) {
-                        e.printStackTrace();
+                if (selectionList.size() == imageList.size()){
+                    openDialogDeleteAlbum();
+                }else{
+                    for (int i = 0; i < selectionList.size(); i++){
+                        try {
+                            Path.copy(selectionList.get(i).getImage(), new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash/"+selectionList.get(i).getText()));
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                        int index = findIndexInList(selectionList.get(i));
+                        remove(index);
                     }
-                    int index = findIndexInList(selectionList.get(i));
-                    remove(index);
+                    updateToolbarText(0);
+                    clearActionMode();
                 }
-
-                updateToolbarText(0);
-                clearActionMode();
             }
         });
 
@@ -227,22 +245,10 @@ public class ListImageOfAlbum extends AppCompatActivity {
     public void clearActionMode() {
         isActionMode = false;
         toolbar.setVisibility(View.GONE);
-        textViewToolbar.setText("0 item selected");
+        chooseAllBtn.setVisibility(View.GONE);
+        textViewToolbar.setText("Selected: 0");
         counter = 0;
         selectionList.clear();
-
-        for (int i = 0; i < imageList.size(); i++) {
-            RecyclerView.ViewHolder holder = recyclerView.getChildViewHolder(recyclerView.getChildAt(i));
-            holder.itemView.findViewById(R.id.itemIMGChoose).setVisibility(View.GONE);
-            CheckBox checkBox = (CheckBox) holder.itemView.findViewById(R.id.itemIMGChoose);
-            checkBox.setChecked(false);
-            holder.itemView.findViewById(R.id.editBtn).setVisibility(View.VISIBLE);
-        }
-
-//
-        RecyclerView.ViewHolder holderAddBtn = recyclerView.findViewHolderForAdapterPosition(imageList.size());
-        holderAddBtn.itemView.findViewById(R.id.addImgBtn).setVisibility(View.VISIBLE);
-
 
         updateImageList();
         imageAdapter = new ImagesOfAlbumAdapter(this, imageList);
@@ -257,14 +263,10 @@ public class ListImageOfAlbum extends AppCompatActivity {
             btnDelete.setVisibility(View.VISIBLE);
             btnMove.setVisibility(View.VISIBLE);
             textViewToolbar.setVisibility(View.VISIBLE);
+            chooseAllBtn.setVisibility(View.VISIBLE);
 
-            for (int i = 0; i < imageList.size(); i++) {
-                RecyclerView.ViewHolder holder =  recyclerView.getChildViewHolder(recyclerView.getChildAt(i));
-                holder.itemView.findViewById(R.id.itemIMGChoose).setVisibility(View.VISIBLE);
-                holder.itemView.findViewById(R.id.editBtn).setVisibility(View.GONE);
-            }
-            RecyclerView.ViewHolder holderAddBtn =  recyclerView.findViewHolderForAdapterPosition(imageList.size());
-            holderAddBtn.itemView.findViewById(R.id.addImgBtn).setVisibility(View.GONE);
+            updateImageAdapter();
+            updateRecyclerView();
         }
     }
 
@@ -280,15 +282,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
     }
 
     public void updateToolbarText(int counter){
-        if (counter == 0){
-            textViewToolbar.setText("0 item selected");
-        }
-        else if (counter == 1){
-            textViewToolbar.setText("1 item selected");
-        }
-        else{
-            textViewToolbar.setText(counter + " items selected");
-        }
+        textViewToolbar.setText("Selected: "+counter);
     }
 
 
@@ -306,6 +300,12 @@ public class ListImageOfAlbum extends AppCompatActivity {
         return index;
     }
 
+    public void chooseAllItem(){
+        counter = imageList.size();
+        updateImageAdapter();
+        updateRecyclerView();
+    }
+
 
     public void openDialog(){
         DialogMoveImage dialogMoveImage = new DialogMoveImage();
@@ -317,15 +317,12 @@ public class ListImageOfAlbum extends AppCompatActivity {
         dialogMoveImage.show((manager), "Move Images");
     }
 
-    public void copy(File src, File dst) throws IOException {
-        try (InputStream in = new FileInputStream(src)) {
-            try (OutputStream out = new FileOutputStream(dst)) {
-                byte[] buf = new byte[1024];
-                int len;
-                while ((len = in.read(buf)) > 0) {
-                    out.write(buf, 0, len);
-                }
-            }
-        }
+    public void openDialogDeleteAlbum(){
+        DialogDeleteAlbum dialogDeleteAlbum = new DialogDeleteAlbum();
+        FragmentManager manager = (this).getSupportFragmentManager();
+        Bundle bundle = new Bundle();
+        bundle.putString("ParentFolder", imageList.get(0).getImage().getParent());
+        dialogDeleteAlbum.setArguments(bundle);
+        dialogDeleteAlbum.show((manager), "Delete Album");
     }
 }

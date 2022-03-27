@@ -1,4 +1,4 @@
-package com.example.oneus.subClasses;
+package com.example.oneus.subClasses.Dialog;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -26,6 +26,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
 import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
+import com.example.oneus.subClasses.Image;
 
 import java.io.File;
 import java.io.FileInputStream;

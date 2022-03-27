@@ -16,12 +16,11 @@ import androidx.viewpager.widget.ViewPager;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.example.oneus.R;
-import com.example.oneus.subClasses.DepthPageTransformer;
+import com.example.oneus.subClasses.Animation.DepthPageTransformer;
 import com.example.oneus.subClasses.FavImage;
-import com.example.oneus.subClasses.Image;
-import com.example.oneus.subClasses.ScrollerCustomDuration;
-import com.example.oneus.subClasses.VerticalPageTransformer;
-import com.example.oneus.subClasses.ZoomOutPageTransformer;
+import com.example.oneus.subClasses.Animation.ScrollerCustomDuration;
+import com.example.oneus.subClasses.Animation.VerticalPageTransformer;
+import com.example.oneus.subClasses.Animation.ZoomOutPageTransformer;
 import com.github.chrisbanes.photoview.PhotoView;
 
 import java.lang.reflect.Field;

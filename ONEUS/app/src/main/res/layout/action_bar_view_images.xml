@@ -24,7 +24,7 @@
         android:fontFamily="@font/icielbccubano"
         android:text="ONEUS-"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="25dp"
         android:layout_height="match_parent">
     </TextView>
 

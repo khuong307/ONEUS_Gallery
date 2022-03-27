@@ -6,13 +6,7 @@ import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.view.animation.DecelerateInterpolator;
 import android.view.animation.Interpolator;
-import android.widget.ImageView;
-import android.widget.Scroller;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
@@ -22,16 +16,14 @@ import androidx.viewpager.widget.ViewPager;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.example.oneus.R;
-import com.example.oneus.subClasses.DepthPageTransformer;
+import com.example.oneus.subClasses.Animation.DepthPageTransformer;
 import com.example.oneus.subClasses.Image;
-import com.example.oneus.subClasses.ScrollerCustomDuration;
-import com.example.oneus.subClasses.VerticalPageTransformer;
-import com.example.oneus.subClasses.ZoomOutPageTransformer;
+import com.example.oneus.subClasses.Animation.ScrollerCustomDuration;
+import com.example.oneus.subClasses.Animation.VerticalPageTransformer;
+import com.example.oneus.subClasses.Animation.ZoomOutPageTransformer;
 import com.github.chrisbanes.photoview.PhotoView;
-import com.google.android.material.transition.MaterialContainerTransform;
 
 import java.lang.reflect.Field;
-import java.util.Date;
 import java.util.List;
 
 public class AutoSlideshowDialogFragment extends DialogFragment {

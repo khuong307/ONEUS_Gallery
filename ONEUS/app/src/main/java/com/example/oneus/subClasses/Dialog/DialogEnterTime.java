@@ -1,4 +1,4 @@
-package com.example.oneus.subClasses;
+package com.example.oneus.subClasses.Dialog;
 
 import android.Manifest;
 import android.app.AlertDialog;
@@ -35,6 +35,7 @@ import com.example.oneus.SubAdapter.SpinnerFactor;
 import com.example.oneus.SubAdapter.SpinnerTime;
 import com.example.oneus.fragment.AutoSlideshowDialogFragment;
 import com.example.oneus.fragment.SlideshowDialogFragment;
+import com.example.oneus.subClasses.Image;
 
 import java.io.File;
 import java.io.FileInputStream;

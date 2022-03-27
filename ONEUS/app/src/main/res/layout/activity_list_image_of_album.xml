@@ -9,32 +9,35 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:orientation="vertical"
+        android:paddingTop="10dp"
         android:layout_height="wrap_content">
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
-            android:background="@color/dark_brown"
             android:id="@+id/toolbar"
             android:layout_height="?attr/actionBarSize">
             <LinearLayout
                 android:orientation="horizontal"
                 android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/dark_brown"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="match_parent">
                 <ImageButton
+                    android:layout_weight="1"
                     android:background="@color/dark_brown"
                     android:layout_width="wrap_content"
                     android:id="@+id/btnBack"
-                    android:layout_weight="1"
                     android:src="@drawable/icon_cancel"
                     android:layout_height="match_parent">
                 </ImageButton>
                 <TextView
                     android:layout_weight="1"
-                    android:padding="10dp"
                     android:textAlignment="center"
                     android:gravity="center"
                     android:id="@+id/text_toolbar"
-                    android:text="0 item selected"
+                    android:text="Selected: 1"
                     android:textSize="20dp"
                     android:fontFamily="@font/icielbccubano"
                     android:textColor="@color/white"
@@ -60,8 +63,21 @@
                 </ImageButton>
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
+        <Button
+            android:id="@+id/chooseAllBtn"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:text="Choose All"
+            android:textSize="15dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/dark_brown"
+            android:textColor="@color/white"
+            android:fontFamily="@font/icielbccubano"
+            android:layout_height="wrap_content">
+        </Button>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="wrap_content"
+            android:nestedScrollingEnabled="false"
             android:id="@+id/recycle_view_list_image_of_album"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,7 +85,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_height="wrap_content">
         </androidx.recyclerview.widget.RecyclerView>
-
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"

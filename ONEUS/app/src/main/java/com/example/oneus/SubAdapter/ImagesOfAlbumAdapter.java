@@ -1,7 +1,6 @@
 package com.example.oneus.SubAdapter;
 
 import android.annotation.SuppressLint;
-import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,27 +10,20 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
 import com.example.oneus.EditActivity;
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
-import com.example.oneus.subClasses.DialogAddImage;
-import com.example.oneus.subClasses.DialogNewAlbum;
-import com.example.oneus.subClasses.FavImage;
+import com.example.oneus.subClasses.Dialog.DialogAddImage;
 import com.example.oneus.subClasses.Image;
 
 import java.io.File;
@@ -41,8 +33,16 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
 
     ListImageOfAlbum context;
     List<Image> mList;
+    LayoutInflater layoutInflater;
+    public static List<Image> selectionList;
+    public static List<Image> getSelectionList(){
+        return selectionList;
+    }
+
 
     public ImagesOfAlbumAdapter(ListImageOfAlbum context, List<Image> mList) {
+        setHasStableIds(true);
+        layoutInflater = LayoutInflater.from(context);
         this.context = context;
         this.mList = mList;
     }
@@ -50,9 +50,8 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
     @NonNull
     @Override
     public ImagesOfAlbumAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
         View itemView;
-        if(viewType == R.layout.custom_images_in_album){
+        if(viewType < mList.size()){
             itemView = layoutInflater.inflate(R.layout.custom_images_in_album, parent, false);
         }
         else {
@@ -64,6 +63,8 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         if(position == mList.size()) {
+            if(ListImageOfAlbum.isActionMode == true)
+                holder.addImgBtn.setVisibility(View.GONE);
             holder.addImgBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -72,7 +73,20 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
             });
         }
         else{
-            holder.checkImgChosen.setVisibility(View.GONE);
+            if(ListImageOfAlbum.isActionMode == true){
+                holder.checkImgChosen.setVisibility(View.VISIBLE);
+                holder.editBtn.setVisibility(View.GONE);
+                if(ListImageOfAlbum.selectionList.contains(mList.get(position)) == true){
+                    holder.checkImgChosen.setChecked(true);
+                }else{
+                    holder.checkImgChosen.setChecked(false);
+                }
+            }else{
+                holder.editBtn.setVisibility(View.VISIBLE);
+                holder.checkImgChosen.setChecked(false);
+                holder.checkImgChosen.setVisibility(View.GONE);
+            }
+
             holder.imageView.setImageURI(Uri.fromFile(new File(String.valueOf(mList.get(position).getImage()))));
             holder.editBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -89,15 +103,23 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                 @Override
                 public void onClick(View view) {
                     context.check(view, position);
+                    notifyDataSetChanged();
                 }
             });
         }
     }
 
+
     @Override
     public int getItemCount() {
         return mList.size() + 1;
     }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
 
     public class MyViewHolder  extends RecyclerView.ViewHolder{
 
@@ -120,7 +142,7 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
     }
     @Override
     public int getItemViewType(int position) {
-        return (position == mList.size()) ? R.layout.add_image_button : R.layout.custom_images_in_album;
+        return position;
     }
 
 

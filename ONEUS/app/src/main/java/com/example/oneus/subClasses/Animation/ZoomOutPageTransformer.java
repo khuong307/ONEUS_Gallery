@@ -1,4 +1,4 @@
-package com.example.oneus.subClasses;
+package com.example.oneus.subClasses.Animation;
 
 import android.view.View;
 

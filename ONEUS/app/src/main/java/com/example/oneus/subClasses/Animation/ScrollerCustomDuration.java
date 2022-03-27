@@ -1,4 +1,4 @@
-package com.example.oneus.subClasses;
+package com.example.oneus.subClasses.Animation;
 import android.content.Context;
 import android.annotation.SuppressLint;
 import android.view.animation.Interpolator;

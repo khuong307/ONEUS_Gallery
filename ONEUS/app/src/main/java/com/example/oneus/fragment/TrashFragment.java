@@ -1,9 +1,7 @@
 package com.example.oneus.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.Handler;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,28 +10,16 @@ import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-import com.example.oneus.ListImageOfAlbum;
-import com.example.oneus.MainActivity;
 import com.example.oneus.R;
-import com.example.oneus.SubAdapter.AlbumAdapter;
-import com.example.oneus.SubAdapter.FavoriteImageAdapter;
-import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 import com.example.oneus.SubAdapter.TrashImageAdapter;
-import com.example.oneus.subClasses.DialogMoveImage;
-import com.example.oneus.subClasses.DialogReturnImage;
-import com.example.oneus.subClasses.FavImage;
-import com.example.oneus.subClasses.Image;
-import com.example.oneus.subClasses.ImageAlbum;
+import com.example.oneus.subClasses.Dialog.DialogReturnImage;
 import com.example.oneus.subClasses.TrashImage;
 
 import java.io.File;

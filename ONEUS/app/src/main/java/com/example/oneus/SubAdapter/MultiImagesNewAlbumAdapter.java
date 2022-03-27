@@ -13,7 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.R;
-import com.example.oneus.subClasses.DialogNewAlbum;
+import com.example.oneus.subClasses.Dialog.DialogNewAlbum;
 import com.example.oneus.subClasses.Image;
 
 import java.io.File;
