@@ -7,6 +7,7 @@ import android.net.Uri;
 import android.os.Environment;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+import android.widget.Toast;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -28,12 +29,9 @@ public class Path {
                 }
             }
             else if (isDownloadsDocument(uri)) {
-
                 final String id = DocumentsContract.getDocumentId(uri);
-                final Uri contentUri = ContentUris.withAppendedId(
-                        Uri.parse("content://downloads/public_downloads"), Long.parseLong(id));
-
-                return getDataColumn(context, contentUri, null, null);
+                String[] path = id.split(":");
+                return path[1];
             }
             // MediaProvider
             else if (isMediaDocument(uri)) {
@@ -124,5 +122,16 @@ public class Path {
             }
         }
         folder.delete();
+    }
+
+    //create a folder in ONEUS
+    public static boolean createSubsDirectory(String FolderName){
+        File folder = new File(Environment.getExternalStorageDirectory() +"/ONEUS/" + FolderName);
+        if (!folder.exists()){
+            folder.mkdir();
+            return true;
+        }else{
+            return false;
+        }
     }
 }

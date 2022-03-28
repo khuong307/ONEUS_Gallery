@@ -313,6 +313,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle.putString("ParentFolder", albumName);
         bundle.putSerializable("SelectedItems", (Serializable) selectionList);
+        bundle.putSerializable("ImageList", (Serializable) imageList);
         dialogMoveImage.setArguments(bundle);
         dialogMoveImage.show((manager), "Move Images");
     }

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+   <HorizontalScrollView
+       android:layout_width="match_parent"
+       android:scrollbars="horizontal"
+       android:layout_height="wrap_content">
+      <LinearLayout
+          android:layout_width="wrap_content"
+          android:layout_height="match_parent">
+         <LinearLayout
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:gravity="center"
+             android:orientation="horizontal"
+             android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/icielbccubano"
+                android:text="Time Delay(s): "
+                android:textColor="@color/red_deep"
+                android:textSize="20dp"></TextView>
+
+            <Spinner
+                android:id="@+id/spinner_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"></Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/icielbccubano"
+                android:text="Factor Transform: "
+                android:textColor="@color/red_deep"
+                android:textSize="20dp"></TextView>
+
+            <Spinner
+                android:id="@+id/spinner_factor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"></Spinner>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/icielbccubano"
+                android:text="Animation: "
+                android:textColor="@color/red_deep"
+                android:textSize="20dp"></TextView>
+
+            <Spinner
+                android:id="@+id/spinner_animation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"></Spinner>
+
+            <ImageButton
+                android:id="@+id/btnPlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/red_deep"
+                android:src="@drawable/icon_play_fav"></ImageButton>
+         </LinearLayout>
+      </LinearLayout>
+   </HorizontalScrollView>
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_gravity="center_horizontal"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintBottom_toBottomOf="parent"
+       android:id="@+id/recycle_view">
+   </androidx.recyclerview.widget.RecyclerView>
+
+
+
+
+</LinearLayout>
