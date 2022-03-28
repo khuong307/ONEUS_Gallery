@@ -1,27 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
+            "outputFile": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-night-v8\\values-night-v8.xml",
             "map": [
-                {
-                    "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\values-night\\themes.xml",
-                    "from": {
-                        "startLines": "15,2",
-                        "startColumns": "4,4",
-                        "startOffsets": "819,100",
-                        "endLines": "19,14",
-                        "endColumns": "12,12",
-                        "endOffsets": "1007,814"
-                    },
-                    "to": {
-                        "startLines": "2,38",
-                        "startColumns": "4,4",
-                        "startOffsets": "100,3579",
-                        "endLines": "6,50",
-                        "endColumns": "12,12",
-                        "endOffsets": "288,4291"
-                    }
-                },
                 {
                     "source": "C:\\Users\\user\\.gradle\\caches\\transforms-3\\96a8459cc55356d65de57437416e5b5d\\transformed\\material-1.5.0\\res\\values-night-v8\\values-night-v8.xml",
                     "from": {
@@ -54,6 +35,25 @@
                         "startOffsets": "293,363,447,531,627,729,831,4296",
                         "endColumns": "69,83,83,95,101,101,93,88",
                         "endOffsets": "358,442,526,622,724,826,920,4380"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\values-night\\themes.xml",
+                    "from": {
+                        "startLines": "15,2",
+                        "startColumns": "4,4",
+                        "startOffsets": "819,100",
+                        "endLines": "19,14",
+                        "endColumns": "12,12",
+                        "endOffsets": "1007,814"
+                    },
+                    "to": {
+                        "startLines": "2,38",
+                        "startColumns": "4,4",
+                        "startOffsets": "100,3579",
+                        "endLines": "6,50",
+                        "endColumns": "12,12",
+                        "endOffsets": "288,4291"
                     }
                 }
             ]

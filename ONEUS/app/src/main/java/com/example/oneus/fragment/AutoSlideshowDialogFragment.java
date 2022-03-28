@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
@@ -31,15 +32,16 @@ public class AutoSlideshowDialogFragment extends DialogFragment {
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private int selectedPosition = 0;
-    private Handler slideHandler = new Handler();
+    private final Handler slideHandler = new Handler();
     private ScrollerCustomDuration mScroller = null;
     private double factor;
     private String animation;
+    private ImageButton replayBtn;
 
 
     static public AutoSlideshowDialogFragment newInstance() {
-        AutoSlideshowDialogFragment f = new AutoSlideshowDialogFragment();
-        return f;
+        AutoSlideshowDialogFragment auto = new AutoSlideshowDialogFragment();
+        return auto;
     }
 
     @Override
@@ -47,6 +49,15 @@ public class AutoSlideshowDialogFragment extends DialogFragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_image_slider, container, false);
         viewPager = (ViewPager) v.findViewById(R.id.viewpager);
+        replayBtn = v.findViewById(R.id.btnReplay);
+        replayBtn.setVisibility(View.GONE);
+        replayBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setCurrentItem(0);
+                replayBtn.setVisibility(View.GONE);
+            }
+        });
 
         animation = getArguments().getString("Animation");
 
@@ -142,6 +153,11 @@ public class AutoSlideshowDialogFragment extends DialogFragment {
         slideHandler.removeCallbacks(slideRunnable);
         float time = Float.parseFloat(getArguments().get("Time").toString());
         slideHandler.postDelayed(slideRunnable, (long) time*1000);
+        if (position == imageList.size()-1){
+            replayBtn.setVisibility(View.VISIBLE);
+        }else{
+            replayBtn.setVisibility(View.GONE);
+        }
     }
 
     @Override

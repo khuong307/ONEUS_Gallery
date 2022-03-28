@@ -1,366 +1,370 @@
 [
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_test.jpg.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable-v24\\test.jpg"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_favpic.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_favpic.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_images_in_album.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\custom_images_in_album.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_favorite_image.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_favorite_image.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_add_image_button.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\custom_add_image_button.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\fragment_home.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_trash_image.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_trash_image.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_album_image.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\custom_album_image.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_add_small_size.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_add_small_size.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_search.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_search.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_enter_time.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_enter_time.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_add_image_dialog_layout.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\add_image_dialog_layout.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_multi_images.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_multi_images.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_green_back.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_green_back.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle_edit_pencil_image.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\circle_edit_pencil_image.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_uncheck.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_uncheck.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_add_small_size.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_add_small_size.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_checkbox.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\custom_checkbox.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_crop.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_crop.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_image_slider.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\fragment_image_slider.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_circle_left_24.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_circle_left_24.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_trash.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\fragment_trash.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_back.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_back.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_animation_spinner_row.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\animation_spinner_row.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_edit.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_edit.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_image_fullscreen_preview.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\image_fullscreen_preview.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_sun.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_sun.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_icon_play_fav.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable-v24\\icon_play_fav.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_return_images_dialog_layout.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\return_images_dialog_layout.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_add.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_add.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_circle_back.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_circle_back.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_edit.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\activity_edit.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_trash.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\fragment_trash.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_return_images_dialog_layout.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\return_images_dialog_layout.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_favorite.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_favorite.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle_textview.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\circle_textview.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle_black.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\circle_black.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle_edit_pencil_image.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\circle_edit_pencil_image.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_trash.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_trash.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_images_in_album.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_images_in_album.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_contrast.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_contrast.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\circle.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_factor_spinner_row.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\factor_spinner_row.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\font_icielbccubano.otf.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\font\\icielbccubano.otf"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_search_button.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\custom_search_button.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_bottom_edit_nav.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\menu\\menu_bottom_edit_nav.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_test.jpg.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable-v24\\test.jpg"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_add_button_home.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\add_button_home.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_bottom_sheet_info.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\bottom_sheet_info.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_enter_time.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\dialog_enter_time.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_action_bar_layout.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\action_bar_layout.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_question.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_question.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_search.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_search.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_close.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_close.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_action_bar_view_images.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\action_bar_view_images.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_layout.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\dialog_layout.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_add_image_dialog_layout.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\add_image_dialog_layout.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_effect.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_effect.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_radio_check.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_radio_check.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_play.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_play.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle_black.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\circle_black.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_home.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_home.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_move.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_move.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_animation_spinner_row.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\animation_spinner_row.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_play.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_play.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_uncheck.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_uncheck.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\color_custom_color_bottom_edit_nav.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\color\\custom_color_bottom_edit_nav.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_trash_image.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\custom_trash_image.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_green_back.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_green_back.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_bright.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\fragment_bright.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_search.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\fragment_search.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_add.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_add.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_trash.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_trash.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_bottom_sheet_info.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\bottom_sheet_info.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_delete_action.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\menu\\menu_delete_action.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_move_images_dialog_layout.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\move_images_dialog_layout.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_image_fullscreen_preview.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\image_fullscreen_preview.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_radio_uncheck.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_radio_uncheck.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_delete_action.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\menu\\menu_delete_action.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\fragment_home.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_double_click_icon.png.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable-v24\\double_click_icon.png"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_album_image.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_album_image.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_sun.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_sun.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_delete.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_delete.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_icon_press.jpg.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable-v24\\icon_press.jpg"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_delete_01.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_delete_01.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_close.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_close.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_bottom_edit_nav.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\menu\\menu_bottom_edit_nav.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\font_custom_fonts.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\font\\custom_fonts.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_album_spinner_row.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\album_spinner_row.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_multi_images.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\custom_multi_images.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_action_bar_layout.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\action_bar_layout.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_back.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_back.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\activity_splash.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_replay.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_replay.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_oneus.png.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable-v24\\oneus.png"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\font_icielbccubano.otf.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\font\\icielbccubano.otf"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_list_image_of_album.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\activity_list_image_of_album.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_circle_back.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_circle_back.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle_textview.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\circle_textview.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_home.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_home.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_icon_press.jpg.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable-v24\\icon_press.jpg"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\activity_splash.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_bottom_sheet_info.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\layout_bottom_sheet_info.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_round_button.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\custom_round_button.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_move_images_dialog_layout.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\move_images_dialog_layout.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_cancel.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_cancel.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_delete.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_delete.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_action_bar_view_images.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\action_bar_view_images.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_bottom_sheet_info.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\layout_bottom_sheet_info.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_del_album.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\dialog_del_album.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_circle_back_brown.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_circle_back_brown.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_move.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_move.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_double_click_icon.png.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable-v24\\double_click_icon.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_bottom_nav.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\menu\\menu_bottom_nav.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_round_button.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\custom_round_button.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_flip.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_flip.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_search_button.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\custom_search_button.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\color_custom_color_bottom_nav.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\color\\custom_color_bottom_nav.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_add_image_button.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\add_image_button.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_add_image_button.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\add_image_button.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_effect.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_effect.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_del_album.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_del_album.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\color_custom_color_bottom_edit_nav.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\color\\custom_color_bottom_edit_nav.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_oneus.png.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable-v24\\oneus.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\font_custom_fonts.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\font\\custom_fonts.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_info_24.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_info_24.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_add_button_home.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\add_button_home.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_icon_play_fav.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable-v24\\icon_play_fav.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_image.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_image.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_contrast.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_contrast.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_radio_uncheck.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_radio_uncheck.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_check.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_check.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_time_spinner_row.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\time_spinner_row.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_bottom_nav.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\menu\\menu_bottom_nav.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_album_spinner_row.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\album_spinner_row.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_info_24.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_info_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_radio_check.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_radio_check.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_favorite.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_favorite.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_favorite.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\fragment_favorite.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_list_image_of_album.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\activity_list_image_of_album.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_image_slider.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\fragment_image_slider.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_question.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_question.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_time_spinner_row.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\time_spinner_row.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_favpic.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_favpic.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_crop.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_crop.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_check.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_check.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_favorite.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\fragment_favorite.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\circle.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_flip.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_flip.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_edit.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\activity_edit.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_cancel.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_cancel.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_search.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\fragment_search.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_edit.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_edit.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_image.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_image.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_bright.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\fragment_bright.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_circle_back_brown.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\icon_circle_back_brown.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_arrow_circle_left_24.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\ic_baseline_arrow_circle_left_24.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\activity_main.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_layout.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_layout.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_add_image_button.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\custom_add_image_button.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_favorite_image.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\layout\\custom_favorite_image.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\color_custom_color_bottom_nav.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\color\\custom_color_bottom_nav.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_checkbox.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery-Khuong\\ONEUS\\app\\src\\main\\res\\drawable\\custom_checkbox.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_factor_spinner_row.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\factor_spinner_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_delete_01.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_delete_01.xml"
     }
 ]

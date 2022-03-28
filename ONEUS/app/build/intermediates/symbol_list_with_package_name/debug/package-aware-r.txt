@@ -2511,6 +2511,7 @@ drawable icon_press
 drawable icon_question
 drawable icon_radio_check
 drawable icon_radio_uncheck
+drawable icon_replay
 drawable icon_search
 drawable icon_sun
 drawable icon_trash
@@ -2691,6 +2692,7 @@ id btnBackAlbumList
 id btnChoose
 id btnInfo
 id btnPlay
+id btnReplay
 id btnSearch
 id buttonPanel
 id cache_measures
