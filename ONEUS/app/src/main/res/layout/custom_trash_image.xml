@@ -8,7 +8,7 @@
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,26 +26,31 @@
             </com.google.android.material.imageview.ShapeableImageView>
 
             <ImageButton
+                android:scaleX="1.2"
+                android:scaleY="1.2"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
                 android:id="@+id/delBtn"
                 android:layout_width="30dp"
-                android:src="@drawable/icon_delete_01"
-                android:backgroundTint="@color/black"
+                android:src="@drawable/icon_cancel"
+                android:backgroundTint="@color/white"
                 android:background="@drawable/circle_textview"
                 app:layout_constraintRight_toRightOf="@id/image_trash"
                 app:layout_constraintTop_toTopOf="@id/image_trash"
-                android:layout_height="30dp">
+                android:layout_height="30dp"
+                app:tint="@color/black">
             </ImageButton>
 
             <CheckBox
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="20dp"
                 android:id="@+id/itemIMGChoose"
                 android:gravity="center"
                 android:layout_width="30dp"
                 android:buttonTint="@color/white"
                 android:button="@drawable/custom_checkbox"
-                android:scaleX="1.5"
-                android:scaleY="1.5"
+                android:scaleX="2"
+                android:scaleY="2"
                 app:layout_constraintLeft_toLeftOf="@id/image_trash"
                 app:layout_constraintTop_toTopOf="@id/image_trash"
                 android:layout_height="30dp"

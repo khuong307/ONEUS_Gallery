@@ -9,12 +9,22 @@ import android.provider.DocumentsContract;
 import android.provider.MediaStore;
 import android.widget.Toast;
 
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class Path {
     public static String getPath(final Context context, final Uri uri) {
@@ -132,6 +142,38 @@ public class Path {
             return true;
         }else{
             return false;
+        }
+    }
+
+    public static List<String[]> readHistoryFolder(){
+        List<String[]> history = new ArrayList<>();
+        try {
+            File txt = new File(Environment.getExternalStorageDirectory() +"/ONEUS/HistoryFolder.txt");
+            Scanner scan = new Scanner(txt);
+            while(scan.hasNextLine()){
+                String line = scan.nextLine();
+                history.add(line.split("-"));
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return history;
+    }
+
+    public static void writeHistoryFolder(List<String[]> newFile){
+        File txt = new File(Environment.getExternalStorageDirectory() +"/ONEUS/HistoryFolder.txt");
+        if (txt.exists()){
+            txt.mkdirs();
+        }
+        try {
+            FileOutputStream writer = new FileOutputStream(txt);
+            for(int i = 0; i < newFile.size(); i++){
+                String info = newFile.get(i)[0]+"-"+newFile.get(i)[1]+"\n";
+                writer.write(info.getBytes(StandardCharsets.UTF_8));
+            }
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

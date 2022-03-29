@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -45,6 +46,7 @@ public class FavoriteFragment extends Fragment {
     private SpinnerFactor spinnerFactor;
     private Spinner spinner_animation;
     private SpinnerAnimationAdapter spinnerAnimationAdapter;
+    private LinearLayout linearLayout;
 
     private ImageButton btnPlay;
 
@@ -79,6 +81,10 @@ public class FavoriteFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.fragment_favorite, container, false);
+        linearLayout = view.findViewById(R.id.playAnimation);
+        if (mList.size() == 0){
+            linearLayout.setVisibility(View.GONE);
+        }
         recyclerView = view.findViewById(R.id.recycle_view);
         favoriteImageAdapter = new FavoriteImageAdapter(getContext(), mList);
         recyclerView.setAdapter(favoriteImageAdapter);

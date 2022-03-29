@@ -2496,6 +2496,7 @@ int drawable icon_delete 0x7f070083
 int drawable icon_delete_01 0x7f070084
 int drawable icon_edit 0x7f070085
 int drawable icon_effect 0x7f070086
+int drawable icon_fav_30 0x7f0700c9
 int drawable icon_favorite 0x7f070087
 int drawable icon_favpic 0x7f070088
 int drawable icon_flip 0x7f070089
@@ -2692,6 +2693,7 @@ int id btnChoose 0x7f09007c
 int id btnInfo 0x7f09007d
 int id btnPlay 0x7f09007e
 int id btnReplay 0x7f09007f
+int id btnRestore 0x7f090229
 int id btnSearch 0x7f090080
 int id buttonPanel 0x7f090081
 int id cache_measures 0x7f090082
@@ -2950,6 +2952,7 @@ int id pathRelative 0x7f09017e
 int id peekHeight 0x7f09017f
 int id percent 0x7f090180
 int id pin 0x7f090181
+int id playAnimation 0x7f090228
 int id position 0x7f090182
 int id postLayout 0x7f090183
 int id progress_circular 0x7f090184
@@ -3243,6 +3246,7 @@ int layout fragment_home 0x7f0c0042
 int layout fragment_image_slider 0x7f0c0043
 int layout fragment_search 0x7f0c0044
 int layout fragment_trash 0x7f0c0045
+int layout fragment_trash_slider 0x7f0c009b
 int layout image_fullscreen_preview 0x7f0c0046
 int layout layout_bottom_sheet_info 0x7f0c0047
 int layout m3_alert_dialog 0x7f0c0048

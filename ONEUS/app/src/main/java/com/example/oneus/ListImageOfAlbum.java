@@ -14,7 +14,6 @@ import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -34,11 +33,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -225,7 +220,16 @@ public class ListImageOfAlbum extends AppCompatActivity {
                 if (selectionList.size() == imageList.size()){
                     openDialogDeleteAlbum();
                 }else{
+                    List<String[]> history = new ArrayList<>();
+                    List<String[]> oldHis = Path.readHistoryFolder();
+                    for (int j = 0; j < oldHis.size(); j++){
+                        history.add(oldHis.get(j));
+                    }
                     for (int i = 0; i < selectionList.size(); i++){
+                        String [] info = new String[2];
+                        info[0] = selectionList.get(i).getImage().getParent();
+                        info[1] = selectionList.get(i).getText();
+                        history.add(info);
                         try {
                             Path.copy(selectionList.get(i).getImage(), new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash/"+selectionList.get(i).getText()));
                         } catch (IOException e) {
@@ -234,6 +238,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
                         int index = findIndexInList(selectionList.get(i));
                         remove(index);
                     }
+                    Path.writeHistoryFolder(history);
                     updateToolbarText(0);
                     clearActionMode();
                 }
@@ -291,7 +296,6 @@ public class ListImageOfAlbum extends AppCompatActivity {
     public void remove(int index) {
         imageList.get(index).getImage().delete();
         imageList.remove(index);
-        Log.d("Index", index+"");
         imageAdapter.notifyItemRemoved(index);
     }
 

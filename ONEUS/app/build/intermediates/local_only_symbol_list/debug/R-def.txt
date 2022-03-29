@@ -40,6 +40,7 @@ drawable icon_delete
 drawable icon_delete_01
 drawable icon_edit
 drawable icon_effect
+drawable icon_fav_30
 drawable icon_favorite
 drawable icon_favpic
 drawable icon_flip
@@ -92,6 +93,7 @@ id btnChoose
 id btnInfo
 id btnPlay
 id btnReplay
+id btnRestore
 id btnSearch
 id chooseAllBtn
 id date
@@ -115,6 +117,7 @@ id listImages
 id newAlb
 id newAlbumBtn
 id newAlbumName
+id playAnimation
 id quantity_image
 id recycle_view
 id recycle_view_album
@@ -160,6 +163,7 @@ layout fragment_home
 layout fragment_image_slider
 layout fragment_search
 layout fragment_trash
+layout fragment_trash_slider
 layout image_fullscreen_preview
 layout layout_bottom_sheet_info
 layout move_images_dialog_layout

@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Interpolator;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.DialogFragment;
@@ -35,6 +36,8 @@ public class AutoSlideshowFavoriteDialogFragment extends DialogFragment {
     private ScrollerCustomDuration mScroller = null;
     private double factor;
     private String animation;
+    private ImageButton favBtn;
+    private ImageButton replayBtn;
 
 
     static public AutoSlideshowFavoriteDialogFragment newInstance() {
@@ -47,6 +50,17 @@ public class AutoSlideshowFavoriteDialogFragment extends DialogFragment {
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_image_slider, container, false);
         viewPager = (ViewPager) v.findViewById(R.id.viewpager);
+        replayBtn = v.findViewById(R.id.btnReplay);
+        favBtn = v.findViewById(R.id.favBtn);
+        favBtn.setVisibility(View.GONE);
+        replayBtn.setVisibility(View.GONE);
+        replayBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                setCurrentItem(0);
+                replayBtn.setVisibility(View.GONE);
+            }
+        });
 
         animation = getArguments().getString("Animation");
 
@@ -142,6 +156,11 @@ public class AutoSlideshowFavoriteDialogFragment extends DialogFragment {
         slideHandler.removeCallbacks(slideRunnable);
         float time = Float.parseFloat(getArguments().get("Time").toString());
         slideHandler.postDelayed(slideRunnable, (long) time*1000);
+        if (position == imageList.size()-1){
+            replayBtn.setVisibility(View.VISIBLE);
+        }else{
+            replayBtn.setVisibility(View.GONE);
+        }
     }
 
     @Override

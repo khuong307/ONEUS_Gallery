@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,6 +29,8 @@ public class SlideshowDialogFavoriteFragment extends DialogFragment {
     private MyViewPagerAdapter myViewPagerAdapter;
     private TextView lblCount, lblTitle, lblDate;
     private int selectedPosition = 0;
+    private ImageButton replayBtn;
+    private ImageButton favBtn;
 
 
     static public SlideshowDialogFavoriteFragment newInstance() {
@@ -43,6 +46,10 @@ public class SlideshowDialogFavoriteFragment extends DialogFragment {
         lblCount = (TextView) v.findViewById(R.id.lbl_count);
         lblTitle = (TextView) v.findViewById(R.id.title);
         lblDate = (TextView) v.findViewById(R.id.date);
+        replayBtn = (ImageButton) v.findViewById(R.id.btnReplay);
+        favBtn = (ImageButton) v.findViewById(R.id.favBtn);
+        favBtn.setVisibility(View.GONE);
+        replayBtn.setVisibility(View.GONE);
 
         final ImageView imageViewPreview = (ImageView) v.findViewById(R.id.image_preview);
 

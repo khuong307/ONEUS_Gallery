@@ -1,12 +1,17 @@
 package com.example.oneus.fragment;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Environment;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.DialogFragment;
 import androidx.viewpager.widget.PagerAdapter;
@@ -15,8 +20,11 @@ import androidx.viewpager.widget.ViewPager;
 import com.bumptech.glide.Glide;
 import com.example.oneus.R;
 import com.example.oneus.subClasses.Image;
+import com.example.oneus.subClasses.Path;
 import com.github.chrisbanes.photoview.PhotoView;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
@@ -26,8 +34,9 @@ public class SlideshowDialogFragment extends DialogFragment {
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
     private TextView lblCount, lblTitle, lblDate;
+    private ImageButton favBtn;
+    private ImageButton replayBtn;
     private int selectedPosition = 0;
-
 
     static public SlideshowDialogFragment newInstance() {
         SlideshowDialogFragment f = new SlideshowDialogFragment();
@@ -42,8 +51,9 @@ public class SlideshowDialogFragment extends DialogFragment {
         lblCount = (TextView) v.findViewById(R.id.lbl_count);
         lblTitle = (TextView) v.findViewById(R.id.title);
         lblDate = (TextView) v.findViewById(R.id.date);
-
-        final ImageView imageViewPreview = (ImageView) v.findViewById(R.id.image_preview);
+        favBtn = (ImageButton) v.findViewById(R.id.favBtn);
+        replayBtn = (ImageButton) v.findViewById(R.id.btnReplay);
+        replayBtn.setVisibility(View.GONE);
 
         imageList = (List<Image>) getArguments().getSerializable("imageList");
         selectedPosition = getArguments().getInt("Position");
@@ -88,7 +98,42 @@ public class SlideshowDialogFragment extends DialogFragment {
 
         Date date = new java.util.Date(image.getImage().lastModified());
         lblDate.setText(date.toString());
+
+        boolean isInFav = image.isInFavorite();
+        if (isInFav == true){
+            favBtn.setColorFilter(Color.rgb(173, 17, 17)); // deep red.
+        }else{
+            favBtn.setColorFilter(Color.rgb(0, 0, 0)); //black
+        }
+
+        favBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast toast;
+                List<Image> favList = Image.setImageList("Favorite");
+                int index = image.indexInFavorite();
+                boolean stillInFav = image.isInFavorite();
+                if (stillInFav){
+                    favBtn.setColorFilter(Color.rgb(0, 0, 0)); //black
+                    toast = Toast.makeText(getActivity(), "Remove from Favorite", Toast.LENGTH_SHORT);
+                    favList.get(index).getImage().delete();
+                }else{
+                    favBtn.setColorFilter(Color.rgb(173, 17, 17)); // deep red.
+                    toast = Toast.makeText(getActivity(), "Add to Favorite", Toast.LENGTH_SHORT);
+                    String destination = Environment.getExternalStorageDirectory().toString() + "/ONEUS/Favorite/"+image.getImage().getName();
+                    try {
+                        Path.copy(image.getImage(), new File(destination));
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                }
+                toast.setGravity(Gravity.CENTER, 0, 0);
+                toast.show();
+            }
+        });
     }
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -111,7 +156,6 @@ public class SlideshowDialogFragment extends DialogFragment {
             View view = layoutInflater.inflate(R.layout.image_fullscreen_preview, container, false);
 
             PhotoView imageViewPreview = view.findViewById(R.id.image_preview);
-
             Image image = imageList.get(position);
 
             Glide.with(getActivity()).load(image.getImage()).into(imageViewPreview);

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:orientation="horizontal"
     android:gravity="center"
+    android:background="@color/green_deep"
     android:layout_height="wrap_content">
 
     <ImageButton
@@ -16,6 +17,7 @@
         android:src="@drawable/ic_baseline_arrow_circle_left_24">
     </ImageButton>
     <TextView
+        android:layout_gravity="center"
         android:gravity="center"
         android:layout_weight="15"
         android:background="@color/green_deep"
@@ -24,7 +26,7 @@
         android:fontFamily="@font/icielbccubano"
         android:text="ONEUS-"
         android:textColor="@color/white"
-        android:textSize="25dp"
+        android:textSize="24dp"
         android:layout_height="match_parent">
     </TextView>
 

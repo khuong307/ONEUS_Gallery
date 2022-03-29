@@ -2497,6 +2497,7 @@ drawable icon_delete
 drawable icon_delete_01
 drawable icon_edit
 drawable icon_effect
+drawable icon_fav_30
 drawable icon_favorite
 drawable icon_favpic
 drawable icon_flip
@@ -2693,6 +2694,7 @@ id btnChoose
 id btnInfo
 id btnPlay
 id btnReplay
+id btnRestore
 id btnSearch
 id buttonPanel
 id cache_measures
@@ -2951,6 +2953,7 @@ id pathRelative
 id peekHeight
 id percent
 id pin
+id playAnimation
 id position
 id postLayout
 id progress_circular
@@ -3244,6 +3247,7 @@ layout fragment_home
 layout fragment_image_slider
 layout fragment_search
 layout fragment_trash
+layout fragment_trash_slider
 layout image_fullscreen_preview
 layout layout_bottom_sheet_info
 layout m3_alert_dialog

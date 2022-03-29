@@ -43,10 +43,9 @@ public class TrashFragment extends Fragment {
     ImageButton btnBack;
     ImageButton btnDelete;
     ImageButton btnMove;
-    String albumName = "Trash";
 
-    public boolean isActionMode = false;
-    List<TrashImage> selectionList = new ArrayList<>();
+    public static boolean isActionMode = false;
+    public static  List<TrashImage> selectionList = new ArrayList<>();
     int counter = 0;
 
     public TrashFragment() {
@@ -70,13 +69,12 @@ public class TrashFragment extends Fragment {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        isActionMode = false;
         trashList = new ArrayList<>();
         String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash";
         File directory = new File (path);
         if (directory.exists()) {
             File[] images = directory.listFiles();
-
             for (int i = 0; i < images.length; i++) {
                 trashList.add(new TrashImage(images[i], images[i].getName()));
             }
@@ -89,13 +87,6 @@ public class TrashFragment extends Fragment {
         counter = 0;
         selectionList.clear();
 
-        for (int i = 0; i < trashList.size(); i++) {
-            RecyclerView.ViewHolder holder = recyclerView.getChildViewHolder(recyclerView.getChildAt(i));
-            holder.itemView.findViewById(R.id.itemIMGChoose).setVisibility(View.GONE);
-            CheckBox checkBox = (CheckBox) holder.itemView.findViewById(R.id.itemIMGChoose);
-            checkBox.setChecked(false);
-            holder.itemView.findViewById(R.id.delBtn).setVisibility(View.VISIBLE);
-        }
         updateImageList();
         trashImageAdapter = new TrashImageAdapter(getActivity(), trashList, this);
         recyclerView.setAdapter(trashImageAdapter);
@@ -109,11 +100,9 @@ public class TrashFragment extends Fragment {
             btnDelete.setVisibility(View.VISIBLE);
             btnMove.setVisibility(View.VISIBLE);
             textViewToolbar.setVisibility(View.VISIBLE);
-            for (int i = 0; i < trashList.size(); i++) {
-                RecyclerView.ViewHolder holder =  recyclerView.getChildViewHolder(recyclerView.getChildAt(i));
-                holder.itemView.findViewById(R.id.itemIMGChoose).setVisibility(View.VISIBLE);
-                holder.itemView.findViewById(R.id.delBtn).setVisibility(View.GONE);
-            }
+
+            trashImageAdapter = new TrashImageAdapter(getActivity(), trashList, this);
+            recyclerView.setAdapter(trashImageAdapter);
         }
     }
 
@@ -129,15 +118,7 @@ public class TrashFragment extends Fragment {
     }
 
     public void updateToolbarText(int counter){
-        if (counter == 0){
-            textViewToolbar.setText("0 item selected");
-        }
-        else if (counter == 1){
-            textViewToolbar.setText("1 item selected");
-        }
-        else{
-            textViewToolbar.setText(counter + " items selected");
-        }
+        textViewToolbar.setText("Selected: " + counter);
     }
 
 
