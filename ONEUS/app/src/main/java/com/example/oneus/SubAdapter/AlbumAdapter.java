@@ -87,7 +87,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
             holder.linearLayout.setOnLongClickListener(new View.OnLongClickListener() {
                 @Override
                 public boolean onLongClick(View view) {
-                    openBottomSheetDialog();
+                    openBottomSheetDialog(mList.get(position).getAlbum());
                     return true;
                 }
             });
@@ -100,7 +100,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
 
 
     // Minh
-    public void openBottomSheetDialog() {
+    public void openBottomSheetDialog(String albumName) {
         View viewDialog= LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.bottom_sheet_album,null);
 
         BottomSheetDialog bottomSheetDialog= new BottomSheetDialog(context);
@@ -108,7 +108,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         viewDialog.findViewById(R.id.layoutEditAlbum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openModifyDialog();
+                openModifyDialog(albumName);
                 bottomSheetDialog.dismiss();
             }
         });
@@ -116,7 +116,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         viewDialog.findViewById(R.id.layoutMoveAlbum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,"Move album",Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,albumName,Toast.LENGTH_SHORT).show();
                 bottomSheetDialog.dismiss();
             }
         });
@@ -184,8 +184,8 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
     }
 
     // Minh
-    public void openModifyDialog(){
-        DialogModifyAlbum dialogModifyAlbum = new DialogModifyAlbum();
+    public void openModifyDialog(String albumName){
+        DialogModifyAlbum dialogModifyAlbum = new DialogModifyAlbum(albumName);
         FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
         dialogModifyAlbum.show((manager), "Modify Album Dialog");
     }

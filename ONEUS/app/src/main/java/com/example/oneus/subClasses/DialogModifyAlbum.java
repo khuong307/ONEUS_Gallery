@@ -39,6 +39,13 @@ public class DialogModifyAlbum extends DialogFragment {
     private Button btnChoose;
     private ImageView imageChosen;
 
+    // MInh
+    private String oldAlbumName;
+
+    public DialogModifyAlbum(String albumName) {
+        this.oldAlbumName=albumName;
+    }
+
 
     @NonNull
     @Override
@@ -114,12 +121,13 @@ public class DialogModifyAlbum extends DialogFragment {
 
 
     boolean createSubsDirectory(String FolderName){
+        File oldFolder=new File(Environment.getExternalStorageDirectory()+"/ONEUS/" +oldAlbumName);
         File folder = new File(Environment.getExternalStorageDirectory() +"/ONEUS/" + FolderName);
-        if (!folder.exists()){
+        if (oldFolder.exists()){
             folder.mkdir();
-            return true;
+            return oldFolder.renameTo(folder);
         }else{
-            Toast.makeText(getActivity(), "Folder already existed!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "Can not rename album!", Toast.LENGTH_SHORT).show();
             return false;
         }
     }
