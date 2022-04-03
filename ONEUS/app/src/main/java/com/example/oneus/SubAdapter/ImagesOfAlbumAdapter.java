@@ -1,7 +1,6 @@
 package com.example.oneus.SubAdapter;
 
 import android.annotation.SuppressLint;
-import android.app.ListActivity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -11,27 +10,21 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
-import com.example.oneus.EditActivity;
+import com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity;
+import com.dsphotoeditor.sdk.utils.DsPhotoEditorConstants;
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
 import com.example.oneus.subClasses.DialogAddImage;
-import com.example.oneus.subClasses.DialogNewAlbum;
-import com.example.oneus.subClasses.FavImage;
 import com.example.oneus.subClasses.Image;
 
 import java.io.File;
@@ -78,10 +71,12 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                 @Override
                 public void onClick(View view) {
                     // Khang
-                    Intent intent = new Intent(context, EditActivity.class);
-                    String URI = String.valueOf(mList.get(position).getImage());
-                    intent.putExtra("URI", URI);
-                    context.startActivity(intent);
+                    Intent dsPhotoEditorIntent = new Intent(context, DsPhotoEditorActivity.class);
+                    Uri temp = Uri.fromFile(new File(String.valueOf(mList.get(position).getImage())));
+                    dsPhotoEditorIntent.setData(temp);
+                    int[] toolsToHide = {};
+                    dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_TOOLS_TO_HIDE, toolsToHide);
+                    context.startActivity(dsPhotoEditorIntent);
                     // Khang
                 }
             });
