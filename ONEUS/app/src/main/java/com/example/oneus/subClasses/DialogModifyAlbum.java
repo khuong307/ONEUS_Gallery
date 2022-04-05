@@ -52,10 +52,10 @@ public class DialogModifyAlbum extends DialogFragment {
     public Dialog onCreateDialog(@Nullable Bundle savedInstanceState) {
         AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        View view = inflater.inflate(R.layout.dialog_layout, null);
-        newAlbumName = (EditText) view.findViewById(R.id.newAlbumName);
-        btnChoose = (Button) view.findViewById(R.id.btnChoose);
-        imageChosen = (ImageView) view.findViewById(R.id.imageChosen);
+        View view = inflater.inflate(R.layout.dialog_modify_album_layout, null);
+        newAlbumName = (EditText) view.findViewById(R.id.changeAlbumName);
+        btnChoose = (Button) view.findViewById(R.id.btnChangeAvatar);
+        imageChosen = (ImageView) view.findViewById(R.id.changeImageChosen);
 
 
         btnChoose.setOnClickListener(new View.OnClickListener() {
@@ -80,7 +80,7 @@ public class DialogModifyAlbum extends DialogFragment {
 
             }
         });
-        newAlbumName = (EditText) view.findViewById(R.id.newAlbumName);
+        newAlbumName = (EditText) view.findViewById(R.id.changeAlbumName);
         return builder.create();
     }
 
@@ -96,9 +96,21 @@ public class DialogModifyAlbum extends DialogFragment {
                     String albumName = newAlbumName.getText().toString();
                     if (albumName.isEmpty()==true){
                         Toast.makeText(getActivity(), "Please enter album's name!", Toast.LENGTH_SHORT).show();
-                    }else{
+                    }
+                    else if(imageChosen.getTag()==null)
+                    {
                         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                             if (createSubsDirectory(albumName) == true){
+                                RecyclerView recyclerView = getActivity().findViewById(R.id.recycle_view_album);
+                                AlbumAdapter albumAdapter = new AlbumAdapter(getContext(), ImageAlbum.setAlbumList());
+                                recyclerView.setAdapter(albumAdapter);
+                                dialog.dismiss();
+                            }
+                        }
+                    }
+                    else{
+                        if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                            if (createSubsDirectory(albumName) == true && imageChosen.getTag()!=null){
                                 String[] sourcePath = imageChosen.getTag().toString().split("raw:");
                                 File inputPath = new File(sourcePath[1]);
                                 String newPathAlbum = Environment.getExternalStorageDirectory() + "/ONEUS/" + albumName + "/" + inputPath.getName();
