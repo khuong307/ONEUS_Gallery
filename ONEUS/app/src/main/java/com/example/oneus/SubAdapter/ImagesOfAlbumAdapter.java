@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -72,10 +73,15 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                 public void onClick(View view) {
                     // Khang
                     Intent dsPhotoEditorIntent = new Intent(context, DsPhotoEditorActivity.class);
-                    Uri temp = Uri.fromFile(new File(String.valueOf(mList.get(position).getImage())));
-                    dsPhotoEditorIntent.setData(temp);
+                    String URI = String.valueOf(mList.get(position).getImage());
+                    int lastForwardSlash = URI.lastIndexOf("/");
+                    int beginPath = findTheIndexOfNthOccurence(URI, "/", 4);
+                    String currentPath = URI.substring(beginPath+1, lastForwardSlash);
+                    Uri pictureURI = Uri.fromFile(new File(URI));
+                    dsPhotoEditorIntent.setData(pictureURI);
                     int[] toolsToHide = {};
                     dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_TOOLS_TO_HIDE, toolsToHide);
+                    dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_OUTPUT_DIRECTORY, currentPath);
                     context.startActivity(dsPhotoEditorIntent);
                     // Khang
                 }
@@ -94,6 +100,20 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
     public int getItemCount() {
         return mList.size() + 1;
     }
+
+    // Khang
+    public int findTheIndexOfNthOccurence(String str, String sub, int n){
+        int count = 1;
+        int index = -1;
+        while (true){
+            index = str.indexOf(sub, index+1);
+            if (index == -1 || count == n)
+                break;
+            count++;
+        }
+        return index;
+    }
+    // Khang
 
     public class MyViewHolder  extends RecyclerView.ViewHolder{
 
