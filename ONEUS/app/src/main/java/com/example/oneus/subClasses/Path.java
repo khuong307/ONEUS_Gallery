@@ -23,6 +23,8 @@ import java.io.OutputStream;
 import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -176,4 +178,28 @@ public class Path {
             e.printStackTrace();
         }
     }
+
+    public static  String getExtension(File file){
+        String filename = file.toString();
+        int index = filename.lastIndexOf('.');
+        return filename.substring(index+1);
+    }
+
+    public static int getMaxIndex(File fileDir) {
+        if(fileDir.isDirectory()){
+            if (fileDir.listFiles().length == 0)
+                return 0;
+            else{
+                List listFile = Arrays.asList(fileDir.list());
+                Collections.sort(listFile);
+                Collections.sort(listFile,Collections.reverseOrder());
+                String info = listFile.get(0).toString().split("_")[1];
+                int maxInt = info.lastIndexOf('.');
+                String tmp = info.substring(0, maxInt);
+                return Integer.parseInt(tmp);
+            }
+        }
+        return 0;
+    }
+
 }

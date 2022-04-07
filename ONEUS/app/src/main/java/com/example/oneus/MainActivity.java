@@ -24,7 +24,7 @@ import java.io.File;
 public class MainActivity extends AppCompatActivity{
 
     private static final int PERMISSION_REQUEST_CODE = 7;
-    private static final String App_Name = "ONEUS";
+    public static final String App_Name = "ONEUS";
 
 
     private ViewPager viewPager;
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity{
         });
 
         //view pager
-        viewPager = (ViewPager) findViewById(R.id.view_pager);
+        viewPager = findViewById(R.id.view_pager);
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         viewPager.setAdapter(adapter);
 
@@ -150,7 +150,16 @@ public class MainActivity extends AppCompatActivity{
         File folder = new File(Environment.getExternalStorageDirectory() +"/ONEUS/" + FolderName);
         if (!folder.exists()){
             folder.mkdir();
-            Toast.makeText(MainActivity.this, "Successful", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (navigationView.getSelectedItemId() == R.id.action_home) {
+            finish();
+        }
+        else {
+            super.onBackPressed();
         }
     }
 }

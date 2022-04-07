@@ -6,7 +6,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
@@ -21,6 +20,7 @@ import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 import com.example.oneus.fragment.SlideshowDialogFragment;
@@ -219,26 +219,30 @@ public class ListImageOfAlbum extends AppCompatActivity {
             public void onClick(View view) {
                 if (selectionList.size() == imageList.size()){
                     openDialogDeleteAlbum();
+                }
+                else if (selectionList.size() == 0){
+                    Toast.makeText(ListImageOfAlbum.this, "Choose at least 1 image!", Toast.LENGTH_SHORT).show();
                 }else{
-                    List<String[]> history = new ArrayList<>();
-                    List<String[]> oldHis = Path.readHistoryFolder();
-                    for (int j = 0; j < oldHis.size(); j++){
-                        history.add(oldHis.get(j));
-                    }
+                    File trashFolder = new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash");
+                    int numberOfFile = Path.getMaxIndex(trashFolder);
+                    String oldPath = selectionList.get(0).getImage().getParent();
+                    File oldFolder = new File(oldPath);
                     for (int i = 0; i < selectionList.size(); i++){
-                        String [] info = new String[2];
-                        info[0] = selectionList.get(i).getImage().getParent();
-                        info[1] = selectionList.get(i).getText();
-                        history.add(info);
                         try {
-                            Path.copy(selectionList.get(i).getImage(), new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash/"+selectionList.get(i).getText()));
+                            int quantity = numberOfFile+i+1;
+                            String extension = Path.getExtension(selectionList.get(i).getImage());
+                            File delImage =  new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash/"+oldFolder.getName()+"_"+quantity+"."+extension);
+                            if(delImage.exists()){
+
+                            }else{
+                                Path.copy(selectionList.get(i).getImage(),delImage);
+                            }
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
                         int index = findIndexInList(selectionList.get(i));
                         remove(index);
                     }
-                    Path.writeHistoryFolder(history);
                     updateToolbarText(0);
                     clearActionMode();
                 }

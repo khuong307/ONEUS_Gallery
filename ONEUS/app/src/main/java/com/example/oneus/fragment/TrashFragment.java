@@ -1,14 +1,18 @@
 package com.example.oneus.fragment;
 
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
@@ -20,6 +24,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.oneus.R;
 import com.example.oneus.SubAdapter.TrashImageAdapter;
 import com.example.oneus.subClasses.Dialog.DialogReturnImage;
+import com.example.oneus.subClasses.Image;
+import com.example.oneus.subClasses.Path;
 import com.example.oneus.subClasses.TrashImage;
 
 import java.io.File;
@@ -35,7 +41,7 @@ import java.util.List;
 public class TrashFragment extends Fragment {
     View view;
     RecyclerView recyclerView;
-    List<TrashImage> trashList;
+    List<Image> trashList;
     TrashImageAdapter trashImageAdapter;
 
     Toolbar toolbar;
@@ -45,8 +51,9 @@ public class TrashFragment extends Fragment {
     ImageButton btnMove;
 
     public static boolean isActionMode = false;
-    public static  List<TrashImage> selectionList = new ArrayList<>();
+    public static  List<Image> selectionList = new ArrayList<>();
     int counter = 0;
+    private boolean isBackFromSlide;
 
     public TrashFragment() {
         // Required empty public constructor
@@ -55,15 +62,12 @@ public class TrashFragment extends Fragment {
     public void updateImageList(){
         trashList.clear();
         trashList = new ArrayList<>();
-        String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash";
-        File directory = new File (path);
-        if (directory.exists()) {
-            File[] images = directory.listFiles();
+        trashList = Image.setImageList("Trash");
+    }
 
-            for (int i = 0; i < images.length; i++) {
-                trashList.add(new TrashImage(images[i], images[i].getName()));
-            }
-        }
+    public void updateAdapter(){
+        trashImageAdapter = new TrashImageAdapter(getActivity(), trashList, this);
+        recyclerView.setAdapter(trashImageAdapter);
     }
 
 
@@ -71,14 +75,12 @@ public class TrashFragment extends Fragment {
         super.onCreate(savedInstanceState);
         isActionMode = false;
         trashList = new ArrayList<>();
-        String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash";
-        File directory = new File (path);
-        if (directory.exists()) {
-            File[] images = directory.listFiles();
-            for (int i = 0; i < images.length; i++) {
-                trashList.add(new TrashImage(images[i], images[i].getName()));
-            }
-        }
+        initTrashList();
+        isBackFromSlide = false;
+
+    }
+    public void initTrashList(){
+        trashList = Image.setImageList("Trash");
     }
     public void clearActionMode() {
         isActionMode = false;
@@ -131,7 +133,7 @@ public class TrashFragment extends Fragment {
         trashImageAdapter.notifyItemRemoved(index);
     }
 
-    public int findIndexInList(TrashImage obj){
+    public int findIndexInList(Image obj){
         int index = trashList.indexOf(obj);
         return index;
     }
@@ -144,18 +146,6 @@ public class TrashFragment extends Fragment {
         bundle.putSerializable("SelectedItems", (Serializable) selectionList);
         dialogReturnImage.setArguments(bundle);
         dialogReturnImage.show((manager), "Return Images");
-    }
-
-    public void copy(File src, File dst) throws IOException {
-        try (InputStream in = new FileInputStream(src)) {
-            try (OutputStream out = new FileOutputStream(dst)) {
-                byte[] buf = new byte[1024];
-                int len;
-                while ((len = in.read(buf)) > 0) {
-                    out.write(buf, 0, len);
-                }
-            }
-        }
     }
 
     @Override
@@ -187,14 +177,13 @@ public class TrashFragment extends Fragment {
             public void onClick(View view) {
                 for (int i = 0; i < selectionList.size(); i++){
                     try {
-                        copy(selectionList.get(i).getImage(), new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash/"+selectionList.get(i).getText()));
+                        Path.copy(selectionList.get(i).getImage(), new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/Trash/"+selectionList.get(i).getText()));
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                     int index = findIndexInList(selectionList.get(i));
                     remove(index);
                 }
-
                 updateToolbarText(0);
                 clearActionMode();
             }
@@ -216,13 +205,13 @@ public class TrashFragment extends Fragment {
             @Override
             public void onClick(View view, int position) {
                 Bundle bundle1 = new Bundle();
-                bundle1.putSerializable("imageList", (Serializable) trashList);
+                bundle1.putSerializable("trashList", (Serializable) Image.setImageList("Trash"));
                 bundle1.putInt("Position", position);
 
                 FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                 SlideshowDialogTrashFragment newFragment = SlideshowDialogTrashFragment.newInstance();
                 newFragment.setArguments(bundle1);
-                newFragment.show(ft, "slideshow");
+                newFragment.show(TrashFragment.this.getChildFragmentManager(),"trashShow");
             }
 
             @Override

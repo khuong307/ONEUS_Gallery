@@ -133,10 +133,9 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.image_in_album);
-            editBtn = (ImageButton) itemView.findViewById(R.id.editBtn);
-            addImgBtn = (ImageButton) itemView.findViewById(R.id.addImgBtn);
-            checkImgChosen = (CheckBox) itemView.findViewById(R.id.itemIMGChoose);
-
+            editBtn = itemView.findViewById(R.id.editBtn);
+            addImgBtn = itemView.findViewById(R.id.addImgBtn);
+            checkImgChosen = itemView.findViewById(R.id.itemIMGChoose);
             linearLayout = itemView.findViewById(R.id.listImages);
         }
     }

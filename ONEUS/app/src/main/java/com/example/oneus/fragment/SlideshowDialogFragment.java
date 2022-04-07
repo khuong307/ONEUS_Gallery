@@ -9,7 +9,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,7 +28,6 @@ import java.util.Date;
 import java.util.List;
 
 public class SlideshowDialogFragment extends DialogFragment {
-    private String TAG = SlideshowDialogFragment.class.getSimpleName();
     private List<Image> imageList;
     private ViewPager viewPager;
     private MyViewPagerAdapter myViewPagerAdapter;
@@ -47,12 +45,12 @@ public class SlideshowDialogFragment extends DialogFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_image_slider, container, false);
-        viewPager = (ViewPager) v.findViewById(R.id.viewpager);
-        lblCount = (TextView) v.findViewById(R.id.lbl_count);
-        lblTitle = (TextView) v.findViewById(R.id.title);
-        lblDate = (TextView) v.findViewById(R.id.date);
-        favBtn = (ImageButton) v.findViewById(R.id.favBtn);
-        replayBtn = (ImageButton) v.findViewById(R.id.btnReplay);
+        viewPager = v.findViewById(R.id.viewpager);
+        lblCount = v.findViewById(R.id.lbl_count);
+        lblTitle = v.findViewById(R.id.title);
+        lblDate = v.findViewById(R.id.date);
+        favBtn = v.findViewById(R.id.favBtn);
+        replayBtn = v.findViewById(R.id.btnReplay);
         replayBtn.setVisibility(View.GONE);
 
         imageList = (List<Image>) getArguments().getSerializable("imageList");
@@ -149,6 +147,8 @@ public class SlideshowDialogFragment extends DialogFragment {
         public MyViewPagerAdapter() {
         }
 
+
+
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
 
@@ -157,7 +157,6 @@ public class SlideshowDialogFragment extends DialogFragment {
 
             PhotoView imageViewPreview = view.findViewById(R.id.image_preview);
             Image image = imageList.get(position);
-
             Glide.with(getActivity()).load(image.getImage()).into(imageViewPreview);
             container.addView(view);
             return view;
