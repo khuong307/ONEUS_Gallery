@@ -3,6 +3,7 @@ package com.example.oneus.SubAdapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -77,11 +78,15 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                     int lastForwardSlash = URI.lastIndexOf("/");
                     int beginPath = findTheIndexOfNthOccurence(URI, "/", 4);
                     String currentPath = URI.substring(beginPath+1, lastForwardSlash);
+                    //File f = new File(URI);
+                    //f.delete();
                     Uri pictureURI = Uri.fromFile(new File(URI));
                     dsPhotoEditorIntent.setData(pictureURI);
+                    dsPhotoEditorIntent.putExtra("URI", URI);
                     int[] toolsToHide = {};
                     dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_TOOLS_TO_HIDE, toolsToHide);
                     dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_OUTPUT_DIRECTORY, currentPath);
+                    //dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_MAIN_BACKGROUND_COLOR, Color.parseColor("#FFFFFF"));
                     context.startActivity(dsPhotoEditorIntent);
                     // Khang
                 }

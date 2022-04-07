@@ -41,6 +41,10 @@ public class ListImageOfAlbum extends AppCompatActivity {
     int counter = 0;
     int number_del = 0;
 
+    // Khang
+    String pathName= "";
+    // Khang
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -73,6 +77,10 @@ public class ListImageOfAlbum extends AppCompatActivity {
         Bundle bundle = new Bundle();
         bundle = getIntent().getExtras();
         String albumName = bundle.get("AlbumName").toString();
+
+        // Khang
+        pathName = albumName;
+        // Khang
 //
         imageList = Image.setImageList(albumName);
         recyclerView = findViewById(R.id.recycle_view_list_image_of_album);
@@ -129,6 +137,16 @@ public class ListImageOfAlbum extends AppCompatActivity {
         });
 
     }
+
+    // Khang
+    @Override
+    protected void onResume() {
+        super.onResume();
+        imageList = Image.setImageList(pathName);
+        imageAdapter = new ImagesOfAlbumAdapter(this, imageList);
+        recyclerView.setAdapter(imageAdapter);
+    }
+    // Khang
 
     public void clearActionMode() {
         isActionMode = false;
