@@ -30,6 +30,11 @@ import com.example.oneus.subClasses.DialogAddImage;
 import com.example.oneus.subClasses.Image;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.List;
 
 public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdapter.MyViewHolder> {
@@ -78,11 +83,24 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                     int lastForwardSlash = URI.lastIndexOf("/");
                     int beginPath = findTheIndexOfNthOccurence(URI, "/", 4);
                     String currentPath = URI.substring(beginPath+1, lastForwardSlash);
-                    //File f = new File(URI);
-                    //f.delete();
-                    Uri pictureURI = Uri.fromFile(new File(URI));
+
+                    int pos = findTheIndexOfNthOccurence(URI, "/", 5);
+                    String firstPart = URI.substring(0, pos+1);
+                    String secondPart = URI.substring(lastForwardSlash);
+                    String trashPath = firstPart + "Trash" + secondPart;
+
+                    File sourceFile = new File(URI);
+                    File destinationFile = new File(trashPath);
+                    try{
+                        copy(sourceFile, destinationFile);
+                    } catch(IOException e){
+
+                    }
+                    sourceFile.delete();
+
+                    Uri pictureURI = Uri.fromFile(new File(trashPath));
                     dsPhotoEditorIntent.setData(pictureURI);
-                    dsPhotoEditorIntent.putExtra("URI", URI);
+                    //dsPhotoEditorIntent.putExtra("URI", URI);
                     int[] toolsToHide = {};
                     dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_TOOLS_TO_HIDE, toolsToHide);
                     dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_OUTPUT_DIRECTORY, currentPath);
@@ -117,6 +135,18 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
             count++;
         }
         return index;
+    }
+
+    public void copy(File src, File dst) throws IOException {
+        try (InputStream in = new FileInputStream(src)) {
+            try (OutputStream out = new FileOutputStream(dst)) {
+                byte[] buf = new byte[1024];
+                int len;
+                while ((len = in.read(buf)) > 0) {
+                    out.write(buf, 0, len);
+                }
+            }
+        }
     }
     // Khang
 
