@@ -87,7 +87,7 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                     int pos = findTheIndexOfNthOccurence(URI, "/", 5);
                     String firstPart = URI.substring(0, pos+1);
                     String secondPart = URI.substring(lastForwardSlash);
-                    String trashPath = firstPart + "Trash" + secondPart;
+                    String trashPath = firstPart + "Original" + secondPart;
 
                     File sourceFile = new File(URI);
                     File destinationFile = new File(trashPath);
