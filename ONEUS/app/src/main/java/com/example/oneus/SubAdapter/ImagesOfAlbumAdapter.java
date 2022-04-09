@@ -1,8 +1,10 @@
 package com.example.oneus.SubAdapter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -30,11 +32,6 @@ import com.example.oneus.subClasses.DialogAddImage;
 import com.example.oneus.subClasses.Image;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.List;
 
 public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdapter.MyViewHolder> {
@@ -87,18 +84,17 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                     int pos = findTheIndexOfNthOccurence(URI, "/", 5);
                     String firstPart = URI.substring(0, pos+1);
                     String secondPart = URI.substring(lastForwardSlash);
-                    String trashPath = firstPart + "Original" + secondPart;
+                    String originalPath = firstPart + "Original" + secondPart;
 
-                    File sourceFile = new File(URI);
-                    File destinationFile = new File(trashPath);
-                    try{
-                        copy(sourceFile, destinationFile);
-                    } catch(IOException e){
+                    String PREFNAME = "myPrefFile";
+                    SharedPreferences myPrefContainer = context.getSharedPreferences(PREFNAME, Activity.MODE_PRIVATE);
+                    SharedPreferences.Editor myPrefEditor = myPrefContainer.edit();
+                    myPrefEditor.putString("quantityImage", String.valueOf(mList.size()));
+                    myPrefEditor.putString("URISource", URI);
+                    myPrefEditor.putString("URIDestination", originalPath);
+                    myPrefEditor.commit();
 
-                    }
-                    sourceFile.delete();
-
-                    Uri pictureURI = Uri.fromFile(new File(trashPath));
+                    Uri pictureURI = Uri.fromFile(new File(URI));
                     dsPhotoEditorIntent.setData(pictureURI);
                     //dsPhotoEditorIntent.putExtra("URI", URI);
                     int[] toolsToHide = {};
@@ -135,18 +131,6 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
             count++;
         }
         return index;
-    }
-
-    public void copy(File src, File dst) throws IOException {
-        try (InputStream in = new FileInputStream(src)) {
-            try (OutputStream out = new FileOutputStream(dst)) {
-                byte[] buf = new byte[1024];
-                int len;
-                while ((len = in.read(buf)) > 0) {
-                    out.write(buf, 0, len);
-                }
-            }
-        }
     }
     // Khang
 

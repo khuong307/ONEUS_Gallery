@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -21,6 +23,12 @@ import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 import com.example.oneus.fragment.SlideshowDialogFragment;
 import com.example.oneus.subClasses.Image;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
@@ -143,8 +151,47 @@ public class ListImageOfAlbum extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         imageList = Image.setImageList(pathName);
+
+        String PREFNAME = "myPrefFile";
+        SharedPreferences myPrefContainer = getSharedPreferences(PREFNAME, Activity.MODE_PRIVATE);
+        String quantity = myPrefContainer.getString("quantityImage", "0");
+
+        if (!quantity.equals("NULL")){
+            if (imageList.size() != Integer.parseInt(quantity)){
+                String URISource = myPrefContainer.getString("URISource", "NULL");
+                String URIDestination = myPrefContainer.getString("URIDestination", "NULL");
+                File sourceFile = new File(URISource);
+                File destinationFile = new File(URIDestination);
+                try{
+                    copy(sourceFile, destinationFile);
+                } catch(IOException e){
+
+                }
+                sourceFile.delete();
+            }
+        }
+
+        SharedPreferences.Editor myPrefEditor = myPrefContainer.edit();
+        myPrefEditor.putString("quantityImage", "NULL");
+        myPrefEditor.putString("URISource", "NULL");
+        myPrefEditor.putString("URIDestination", "NULL");
+        myPrefEditor.commit();
+
+        imageList = Image.setImageList(pathName);
         imageAdapter = new ImagesOfAlbumAdapter(this, imageList);
         recyclerView.setAdapter(imageAdapter);
+    }
+
+    public void copy(File src, File dst) throws IOException {
+        try (InputStream in = new FileInputStream(src)) {
+            try (OutputStream out = new FileOutputStream(dst)) {
+                byte[] buf = new byte[1024];
+                int len;
+                while ((len = in.read(buf)) > 0) {
+                    out.write(buf, 0, len);
+                }
+            }
+        }
     }
     // Khang
 
