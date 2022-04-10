@@ -160,6 +160,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
             if (imageList.size() != Integer.parseInt(quantity)){
                 String URISource = myPrefContainer.getString("URISource", "NULL");
                 String URIDestination = myPrefContainer.getString("URIDestination", "NULL");
+
                 File sourceFile = new File(URISource);
                 File destinationFile = new File(URIDestination);
                 try{
@@ -168,6 +169,14 @@ public class ListImageOfAlbum extends AppCompatActivity {
 
                 }
                 sourceFile.delete();
+
+                for (int i = 0; i < imageList.size(); i++){
+                    String name = imageList.get(i).getImage().getName();
+                    if (name.contains("photo_editor_ds")){
+                        File tmp = imageList.get(i).getImage();
+                        tmp.renameTo(sourceFile);
+                    }
+                }
             }
         }
 

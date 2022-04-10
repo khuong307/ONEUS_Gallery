@@ -94,6 +94,9 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                     myPrefEditor.putString("URIDestination", originalPath);
                     myPrefEditor.commit();
 
+//                    File t = new File(URI);
+//                    t.delete();
+
                     Uri pictureURI = Uri.fromFile(new File(URI));
                     dsPhotoEditorIntent.setData(pictureURI);
                     //dsPhotoEditorIntent.putExtra("URI", URI);
