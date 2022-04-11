@@ -4,10 +4,14 @@ import android.os.Environment;
 import android.util.Log;
 
 import java.io.File;
+import java.io.FileFilter;
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
-public class ImageAlbum {
+public class ImageAlbum implements Serializable {
     String albumName;
     File thumbnail;
 
@@ -47,8 +51,15 @@ public class ImageAlbum {
             for (int i = 0; i < folder.length; i++){
                 if(folder[i].isDirectory() == true && folder[i].getName().compareTo("Trash") != 0 && folder[i].getName().compareTo("Favorite") != 0) {
                     File[] images = folder[i].listFiles();
-                    if (images.length != 0)
+                    if (images.length != 0){
+                        Arrays.sort(images, new Comparator<File>() {
+                            @Override
+                            public int compare(File f1, File f2) {
+                                return -Long.compare(f1.lastModified(), f2.lastModified());
+                            }
+                        });
                         mList.add(new ImageAlbum(folder[i].getName(),images[0]));
+                    }
                 }
             }
         }

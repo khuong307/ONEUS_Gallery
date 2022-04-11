@@ -29,6 +29,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="25dp"
             android:text="Edit Album"
+            android:fontFamily="@font/icielbccubano"
             android:textSize="30dp"/>
     </LinearLayout>
 
@@ -56,6 +57,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="25dp"
             android:text="Move album to"
+            android:fontFamily="@font/icielbccubano"
             android:textSize="30dp"/>
     </LinearLayout>
 
@@ -83,6 +85,7 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="25dp"
             android:text="Delete album"
+            android:fontFamily="@font/icielbccubano"
             android:textSize="30dp"/>
     </LinearLayout>
 
