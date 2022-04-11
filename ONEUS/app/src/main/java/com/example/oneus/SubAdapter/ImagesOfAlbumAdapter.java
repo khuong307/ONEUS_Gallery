@@ -32,6 +32,8 @@ import com.example.oneus.subClasses.DialogAddImage;
 import com.example.oneus.subClasses.Image;
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdapter.MyViewHolder> {
@@ -83,8 +85,11 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
 
                     int pos = findTheIndexOfNthOccurence(URI, "/", 5);
                     String firstPart = URI.substring(0, pos+1);
-                    String secondPart = URI.substring(lastForwardSlash);
-                    String originalPath = firstPart + "Original" + secondPart;
+                    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+                    LocalDateTime now = LocalDateTime.now();
+                    String currentTime = dtf.format(now);
+                    currentTime = currentTime.replaceAll("\\W", "");
+                    String originalPath = firstPart + "Original/" + currentTime + ".png";
 
                     String PREFNAME = "myPrefFile";
                     SharedPreferences myPrefContainer = context.getSharedPreferences(PREFNAME, Activity.MODE_PRIVATE);
