@@ -2,6 +2,7 @@ package com.example.oneus.SubAdapter;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -27,6 +28,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.MainActivity;
 import com.example.oneus.R;
+import com.example.oneus.subClasses.DialogDeleteAlbum;
 import com.example.oneus.subClasses.DialogModifyAlbum;
 import com.example.oneus.subClasses.DialogNewAlbum;
 import com.example.oneus.subClasses.ImageAlbum;
@@ -117,7 +119,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         viewDialog.findViewById(R.id.layoutMoveAlbum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,albumName,Toast.LENGTH_SHORT).show();
+                Toast.makeText(context,"Move album",Toast.LENGTH_SHORT).show();
                 bottomSheetDialog.dismiss();
             }
         });
@@ -125,7 +127,19 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         viewDialog.findViewById(R.id.layoutDeleteAlbum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,"Delete album",Toast.LENGTH_SHORT).show();
+//                AlertDialog dialog = new AlertDialog.Builder(context).
+//                        setTitle("Do you want to delete this album").setMessage(albumName+" will be moved to Trash").
+//                        setPositiveButton("OK",null).
+//                        setNegativeButton("Cancel",null).show();
+//                Button positiveButton=dialog.getButton(AlertDialog.BUTTON_POSITIVE);
+//                positiveButton.setOnClickListener(new View.OnClickListener() {
+//                    @Override
+//                    public void onClick(View view) {
+//                        Toast.makeText(context,albumName,Toast.LENGTH_SHORT).show();
+//                        dialog.dismiss();
+//                    }
+//                });
+                openDeleteDialog(albumName);
                 bottomSheetDialog.dismiss();
             }
         });
@@ -189,5 +203,12 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         DialogModifyAlbum dialogModifyAlbum = new DialogModifyAlbum(albumName);
         FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
         dialogModifyAlbum.show((manager), "Modify Album Dialog");
+    }
+
+    // Minh
+    public void openDeleteDialog(String albumName){
+        DialogDeleteAlbum dialogDeleteAlbum = new DialogDeleteAlbum(albumName);
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        dialogDeleteAlbum.show((manager), "Delete Album Dialog");
     }
 }
