@@ -1,8 +1,10 @@
 package com.example.oneus.SubAdapter;
 
 import android.annotation.SuppressLint;
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.GestureDetector;
@@ -14,19 +16,23 @@ import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.oneus.EditActivity;
+import com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity;
+import com.dsphotoeditor.sdk.utils.DsPhotoEditorConstants;
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
 import com.example.oneus.subClasses.Dialog.DialogAddImage;
 import com.example.oneus.subClasses.Image;
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdapter.MyViewHolder> {
@@ -91,11 +97,34 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
             holder.editBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    // Khang
-                    Intent intent = new Intent(context, EditActivity.class);
+                    Intent dsPhotoEditorIntent = new Intent(context, DsPhotoEditorActivity.class);
                     String URI = String.valueOf(mList.get(position).getImage());
-                    intent.putExtra("URI", URI);
-                    context.startActivity(intent);
+                    int lastForwardSlash = URI.lastIndexOf("/");
+                    int beginPath = findTheIndexOfNthOccurence(URI, "/", 4);
+                    String currentPath = URI.substring(beginPath+1, lastForwardSlash);
+
+                    int pos = findTheIndexOfNthOccurence(URI, "/", 5);
+                    String firstPart = URI.substring(0, pos+1);
+                    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+                    LocalDateTime now = LocalDateTime.now();
+                    String currentTime = dtf.format(now);
+                    currentTime = currentTime.replaceAll("\\W", "");
+                    String originalPath = firstPart + "Original/" + currentTime + ".png";
+
+                    String PREFNAME = "myPrefFile";
+                    SharedPreferences myPrefContainer = context.getSharedPreferences(PREFNAME, Activity.MODE_PRIVATE);
+                    SharedPreferences.Editor myPrefEditor = myPrefContainer.edit();
+                    myPrefEditor.putString("quantityImage", String.valueOf(mList.size()));
+                    myPrefEditor.putString("URISource", URI);
+                    myPrefEditor.putString("URIDestination", originalPath);
+                    myPrefEditor.commit();
+
+                    Uri pictureURI = Uri.fromFile(new File(URI));
+                    dsPhotoEditorIntent.setData(pictureURI);
+                    int[] toolsToHide = {};
+                    dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_TOOLS_TO_HIDE, toolsToHide);
+                    dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_OUTPUT_DIRECTORY, currentPath);
+                    context.startActivity(dsPhotoEditorIntent);
                 }
             });
 
@@ -118,6 +147,18 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
     @Override
     public long getItemId(int position) {
         return position;
+    }
+
+    public int findTheIndexOfNthOccurence(String str, String sub, int n){
+        int count = 1;
+        int index = -1;
+        while (true){
+            index = str.indexOf(sub, index+1);
+            if (index == -1 || count == n)
+                break;
+            count++;
+        }
+        return index;
     }
 
 

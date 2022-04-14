@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity{
             createDirectory(this.App_Name);
             createSubsDirectory("Favorite");
             createSubsDirectory("Trash");
+            createSubsDirectory("Original");
         }else{
             askPermission();
         }

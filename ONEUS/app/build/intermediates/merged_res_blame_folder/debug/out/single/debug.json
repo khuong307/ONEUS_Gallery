@@ -240,12 +240,12 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\layout_bottom_sheet_info.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_circle_back_brown.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_circle_back_brown.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_fav_30.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_fav_30.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_circle_back_brown.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_circle_back_brown.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_double_click_icon.png.flat",

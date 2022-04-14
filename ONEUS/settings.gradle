@@ -11,6 +11,7 @@ dependencyResolutionManagement {
         maven { url 'https://jitpack.io' }
         google()
         mavenCentral()
+        flatDir {dirs 'libs'}
     }
 }
 rootProject.name = "ONEUS"

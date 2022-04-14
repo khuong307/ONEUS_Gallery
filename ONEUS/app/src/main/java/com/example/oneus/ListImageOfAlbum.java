@@ -8,7 +8,9 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -56,8 +58,7 @@ public class ListImageOfAlbum extends AppCompatActivity {
     public void setAlbumName(){
         Bundle bundle = new Bundle();
         bundle = getIntent().getExtras();
-        String albumName = bundle.get("AlbumName").toString();
-        this.albumName = albumName;
+        this.albumName = bundle.get("AlbumName").toString();
     }
     public String getAlbumName(){
         return this.albumName;
@@ -333,5 +334,50 @@ public class ListImageOfAlbum extends AppCompatActivity {
         bundle.putString("ParentFolder", imageList.get(0).getImage().getParent());
         dialogDeleteAlbum.setArguments(bundle);
         dialogDeleteAlbum.show((manager), "Delete Album");
+    }
+
+    // Khang
+    @Override
+    protected void onResume() {
+        super.onResume();
+        imageList = Image.setImageList(albumName);
+
+        String PREFNAME = "myPrefFile";
+        SharedPreferences myPrefContainer = getSharedPreferences(PREFNAME, Activity.MODE_PRIVATE);
+        String quantity = myPrefContainer.getString("quantityImage", "0");
+
+        if (!quantity.equals("NULL")){
+            if (imageList.size() != Integer.parseInt(quantity)){
+                String URISource = myPrefContainer.getString("URISource", "NULL");
+                String URIDestination = myPrefContainer.getString("URIDestination", "NULL");
+
+                File sourceFile = new File(URISource);
+                File destinationFile = new File(URIDestination);
+                try{
+                    Path.copy(sourceFile, destinationFile);
+                } catch(IOException e){
+
+                }
+                sourceFile.delete();
+
+                for (int i = 0; i < imageList.size(); i++){
+                    String name = imageList.get(i).getImage().getName();
+                    if (name.contains("photo_editor_ds")){
+                        File tmp = imageList.get(i).getImage();
+                        tmp.renameTo(sourceFile);
+                    }
+                }
+            }
+        }
+
+        SharedPreferences.Editor myPrefEditor = myPrefContainer.edit();
+        myPrefEditor.putString("quantityImage", "NULL");
+        myPrefEditor.putString("URISource", "NULL");
+        myPrefEditor.putString("URIDestination", "NULL");
+        myPrefEditor.commit();
+
+        imageList = Image.setImageList(albumName);
+        imageAdapter = new ImagesOfAlbumAdapter(this, imageList);
+        recyclerView.setAdapter(imageAdapter);
     }
 }
