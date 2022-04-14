@@ -1,37 +1,29 @@
 package com.example.oneus.SubAdapter;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.ListImageOfAlbum;
-import com.example.oneus.MainActivity;
 import com.example.oneus.R;
-import com.example.oneus.subClasses.DialogNewAlbum;
+import com.example.oneus.subClasses.Dialog.DialogNewAlbum;
 import com.example.oneus.subClasses.ImageAlbum;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder> {

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/listAlbum"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="20dp"
+    android:paddingLeft="20dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/album_thumbnail"
+                android:background="@null"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/test"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/RoundImage"
+                tools:ignore="MissingConstraints">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/album_thumbnail1"
+                android:layout_width="150dp"
+                android:background="@null"
+                android:layout_height="150dp"
+                android:src="@drawable/test"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintTop_toTopOf="@id/album_thumbnail"
+                app:layout_constraintStart_toStartOf="@id/album_thumbnail"
+                app:layout_constraintEnd_toEndOf="@id/album_thumbnail"
+                app:layout_constraintBottom_toBottomOf="@id/album_thumbnail"
+                app:shapeAppearanceOverlay="@style/RoundImage"
+                tools:ignore="MissingConstraints">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/album_thumbnail2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/test"
+                android:scaleType="centerCrop"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintTop_toTopOf="@id/album_thumbnail1"
+                app:layout_constraintStart_toStartOf="@id/album_thumbnail1"
+                app:layout_constraintEnd_toEndOf="@id/album_thumbnail1"
+                app:layout_constraintBottom_toBottomOf="@id/album_thumbnail1"
+                app:shapeAppearanceOverlay="@style/RoundImage"
+                tools:ignore="MissingConstraints">
+            </com.google.android.material.imageview.ShapeableImageView>
+
+
+            <TextView
+                android:layout_margin="10dp"
+                android:id="@+id/quantity_image"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/circle_textview"
+                android:fontFamily="@font/icielbccubano"
+                android:gravity="center"
+                android:text="10"
+                android:textColor="@color/red_deep"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                app:layout_constraintRight_toRightOf="@id/album_thumbnail2"
+                app:layout_constraintBottom_toBottomOf="@id/album_thumbnail2"
+                tools:ignore="MissingConstraints"></TextView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+            android:id="@+id/albumName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Name"
+            android:fontFamily="@font/icielbccubano"
+            android:textSize="20dp"
+            android:textColor="@color/black">
+        </TextView>
+
+    </LinearLayout>
+</LinearLayout>

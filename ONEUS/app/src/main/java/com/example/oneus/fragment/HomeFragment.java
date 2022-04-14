@@ -1,18 +1,11 @@
 package com.example.oneus.fragment;
 
-import android.app.AlertDialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.os.Environment;
 import android.os.Handler;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -21,11 +14,8 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.example.oneus.R;
 import com.example.oneus.SubAdapter.AlbumAdapter;
-import com.example.oneus.subClasses.DialogNewAlbum;
 import com.example.oneus.subClasses.ImageAlbum;
 
-import java.io.File;
-import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment{
@@ -35,7 +25,6 @@ public class HomeFragment extends Fragment{
     AlbumAdapter albumAdapter;
     SwipeRefreshLayout swipeRefreshLayout;
     ImageButton addBtn;
-    DialogNewAlbum dialogNewAlbum;
 
 
     public HomeFragment() {
@@ -79,8 +68,6 @@ public class HomeFragment extends Fragment{
                 }, 2000);
             }
         });
-
-
         return view;
     }
 }

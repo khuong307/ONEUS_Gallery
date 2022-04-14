@@ -45,7 +45,24 @@ public class ImageAlbum {
         if (directory.exists()){
             File[] folder = directory.listFiles();
             for (int i = 0; i < folder.length; i++){
-                if(folder[i].isDirectory() == true){
+                if(folder[i].isDirectory() == true && folder[i].getName().compareTo("Trash") != 0 && folder[i].getName().compareTo("Favorite") != 0) {
+                    File[] images = folder[i].listFiles();
+                    if (images.length != 0)
+                        mList.add(new ImageAlbum(folder[i].getName(),images[0]));
+                }
+            }
+        }
+        return mList;
+    }
+
+    public static List<ImageAlbum> setAlbumListExcept(String folderName){
+        List<ImageAlbum> mList = new ArrayList<>();
+        String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS";
+        File directory = new File (path);
+        if (directory.exists()){
+            File[] folder = directory.listFiles();
+            for (int i = 0; i < folder.length; i++){
+                if(folder[i].isDirectory() == true && folder[i].getName().compareTo(folderName) != 0 && folder[i].getName().compareTo("Trash") != 0 && folder[i].getName().compareTo("Favorite") != 0){
                     File[] images = folder[i].listFiles();
                     if (images.length != 0)
                         mList.add(new ImageAlbum(folder[i].getName(),images[0]));

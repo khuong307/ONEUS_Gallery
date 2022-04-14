@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: C./Users/user/Desktop/ONEUS_Gallery/ONEUS/app/libs/ds-photo-editor-sdk.aar">
+    <ANNOTATIONS>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3bdc9e67d3f3f585c72c33802773cddc/transformed/jetified-ds-photo-editor-sdk/annotations.zip!/" />
+    </ANNOTATIONS>
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/3bdc9e67d3f3f585c72c33802773cddc/transformed/jetified-ds-photo-editor-sdk/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3bdc9e67d3f3f585c72c33802773cddc/transformed/jetified-ds-photo-editor-sdk/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/3bdc9e67d3f3f585c72c33802773cddc/transformed/jetified-ds-photo-editor-sdk/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

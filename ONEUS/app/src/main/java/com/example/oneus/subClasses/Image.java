@@ -43,4 +43,24 @@ public class Image {
         }
         return imageList;
     }
+
+    public boolean isInFavorite(){
+        List<Image> fav = setImageList("Favorite");
+        for (int i = 0; i < fav.size(); i++){
+            if (fav.get(i).getImage().getName().compareTo(this.getImage().getName()) == 0)
+                return true;
+        }
+
+        return false;
+    }
+
+    public int indexInFavorite(){
+        List<Image> fav = setImageList("Favorite");
+        for (int i = 0; i < fav.size(); i++){
+            if (fav.get(i).getImage().getName().compareTo(this.getImage().getName()) == 0)
+                return i;
+        }
+
+        return -1;
+    }
 }
