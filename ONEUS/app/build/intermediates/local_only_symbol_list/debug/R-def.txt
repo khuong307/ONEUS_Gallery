@@ -46,6 +46,7 @@ drawable icon_favpic
 drawable icon_flip
 drawable icon_green_back
 drawable icon_home
+drawable icon_home_screen
 drawable icon_image
 drawable icon_info_24
 drawable icon_move
@@ -132,6 +133,7 @@ id recycle_view_list_image_of_album
 id recycle_view_trash
 id recycler_images_chosen
 id removeBtn
+id screenBtn
 id spinner_albumList
 id spinner_animation
 id spinner_factor
@@ -163,6 +165,7 @@ layout custom_favorite_image
 layout custom_images_in_album
 layout custom_multi_images
 layout custom_trash_image
+layout dialog_add_image_bottom_layout
 layout dialog_del_album
 layout dialog_delete_album_layout
 layout dialog_enter_time

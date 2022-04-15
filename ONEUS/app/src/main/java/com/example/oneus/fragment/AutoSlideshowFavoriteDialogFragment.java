@@ -37,6 +37,7 @@ public class AutoSlideshowFavoriteDialogFragment extends DialogFragment {
     private double factor;
     private String animation;
     private ImageButton favBtn;
+    private ImageButton screenBtn;
     private ImageButton replayBtn;
 
 
@@ -52,7 +53,9 @@ public class AutoSlideshowFavoriteDialogFragment extends DialogFragment {
         viewPager = (ViewPager) v.findViewById(R.id.viewpager);
         replayBtn = v.findViewById(R.id.btnReplay);
         favBtn = v.findViewById(R.id.favBtn);
+        screenBtn = v.findViewById(R.id.screenBtn);
         favBtn.setVisibility(View.GONE);
+        screenBtn.setVisibility(View.GONE);
         replayBtn.setVisibility(View.GONE);
         replayBtn.setOnClickListener(new View.OnClickListener() {
             @Override

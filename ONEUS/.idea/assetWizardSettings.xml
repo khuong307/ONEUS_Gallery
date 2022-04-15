@@ -18,7 +18,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/favorite/baseline_favorite_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/add_to_home_screen/baseline_add_to_home_screen_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +28,7 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="797575" />
-                            <entry key="outputName" value="icon_fav_30" />
+                            <entry key="outputName" value="icon_home_screen" />
                             <entry key="sourceFile" value="C:\Users\user\Desktop\ONEUS_Gallery\ONEUS" />
                           </map>
                         </option>

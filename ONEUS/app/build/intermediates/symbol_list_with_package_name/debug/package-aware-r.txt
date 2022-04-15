@@ -2722,6 +2722,7 @@ drawable icon_favpic
 drawable icon_flip
 drawable icon_green_back
 drawable icon_home
+drawable icon_home_screen
 drawable icon_image
 drawable icon_info_24
 drawable icon_move
@@ -3391,6 +3392,7 @@ id save_overlay_view
 id sawtooth
 id scale
 id screen
+id screenBtn
 id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
@@ -3659,6 +3661,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout dialog_add_image_bottom_layout
 layout dialog_del_album
 layout dialog_delete_album_layout
 layout dialog_ds_photo_editor_text_sticker

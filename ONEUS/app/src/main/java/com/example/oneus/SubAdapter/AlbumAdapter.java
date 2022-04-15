@@ -23,6 +23,8 @@ import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
 import com.example.oneus.fragment.DialogDeleteAlbum;
 import com.example.oneus.fragment.DialogModifyAlbum;
+import com.example.oneus.subClasses.Dialog.DialogAddImage;
+import com.example.oneus.subClasses.Dialog.DialogAddImageBottom;
 import com.example.oneus.subClasses.Dialog.DialogNewAlbum;
 import com.example.oneus.subClasses.ImageAlbum;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
@@ -107,7 +109,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         viewDialog.findViewById(R.id.layoutMoveAlbum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(context,"Move album",Toast.LENGTH_SHORT).show();
+                openDialogAddImage(albumName);
                 bottomSheetDialog.dismiss();
             }
         });
@@ -172,6 +174,15 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         DialogNewAlbum dialogNewAlbum = new DialogNewAlbum();
         FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
         dialogNewAlbum.show((manager), "New Album Dialog");
+    }
+
+    public void openDialogAddImage(String albumName){
+        DialogAddImageBottom dialogAddImageBottom = new DialogAddImageBottom();
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        Bundle data = new Bundle();
+        data.putString("AlbumName", albumName);
+        dialogAddImageBottom.setArguments(data);
+        dialogAddImageBottom.show((manager), "Add Image Dialog");
     }
 
     // Minh

@@ -100,6 +100,10 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\album_spinner_row.xml"
     },
     {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_home_screen.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_home_screen.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -354,6 +358,10 @@
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_favorite.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_favorite.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_add_image_bottom_layout.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_add_image_bottom_layout.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_favorite.xml.flat",

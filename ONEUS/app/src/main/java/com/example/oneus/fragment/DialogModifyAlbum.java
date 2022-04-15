@@ -92,6 +92,8 @@ public class DialogModifyAlbum extends DialogFragment {
                                 AlbumAdapter albumAdapter = new AlbumAdapter(getContext(), ImageAlbum.setAlbumList());
                                 recyclerView.setAdapter(albumAdapter);
                                 dialog.dismiss();
+                            }else{
+                                Toast.makeText(getActivity(), "This folder already existed!", Toast.LENGTH_SHORT).show();
                             }
                         }
                     }
@@ -107,7 +109,7 @@ public class DialogModifyAlbum extends DialogFragment {
         if (oldFolder.exists()){
             return oldFolder.renameTo(folder);
         }else{
-            Toast.makeText(getActivity(), "Can not rename album!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getActivity(), "This folder is already existed!", Toast.LENGTH_SHORT).show();
             return false;
         }
     }

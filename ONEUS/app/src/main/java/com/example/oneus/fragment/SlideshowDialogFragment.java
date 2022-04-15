@@ -1,6 +1,9 @@
 package com.example.oneus.fragment;
 
+import android.app.WallpaperManager;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
@@ -34,6 +37,7 @@ public class SlideshowDialogFragment extends DialogFragment {
     private TextView lblCount, lblTitle, lblDate;
     private ImageButton favBtn;
     private ImageButton replayBtn;
+    private ImageButton screenBtn;
     private int selectedPosition = 0;
 
     static public SlideshowDialogFragment newInstance() {
@@ -50,6 +54,7 @@ public class SlideshowDialogFragment extends DialogFragment {
         lblTitle = v.findViewById(R.id.title);
         lblDate = v.findViewById(R.id.date);
         favBtn = v.findViewById(R.id.favBtn);
+        screenBtn = v.findViewById(R.id.screenBtn);
         replayBtn = v.findViewById(R.id.btnReplay);
         replayBtn.setVisibility(View.GONE);
 
@@ -61,6 +66,8 @@ public class SlideshowDialogFragment extends DialogFragment {
         viewPager.setAdapter(myViewPagerAdapter);
         viewPager.addOnPageChangeListener(viewPagerPageChangeListener);
         setCurrentItem(selectedPosition);
+
+
         return v;
     }
 
@@ -127,6 +134,21 @@ public class SlideshowDialogFragment extends DialogFragment {
                 }
                 toast.setGravity(Gravity.CENTER, 0, 0);
                 toast.show();
+            }
+        });
+
+        screenBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                File currentImage = image.getImage();
+                        Bitmap bitmap = BitmapFactory.decodeFile(currentImage.getPath());
+                WallpaperManager wpm = WallpaperManager.getInstance(getActivity().getApplicationContext());
+                try {
+                    wpm.setBitmap(bitmap);
+                    Toast.makeText(getActivity(), "Set wallpaper successfully!", Toast.LENGTH_SHORT).show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         });
     }

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,15 +9,35 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@android:color/black" />
-    <ImageButton
-        android:layout_margin="20dp"
-        android:id="@+id/favBtn"
-        android:layout_width="40dp"
-        android:backgroundTint="@color/white"
-        android:background="@drawable/circle"
-        android:src="@drawable/icon_fav_30"
-        android:layout_height="40dp">
-    </ImageButton>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_margin="20dp"
+            android:id="@+id/favBtn"
+            android:layout_width="40dp"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/circle"
+            android:src="@drawable/icon_fav_30"
+            android:layout_height="40dp">
+        </ImageButton>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <ImageButton
+            android:layout_margin="20dp"
+            android:id="@+id/screenBtn"
+            android:layout_width="40dp"
+            android:foregroundGravity="right"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/circle"
+            android:src="@drawable/icon_home_screen"
+            android:layout_height="40dp"
+            app:tint="@color/black">
+        </ImageButton>
+    </LinearLayout>
 
     <TextView
         android:id="@+id/lbl_count"

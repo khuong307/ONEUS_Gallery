@@ -2721,6 +2721,7 @@ int drawable icon_favpic 0x7f070132
 int drawable icon_flip 0x7f070133
 int drawable icon_green_back 0x7f070134
 int drawable icon_home 0x7f070135
+int drawable icon_home_screen 0x7f070177
 int drawable icon_image 0x7f070136
 int drawable icon_info_24 0x7f070137
 int drawable icon_move 0x7f070138
@@ -3390,6 +3391,7 @@ int id save_overlay_view 0x7f090258
 int id sawtooth 0x7f090259
 int id scale 0x7f09025a
 int id screen 0x7f09025b
+int id screenBtn 0x7f0902ee
 int id scroll 0x7f09025c
 int id scrollIndicatorDown 0x7f09025d
 int id scrollIndicatorUp 0x7f09025e
@@ -3658,6 +3660,7 @@ int layout design_navigation_menu 0x7f0c003f
 int layout design_navigation_menu_item 0x7f0c0040
 int layout design_text_input_end_icon 0x7f0c0041
 int layout design_text_input_start_icon 0x7f0c0042
+int layout dialog_add_image_bottom_layout 0x7f0c00ac
 int layout dialog_del_album 0x7f0c0043
 int layout dialog_delete_album_layout 0x7f0c0044
 int layout dialog_ds_photo_editor_text_sticker 0x7f0c0045

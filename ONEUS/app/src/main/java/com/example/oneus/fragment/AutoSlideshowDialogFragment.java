@@ -38,6 +38,7 @@ public class AutoSlideshowDialogFragment extends DialogFragment {
     private String animation;
     private ImageButton replayBtn;
     private ImageButton favBtn;
+    private ImageButton screenBtn;
 
 
     static public AutoSlideshowDialogFragment newInstance() {
@@ -52,7 +53,9 @@ public class AutoSlideshowDialogFragment extends DialogFragment {
         viewPager = (ViewPager) v.findViewById(R.id.viewpager);
         replayBtn = v.findViewById(R.id.btnReplay);
         favBtn = v.findViewById(R.id.favBtn);
+        screenBtn = v.findViewById(R.id.screenBtn);
         favBtn.setVisibility(View.GONE);
+        screenBtn.setVisibility(View.GONE);
         replayBtn.setVisibility(View.GONE);
 
         replayBtn.setOnClickListener(new View.OnClickListener() {
