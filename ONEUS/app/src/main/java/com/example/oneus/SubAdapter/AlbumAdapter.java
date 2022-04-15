@@ -12,6 +12,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +21,11 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
+import com.example.oneus.fragment.DialogDeleteAlbum;
+import com.example.oneus.fragment.DialogModifyAlbum;
 import com.example.oneus.subClasses.Dialog.DialogNewAlbum;
 import com.example.oneus.subClasses.ImageAlbum;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.io.File;
 import java.util.List;
@@ -73,10 +77,51 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
                 }
             });
 
+            holder.linearLayout.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    openBottomSheetDialog(mList.get(position).getAlbum());
+                    return true;
+                }
+            });
+
             //set transparent 2 thumbnails.
             holder.thumbnail.setImageAlpha(128);
             holder.thumbnail1.setImageAlpha(128);
         }
+    }
+
+    public void openBottomSheetDialog(String albumName) {
+        View viewDialog= LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.bottom_sheet_album,null);
+
+        BottomSheetDialog bottomSheetDialog= new BottomSheetDialog(context);
+
+        viewDialog.findViewById(R.id.layoutEditAlbum).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openModifyDialog(albumName);
+                bottomSheetDialog.dismiss();
+            }
+        });
+
+        viewDialog.findViewById(R.id.layoutMoveAlbum).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context,"Move album",Toast.LENGTH_SHORT).show();
+                bottomSheetDialog.dismiss();
+            }
+        });
+
+        viewDialog.findViewById(R.id.layoutDeleteAlbum).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDeleteDialog(albumName);
+                bottomSheetDialog.dismiss();
+            }
+        });
+
+        bottomSheetDialog.setContentView(viewDialog);
+        bottomSheetDialog.show();
     }
 
     private void onClickViewListImage(String albumName){
@@ -127,5 +172,19 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         DialogNewAlbum dialogNewAlbum = new DialogNewAlbum();
         FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
         dialogNewAlbum.show((manager), "New Album Dialog");
+    }
+
+    // Minh
+    public void openModifyDialog(String albumName){
+        DialogModifyAlbum dialogModifyAlbum = new DialogModifyAlbum(albumName);
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        dialogModifyAlbum.show((manager), "Modify Album Dialog");
+    }
+
+    // Minh
+    public void openDeleteDialog(String albumName){
+        DialogDeleteAlbum dialogDeleteAlbum = new DialogDeleteAlbum(albumName);
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        dialogDeleteAlbum.show((manager), "Delete Album Dialog");
     }
 }

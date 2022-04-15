@@ -2903,6 +2903,7 @@ id beginning
 id bestChoice
 id blocking
 id bottom
+id bottomSheetAlbum
 id bottomSheetInfo
 id bottom_edit_nav
 id bottom_nav
@@ -2931,6 +2932,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id changeAlbumName
 id checkbox
 id checked
 id chip
@@ -2971,7 +2973,9 @@ id decelerate
 id decelerateAndComplete
 id decor_content_parent
 id default_activity_button
+id delAlbumName
 id delBtn
+id delThumbnail
 id deltaRelative
 id dependency_ordering
 id design_bottom_sheet
@@ -3245,6 +3249,9 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutDeleteAlbum
+id layoutEditAlbum
+id layoutMoveAlbum
 id lbl_count
 id left
 id leftToRight
@@ -3473,6 +3480,7 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -3502,6 +3510,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txvDeleteAlbum
 id unchecked
 id uniform
 id unlabeled
@@ -3628,6 +3637,7 @@ layout add_image_button
 layout add_image_dialog_layout
 layout album_spinner_row
 layout animation_spinner_row
+layout bottom_sheet_album
 layout custom_album_image
 layout custom_dialog
 layout custom_favorite_image
@@ -3650,9 +3660,11 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_del_album
+layout dialog_delete_album_layout
 layout dialog_ds_photo_editor_text_sticker
 layout dialog_enter_time
 layout dialog_layout
+layout dialog_modify_album_layout
 layout factor_spinner_row
 layout fragment_bright
 layout fragment_ds_photo_editor_filters
