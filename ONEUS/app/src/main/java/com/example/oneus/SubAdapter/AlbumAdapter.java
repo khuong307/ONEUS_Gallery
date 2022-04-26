@@ -3,8 +3,12 @@ package com.example.oneus.SubAdapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +16,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,8 +25,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
+import com.example.oneus.fragment.DialogCreatePassword;
+import com.example.oneus.fragment.DialogDeleteAlbum;
+import com.example.oneus.fragment.DialogEnterPassword;
+import com.example.oneus.fragment.DialogModifyAlbum;
+import com.example.oneus.subClasses.Dialog.DialogAddImage;
+import com.example.oneus.subClasses.Dialog.DialogAddImageBottom;
 import com.example.oneus.subClasses.Dialog.DialogNewAlbum;
 import com.example.oneus.subClasses.ImageAlbum;
+import com.google.android.material.bottomsheet.BottomSheetDialog;
 
 import java.io.File;
 import java.util.List;
@@ -73,18 +85,99 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
                 }
             });
 
+            holder.linearLayout.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View view) {
+                    openBottomSheetDialog(mList.get(position).getAlbum());
+                    return true;
+                }
+            });
+
             //set transparent 2 thumbnails.
             holder.thumbnail.setImageAlpha(128);
             holder.thumbnail1.setImageAlpha(128);
         }
     }
 
+    public void openBottomSheetDialog(String albumName) {
+        View viewDialog= LayoutInflater.from(context.getApplicationContext()).inflate(R.layout.bottom_sheet_album,null);
+
+        BottomSheetDialog bottomSheetDialog= new BottomSheetDialog(context);
+
+        viewDialog.findViewById(R.id.layoutEditAlbum).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openModifyDialog(albumName);
+                bottomSheetDialog.dismiss();
+            }
+        });
+
+        viewDialog.findViewById(R.id.layoutMoveAlbum).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDialogAddImage(albumName);
+                bottomSheetDialog.dismiss();
+            }
+        });
+
+        viewDialog.findViewById(R.id.layoutDeleteAlbum).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDeleteDialog(albumName);
+                bottomSheetDialog.dismiss();
+            }
+        });
+
+        // Khang
+        viewDialog.findViewById(R.id.layoutCreatePassword).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openCreatePasswordDialog(albumName);
+                bottomSheetDialog.dismiss();
+            }
+        });
+        // Khang
+
+        bottomSheetDialog.setContentView(viewDialog);
+        bottomSheetDialog.show();
+    }
+
     private void onClickViewListImage(String albumName){
-        Intent intent = new Intent(context, ListImageOfAlbum.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("AlbumName", albumName);
-        intent.putExtras(bundle);
-        context.startActivity(intent);
+        // Khang
+        SQLiteDatabase db;
+        File storagePath = context.getFilesDir();
+        String myDbPath = storagePath + "/" + "group01";
+        db = SQLiteDatabase.openDatabase(myDbPath, null, SQLiteDatabase.CREATE_IF_NECESSARY);
+        String albumPath = Environment.getExternalStorageDirectory() +"/ONEUS/" + albumName;
+
+        db.beginTransaction();
+        try {
+            db.execSQL("create table if not exists password ("
+                    + " albumPath text PRIMARY KEY, "
+                    + " hashedPassword text); " );
+            db.setTransactionSuccessful();
+        }
+        catch (SQLiteException e) {
+
+        }
+        finally { db.endTransaction(); }
+
+        Cursor c1 = db.rawQuery("select * from password where albumPath = '" + albumPath + "'", null);
+        int resultNum = c1.getCount();
+
+        if (resultNum == 0){
+            Intent intent = new Intent(context, ListImageOfAlbum.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("AlbumName", albumName);
+            intent.putExtras(bundle);
+            context.startActivity(intent);
+        }
+        else{
+            DialogEnterPassword dialogEnterPasswordPassword = new DialogEnterPassword(albumName);
+            FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+            dialogEnterPasswordPassword.show((manager), "Create Password Dialog");
+        }
+        // Khang
     }
 
     @Override
@@ -128,4 +221,35 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
         dialogNewAlbum.show((manager), "New Album Dialog");
     }
+
+    public void openDialogAddImage(String albumName){
+        DialogAddImageBottom dialogAddImageBottom = new DialogAddImageBottom();
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        Bundle data = new Bundle();
+        data.putString("AlbumName", albumName);
+        dialogAddImageBottom.setArguments(data);
+        dialogAddImageBottom.show((manager), "Add Image Dialog");
+    }
+
+    // Minh
+    public void openModifyDialog(String albumName){
+        DialogModifyAlbum dialogModifyAlbum = new DialogModifyAlbum(albumName);
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        dialogModifyAlbum.show((manager), "Modify Album Dialog");
+    }
+
+    // Minh
+    public void openDeleteDialog(String albumName){
+        DialogDeleteAlbum dialogDeleteAlbum = new DialogDeleteAlbum(albumName);
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        dialogDeleteAlbum.show((manager), "Delete Album Dialog");
+    }
+
+    // Khang
+    public void openCreatePasswordDialog(String albumName){
+        DialogCreatePassword dialogCreatePassword = new DialogCreatePassword(albumName);
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        dialogCreatePassword.show((manager), "Create Password Dialog");
+    }
+    // Khang
 }

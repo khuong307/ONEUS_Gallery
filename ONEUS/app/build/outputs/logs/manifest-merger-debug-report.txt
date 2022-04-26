@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-62:12
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-60:12
 MERGED from [ds-photo-editor-sdk.aar] C:\Users\HUY\.gradle\caches\transforms-3\3bdc9e67d3f3f585c72c33802773cddc\transformed\jetified-ds-photo-editor-sdk\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\HUY\.gradle\caches\transforms-3\96a8459cc55356d65de57437416e5b5d\transformed\material-1.5.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\HUY\.gradle\caches\transforms-3\6c26fb9b62a1bb0fcdae9434e1ae5467\transformed\constraintlayout-2.1.3\AndroidManifest.xml:2:1-11:12
@@ -55,20 +55,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\17156df85410c057d296e1b383c94b8c\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\ea4c74a463f932c7b3d59f048c7fce9c\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] C:\Users\HUY\.gradle\caches\transforms-3\1d4140b3ab3f7eaa9a9cf573d4e787c2\transformed\jetified-annotation-experimental-1.1.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-62:12
-INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-62:12
+INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-60:12
+INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-60:12
 	package
 		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:3:5-32
 		INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-60:12
 		INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-62:12
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:1-60:12
 		INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:2:11-69
@@ -97,11 +97,11 @@ MERGED from [ds-photo-editor-sdk.aar] C:\Users\HUY\.gradle\caches\transforms-3\3
 	android:name
 		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:8:22-76
 uses-permission#android.permission.SET_WALLPAPER
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:10:5-71
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:9:5-71
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:10:22-69
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:9:22-69
 application
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:13:5-60:19
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:11:5-58:19
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\HUY\.gradle\caches\transforms-3\96a8459cc55356d65de57437416e5b5d\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.5.0] C:\Users\HUY\.gradle\caches\transforms-3\96a8459cc55356d65de57437416e5b5d\transformed\material-1.5.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.3] C:\Users\HUY\.gradle\caches\transforms-3\6c26fb9b62a1bb0fcdae9434e1ae5467\transformed\constraintlayout-2.1.3\AndroidManifest.xml:9:5-20
@@ -123,85 +123,85 @@ MERGED from [androidx.startup:startup-runtime:1.0.0] C:\Users\HUY\.gradle\caches
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.7.0] C:\Users\HUY\.gradle\caches\transforms-3\d79cd730aff89e16bbe6bbee05f6ceb1\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:18:9-35
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:16:9-41
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:14:9-41
 	android:roundIcon
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:17:9-54
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:15:9-54
 	android:largeHeap
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:19:9-33
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:17:9-33
 	android:icon
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:15:9-43
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:14:9-35
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:20:9-43
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:18:9-43
 activity#com.example.oneus.EditActivity
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:21:9-23:40
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:19:9-21:40
 	android:exported
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:23:13-37
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:21:13-37
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:22:13-41
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:20:13-41
 activity#com.example.oneus.ListImageOfAlbum
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:24:9-26:40
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:22:9-24:40
 	android:exported
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:26:13-37
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:24:13-37
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:25:13-45
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:23:13-45
 activity#com.example.oneus.SplashActivity
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:27:9-35:20
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:25:9-33:20
 	android:exported
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:29:13-36
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:27:13-36
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:28:13-43
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:26:13-43
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:30:13-34:29
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:28:13-32:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:17-69
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:25-66
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:33:17-77
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:17-77
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:33:27-74
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:27-74
 activity#com.example.oneus.MainActivity
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:36:9-38:40
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:34:9-36:40
 	android:exported
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:38:13-37
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:36:13-37
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:37:13-41
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:35:13-41
 activity#com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:40:9-42:51
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:38:9-40:51
 	android:screenOrientation
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:42:13-49
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:40:13-49
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:41:13-80
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:39:13-80
 activity#com.dsphotoeditor.sdk.activity.DsPhotoEditorStickerActivity
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:44:9-46:51
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:42:9-44:51
 	android:screenOrientation
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:46:13-49
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:44:13-49
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:45:13-87
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:43:13-87
 activity#com.dsphotoeditor.sdk.activity.DsPhotoEditorTextActivity
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:48:9-51:55
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:46:9-49:55
 	android:screenOrientation
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:50:13-49
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:48:13-49
 	android:windowSoftInputMode
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:51:13-52
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:49:13-52
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:49:13-84
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:47:13-84
 activity#com.dsphotoeditor.sdk.activity.DsPhotoEditorCropActivity
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:53:9-55:51
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:51:9-53:51
 	android:screenOrientation
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:55:13-49
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:53:13-49
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:54:13-84
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:52:13-84
 activity#com.dsphotoeditor.sdk.activity.DsPhotoEditorDrawActivity
-ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:57:9-59:52
+ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:55:9-57:52
 	android:screenOrientation
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:59:13-49
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:57:13-49
 	android:name
-		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:58:13-84
+		ADDED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:56:13-84
 uses-sdk
 INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml

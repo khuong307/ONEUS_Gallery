@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:text="Change Album's Name"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:fontFamily="@font/icielbccubano"
+        android:textColor="@color/green_deep"
+        android:layout_height="wrap_content">
+    </TextView>
+    <EditText
+        android:layout_width="match_parent"
+        android:id="@+id/changeAlbumName"
+        android:padding="20dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/icielbccubano"
+        android:textAlignment="center"
+        android:hint="Enter album's name"
+        android:layout_height="wrap_content">
+    </EditText>
+</LinearLayout>

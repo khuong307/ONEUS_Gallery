@@ -61,17 +61,6 @@
                     android:id="@+id/item_delete"
                     android:layout_height="match_parent">
                 </ImageButton>
-                <!--Khang-->
-                <ImageButton
-                    android:layout_weight="1"
-                    android:layout_gravity="right"
-                    android:layout_width="wrap_content"
-                    android:src="@drawable/icon_add_to_home_screen_24"
-                    android:backgroundTint="@color/dark_brown"
-                    android:id="@+id/item_screen"
-                    android:layout_height="match_parent">
-                </ImageButton>
-                <!--Khang-->
             </LinearLayout>
         </androidx.appcompat.widget.Toolbar>
         <Button

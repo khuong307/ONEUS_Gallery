@@ -9,12 +9,9 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.Activity;
-import android.app.WallpaperManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
@@ -54,9 +51,6 @@ public class ListImageOfAlbum extends AppCompatActivity {
     ImageButton btnBack;
     ImageButton btnDelete;
     ImageButton btnMove;
-    // Khang
-    ImageButton btnScreen;
-    // Khang
     Button chooseAllBtn;
     String albumName;
 
@@ -138,11 +132,6 @@ public class ListImageOfAlbum extends AppCompatActivity {
 
         btnDelete = findViewById(R.id.item_delete);
         btnDelete.setVisibility(View.GONE);
-
-        // Khang
-        btnScreen = findViewById(R.id.item_screen);
-        btnScreen.setVisibility(View.GONE);
-        // Khang
 
         btnMove = findViewById(R.id.item_move);
         btnMove.setVisibility(View.GONE);
@@ -261,30 +250,6 @@ public class ListImageOfAlbum extends AppCompatActivity {
             }
         });
 
-        // Khang
-        btnScreen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (selectionList.size() > 1){
-                    Toast.makeText(ListImageOfAlbum.this, "Choose only 1 image!", Toast.LENGTH_SHORT).show();
-                }
-                if (selectionList.size() < 1){
-                    Toast.makeText(ListImageOfAlbum.this, "Please choose 1 image!", Toast.LENGTH_SHORT).show();
-                }
-                else{
-                    File currentImage = selectionList.get(0).getImage();
-                    Bitmap bitmap = BitmapFactory.decodeFile(currentImage.getPath());
-                    WallpaperManager wpm = WallpaperManager.getInstance(getApplicationContext());
-                    try {
-                        wpm.setBitmap(bitmap);
-                        Toast.makeText(ListImageOfAlbum.this, "Set wallpaper successfully!", Toast.LENGTH_SHORT).show();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
-            }
-        });
-        // Khang
     }
 
     public void clearActionMode() {
@@ -307,9 +272,6 @@ public class ListImageOfAlbum extends AppCompatActivity {
             btnBack.setVisibility(View.VISIBLE);
             btnDelete.setVisibility(View.VISIBLE);
             btnMove.setVisibility(View.VISIBLE);
-            // Khang
-            btnScreen.setVisibility(View.VISIBLE);
-            // Khang
             textViewToolbar.setVisibility(View.VISIBLE);
             chooseAllBtn.setVisibility(View.VISIBLE);
 

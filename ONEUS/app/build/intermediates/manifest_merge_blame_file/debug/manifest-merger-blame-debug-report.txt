@@ -25,122 +25,120 @@
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 16-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:8:5-78
 16-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:8:22-76
-17    <!-- Khang -->
-18    <uses-permission android:name="android.permission.SET_WALLPAPER" />
-18-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:10:5-71
-18-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:10:22-69
-19
-20    <!-- Khang -->
-21    <application
-21-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:13:5-60:19
-22        android:allowBackup="true"
-22-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:14:9-35
-23        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-23-->[androidx.core:core:1.7.0] C:\Users\HUY\.gradle\caches\transforms-3\d79cd730aff89e16bbe6bbee05f6ceb1\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
-24        android:debuggable="true"
-25        android:extractNativeLibs="false"
-26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:15:9-43
-27        android:label="@string/app_name"
-27-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:16:9-41
-28        android:largeHeap="true"
-28-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:19:9-33
-29        android:roundIcon="@mipmap/ic_launcher_round"
-29-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:17:9-54
-30        android:supportsRtl="true"
-30-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:18:9-35
-31        android:testOnly="true"
-32        android:theme="@style/Theme.ONEUS" >
-32-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:20:9-43
-33        <activity
-33-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:21:9-23:40
-34            android:name="com.example.oneus.EditActivity"
-34-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:22:13-41
-35            android:exported="false" />
-35-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:23:13-37
-36        <activity
-36-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:24:9-26:40
-37            android:name="com.example.oneus.ListImageOfAlbum"
-37-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:25:13-45
-38            android:exported="false" />
-38-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:26:13-37
-39        <activity
-39-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:27:9-35:20
-40            android:name="com.example.oneus.SplashActivity"
-40-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:28:13-43
-41            android:exported="true" >
-41-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:29:13-36
-42            <intent-filter>
-42-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:30:13-34:29
-43                <action android:name="android.intent.action.MAIN" />
-43-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:17-69
-43-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:25-66
-44
-45                <category android:name="android.intent.category.LAUNCHER" />
-45-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:33:17-77
-45-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:33:27-74
-46            </intent-filter>
-47        </activity>
-48        <activity
-48-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:36:9-38:40
-49            android:name="com.example.oneus.MainActivity"
-49-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:37:13-41
-50            android:exported="false" />
-50-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:38:13-37
-51        <activity
-51-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:40:9-42:51
-52            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity"
-52-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:41:13-80
-53            android:screenOrientation="portrait" />
-53-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:42:13-49
-54        <activity
-54-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:44:9-46:51
-55            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorStickerActivity"
-55-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:45:13-87
-56            android:screenOrientation="portrait" />
-56-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:46:13-49
-57        <activity
-57-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:48:9-51:55
-58            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorTextActivity"
-58-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:49:13-84
-59            android:screenOrientation="portrait"
-59-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:50:13-49
-60            android:windowSoftInputMode="adjustPan" />
-60-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:51:13-52
-61        <activity
-61-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:53:9-55:51
-62            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorCropActivity"
-62-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:54:13-84
-63            android:screenOrientation="portrait" />
-63-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:55:13-49
-64        <activity
-64-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:57:9-59:52
-65            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorDrawActivity"
-65-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:58:13-84
-66            android:screenOrientation="portrait" />
-66-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:59:13-49
-67
-68        <provider
-68-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-69            android:name="androidx.startup.InitializationProvider"
-69-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-70            android:authorities="com.example.oneus.androidx-startup"
-70-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-71            android:exported="false" >
-71-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-72            <meta-data
-72-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-73                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-73-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-74                android:value="androidx.startup" />
-74-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
-75            <meta-data
-75-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HUY\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-76                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-76-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HUY\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
-77                android:value="androidx.startup" />
-77-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HUY\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-78        </provider>
-79    </application>
-80
-81</manifest>
+17    <uses-permission android:name="android.permission.SET_WALLPAPER" />
+17-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:9:5-71
+17-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:9:22-69
+18
+19    <application
+19-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:11:5-58:19
+20        android:allowBackup="true"
+20-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:12:9-35
+21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+21-->[androidx.core:core:1.7.0] C:\Users\HUY\.gradle\caches\transforms-3\d79cd730aff89e16bbe6bbee05f6ceb1\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+22        android:debuggable="true"
+23        android:extractNativeLibs="false"
+24        android:icon="@mipmap/ic_launcher"
+24-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:13:9-43
+25        android:label="@string/app_name"
+25-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:14:9-41
+26        android:largeHeap="true"
+26-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:17:9-33
+27        android:roundIcon="@mipmap/ic_launcher_round"
+27-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:15:9-54
+28        android:supportsRtl="true"
+28-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:16:9-35
+29        android:testOnly="true"
+30        android:theme="@style/Theme.ONEUS" >
+30-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:18:9-43
+31        <activity
+31-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:19:9-21:40
+32            android:name="com.example.oneus.EditActivity"
+32-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:20:13-41
+33            android:exported="false" />
+33-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:21:13-37
+34        <activity
+34-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:22:9-24:40
+35            android:name="com.example.oneus.ListImageOfAlbum"
+35-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:23:13-45
+36            android:exported="false" />
+36-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:24:13-37
+37        <activity
+37-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:25:9-33:20
+38            android:name="com.example.oneus.SplashActivity"
+38-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:26:13-43
+39            android:exported="true" >
+39-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:27:13-36
+40            <intent-filter>
+40-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:28:13-32:29
+41                <action android:name="android.intent.action.MAIN" />
+41-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:29:17-69
+41-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:29:25-66
+42
+43                <category android:name="android.intent.category.LAUNCHER" />
+43-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:17-77
+43-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:27-74
+44            </intent-filter>
+45        </activity>
+46        <activity
+46-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:34:9-36:40
+47            android:name="com.example.oneus.MainActivity"
+47-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:35:13-41
+48            android:exported="false" />
+48-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:36:13-37
+49        <activity
+49-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:38:9-40:51
+50            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity"
+50-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:39:13-80
+51            android:screenOrientation="portrait" />
+51-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:40:13-49
+52        <activity
+52-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:42:9-44:51
+53            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorStickerActivity"
+53-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:43:13-87
+54            android:screenOrientation="portrait" />
+54-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:44:13-49
+55        <activity
+55-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:46:9-49:55
+56            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorTextActivity"
+56-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:47:13-84
+57            android:screenOrientation="portrait"
+57-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:48:13-49
+58            android:windowSoftInputMode="adjustPan" />
+58-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:49:13-52
+59        <activity
+59-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:51:9-53:51
+60            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorCropActivity"
+60-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:52:13-84
+61            android:screenOrientation="portrait" />
+61-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:53:13-49
+62        <activity
+62-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:55:9-57:52
+63            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorDrawActivity"
+63-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:56:13-84
+64            android:screenOrientation="portrait" />
+64-->C:\Users\HUY\Documents\GitHub\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:57:13-49
+65
+66        <provider
+66-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+67            android:name="androidx.startup.InitializationProvider"
+67-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+68            android:authorities="com.example.oneus.androidx-startup"
+68-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+69            android:exported="false" >
+69-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+70            <meta-data
+70-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+71                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+71-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+72                android:value="androidx.startup" />
+72-->[androidx.emoji2:emoji2:1.0.0] C:\Users\HUY\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+73            <meta-data
+73-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HUY\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+74                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+74-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HUY\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+75                android:value="androidx.startup" />
+75-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\HUY\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+76        </provider>
+77    </application>
+78
+79</manifest>
