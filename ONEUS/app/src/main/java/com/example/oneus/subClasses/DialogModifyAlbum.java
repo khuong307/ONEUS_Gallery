@@ -40,7 +40,6 @@ public class DialogModifyAlbum extends DialogFragment {
     private Button btnChoose;
     private ImageView imageChosen;
 
-    // MInh
     private String oldAlbumName;
 
     public DialogModifyAlbum(String albumName) {

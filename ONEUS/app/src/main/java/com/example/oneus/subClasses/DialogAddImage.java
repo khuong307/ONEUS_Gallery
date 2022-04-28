@@ -1,14 +1,19 @@
 package com.example.oneus.subClasses;
 
 import android.Manifest;
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -16,6 +21,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
@@ -36,11 +42,15 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.Date;
 
 public class DialogAddImage extends DialogFragment {
     private Button btnChoose;
     private ImageView imageChosen;
     private String parentFolder;
+
+    // Minh
+    private Button btnCapture;
 
     public String getParentFolder() {
         return parentFolder;
@@ -59,6 +69,15 @@ public class DialogAddImage extends DialogFragment {
         btnChoose = (Button) view.findViewById(R.id.btnChoose);
         imageChosen = (ImageView) view.findViewById(R.id.imageChosen);
 
+        //Minh
+        btnCapture = (Button) view.findViewById(R.id.btnCapture);
+        btnCapture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent,100);
+            }
+        });
 
         btnChoose.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,6 +152,48 @@ public class DialogAddImage extends DialogFragment {
                     imageChosen.setTag(uri.toString().replace("%3A", ":").replace("%2F", "/"));
                 }
             });
+
+    // Minh
+
+
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode==100){
+            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+            String parentFolder = getArguments().getString("ParentFolder");
+            File bitmapFile=SaveBitmap(parentFolder,bitmap);
+            if (bitmapFile.exists()){
+                Uri bitmapUri= convertBitmapToUri(bitmapFile);
+                imageChosen.setImageURI(bitmapUri);
+            }
+            else
+                Toast.makeText(getActivity(),"Capture image is unsuccesfully",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    public static Uri convertBitmapToUri(File file){
+        Uri bitmapUri = Uri.fromFile(file);
+        return bitmapUri;
+    }
+
+    public static File SaveBitmap(String folderName,Bitmap bitmap){
+        String path = folderName;
+        File dir = new File(path);
+        if (!dir.exists())
+            return null;
+        File file=new File(dir,Long.toString(new Date().getTime())+".jpg");
+        try {
+            FileOutputStream fOut = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 85, fOut);
+            fOut.flush();
+            fOut.close();
+        }
+        catch (Exception ex) {
+            return null;
+        }
+        return file;
+    }
 
     //copy a binary files.
     public void copy(File src, File dst) throws IOException {
