@@ -3,6 +3,8 @@ package com.example.oneus.fragment;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.DialogInterface;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -80,6 +82,27 @@ public class DialogDeleteAlbum extends DialogFragment {
                 @Override
                 public void onClick(View v) {
                     RemoveAlbum();
+                    // Khang
+                    SQLiteDatabase db = null;
+                    try{
+                        File storagePath = (getActivity()).getFilesDir();
+                        String myDbPath = storagePath + "/" + "group01";
+                        db = SQLiteDatabase.openDatabase(myDbPath, null, SQLiteDatabase.CREATE_IF_NECESSARY);
+                    } catch (SQLiteException e){}
+
+                    String albumPath = Environment.getExternalStorageDirectory() +"/ONEUS/" + albumName;
+
+                    db.beginTransaction();
+                    try {
+                        String raw_sql = "delete from password where albumPath = '" + albumPath + "';";
+                        db.execSQL(raw_sql);
+                        db.setTransactionSuccessful();
+                    }
+                    catch (SQLiteException e) {
+
+                    }
+                    finally { db.endTransaction(); }
+                    // Khang
                     RecyclerView recyclerView = getActivity().findViewById(R.id.recycle_view_album);
                     AlbumAdapter albumAdapter = new AlbumAdapter(getContext(), ImageAlbum.setAlbumList());
                     recyclerView.setAdapter(albumAdapter);
