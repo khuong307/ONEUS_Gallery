@@ -58,8 +58,7 @@ public class DialogCreatePassword extends DialogFragment {
 
             }
         });
-//        newAlbumName = (EditText) view.findViewById(R.id.changeAlbumName);
-//        newAlbumName.setText(oldAlbumName);
+
         return builder.create();
     }
 
@@ -114,6 +113,7 @@ public class DialogCreatePassword extends DialogFragment {
                             AlbumAdapter albumAdapter = new AlbumAdapter(getContext(), ImageAlbum.setAlbumList());
                             recyclerView.setAdapter(albumAdapter);
                             dialog.dismiss();
+                            Toast.makeText(getActivity(), "Create Password Successfully!", Toast.LENGTH_SHORT).show();
                         }
                         else{
                             Toast.makeText(getActivity(), "Password confirm does not match", Toast.LENGTH_SHORT).show();

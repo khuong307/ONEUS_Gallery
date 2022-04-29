@@ -60,8 +60,7 @@ public class DialogEnterPassword extends DialogFragment {
 
             }
         });
-//        newAlbumName = (EditText) view.findViewById(R.id.changeAlbumName);
-//        newAlbumName.setText(oldAlbumName);
+
         return builder.create();
     }
 

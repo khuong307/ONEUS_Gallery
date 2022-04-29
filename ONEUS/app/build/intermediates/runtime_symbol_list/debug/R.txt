@@ -2705,12 +2705,14 @@ int drawable icon_add 0x7f070122
 int drawable icon_add_small_size 0x7f070123
 int drawable icon_back 0x7f070124
 int drawable icon_cancel 0x7f070125
+int drawable icon_change 0x7f070179
 int drawable icon_check 0x7f070126
 int drawable icon_circle_back 0x7f070127
 int drawable icon_circle_back_brown 0x7f070128
 int drawable icon_close 0x7f070129
 int drawable icon_contrast 0x7f07012a
 int drawable icon_crop 0x7f07012b
+int drawable icon_del_pass 0x7f07017a
 int drawable icon_delete 0x7f07012c
 int drawable icon_delete_01 0x7f07012d
 int drawable icon_edit 0x7f07012e
@@ -2718,7 +2720,6 @@ int drawable icon_effect 0x7f07012f
 int drawable icon_fav_30 0x7f070130
 int drawable icon_favorite 0x7f070131
 int drawable icon_favpic 0x7f070132
-int drawable icon_flip 0x7f070133
 int drawable icon_green_back 0x7f070134
 int drawable icon_home 0x7f070135
 int drawable icon_home_screen 0x7f070136
@@ -3250,10 +3251,12 @@ int id jumpToEnd 0x7f0901c8
 int id jumpToStart 0x7f0901c9
 int id labeled 0x7f0901ca
 int id layout 0x7f0901cb
+int id layoutChangePassword 0x7f0902ee
 int id layoutCreatePassword 0x7f0902eb
 int id layoutDeleteAlbum 0x7f0901cc
 int id layoutEditAlbum 0x7f0901cd
 int id layoutMoveAlbum 0x7f0901ce
+int id layoutRemovePassword 0x7f0902ef
 int id lbl_count 0x7f0901cf
 int id left 0x7f0901d0
 int id leftToRight 0x7f0901d1
@@ -3513,6 +3516,8 @@ int id transition_position 0x7f0902ce
 int id transition_scene_layoutid_cache 0x7f0902cf
 int id transition_transform 0x7f0902d0
 int id triangle 0x7f0902d1
+int id txtNewPassword 0x7f0902f0
+int id txtOldPassword 0x7f0902f1
 int id txtPassword 0x7f0902ec
 int id txtPasswordConfirm 0x7f0902ed
 int id txvDeleteAlbum 0x7f0902d2
@@ -3665,6 +3670,7 @@ int layout design_navigation_menu_item 0x7f0c0040
 int layout design_text_input_end_icon 0x7f0c0041
 int layout design_text_input_start_icon 0x7f0c0042
 int layout dialog_add_image_bottom_layout 0x7f0c0043
+int layout dialog_change_password 0x7f0c00af
 int layout dialog_create_password 0x7f0c00ad
 int layout dialog_del_album 0x7f0c0044
 int layout dialog_delete_album_layout 0x7f0c0045
@@ -3673,6 +3679,7 @@ int layout dialog_enter_password 0x7f0c00ae
 int layout dialog_enter_time 0x7f0c0047
 int layout dialog_layout 0x7f0c0048
 int layout dialog_modify_album_layout 0x7f0c0049
+int layout dialog_remove_password 0x7f0c00b0
 int layout factor_spinner_row 0x7f0c004a
 int layout fragment_bright 0x7f0c004b
 int layout fragment_ds_photo_editor_filters 0x7f0c004c

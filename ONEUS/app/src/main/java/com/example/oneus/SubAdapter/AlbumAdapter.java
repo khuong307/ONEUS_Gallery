@@ -25,10 +25,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
+import com.example.oneus.fragment.DialogChangePassword;
 import com.example.oneus.fragment.DialogCreatePassword;
 import com.example.oneus.fragment.DialogDeleteAlbum;
 import com.example.oneus.fragment.DialogEnterPassword;
 import com.example.oneus.fragment.DialogModifyAlbum;
+import com.example.oneus.fragment.DialogRemovePassword;
 import com.example.oneus.subClasses.Dialog.DialogAddImage;
 import com.example.oneus.subClasses.Dialog.DialogAddImageBottom;
 import com.example.oneus.subClasses.Dialog.DialogNewAlbum;
@@ -104,6 +106,17 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
 
         BottomSheetDialog bottomSheetDialog= new BottomSheetDialog(context);
 
+        // Khang
+        boolean isExistedPassword = checkExistedPassword(albumName);
+        if (isExistedPassword){
+            viewDialog.findViewById(R.id.layoutCreatePassword).setVisibility(View.GONE);
+        }
+        else{
+            viewDialog.findViewById(R.id.layoutChangePassword).setVisibility(View.GONE);
+            viewDialog.findViewById(R.id.layoutRemovePassword).setVisibility(View.GONE);
+        }
+        // Khang
+
         viewDialog.findViewById(R.id.layoutEditAlbum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -136,6 +149,22 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
                 bottomSheetDialog.dismiss();
             }
         });
+
+        viewDialog.findViewById(R.id.layoutChangePassword).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openChangePasswordDialog(albumName);
+                bottomSheetDialog.dismiss();
+            }
+        });
+
+        viewDialog.findViewById(R.id.layoutRemovePassword).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openRemovePasswordDialog(albumName);
+                bottomSheetDialog.dismiss();
+            }
+        });
         // Khang
 
         bottomSheetDialog.setContentView(viewDialog);
@@ -144,28 +173,8 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
 
     private void onClickViewListImage(String albumName){
         // Khang
-        SQLiteDatabase db;
-        File storagePath = context.getFilesDir();
-        String myDbPath = storagePath + "/" + "group01";
-        db = SQLiteDatabase.openDatabase(myDbPath, null, SQLiteDatabase.CREATE_IF_NECESSARY);
-        String albumPath = Environment.getExternalStorageDirectory() +"/ONEUS/" + albumName;
-
-        db.beginTransaction();
-        try {
-            db.execSQL("create table if not exists password ("
-                    + " albumPath text PRIMARY KEY, "
-                    + " hashedPassword text); " );
-            db.setTransactionSuccessful();
-        }
-        catch (SQLiteException e) {
-
-        }
-        finally { db.endTransaction(); }
-
-        Cursor c1 = db.rawQuery("select * from password where albumPath = '" + albumPath + "'", null);
-        int resultNum = c1.getCount();
-
-        if (resultNum == 0){
+        boolean isExistedPassword = checkExistedPassword(albumName);
+        if (!isExistedPassword){
             Intent intent = new Intent(context, ListImageOfAlbum.class);
             Bundle bundle = new Bundle();
             bundle.putString("AlbumName", albumName);
@@ -250,6 +259,43 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         DialogCreatePassword dialogCreatePassword = new DialogCreatePassword(albumName);
         FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
         dialogCreatePassword.show((manager), "Create Password Dialog");
+    }
+
+    public void openChangePasswordDialog(String albumName){
+        DialogChangePassword dialogChangePassword = new DialogChangePassword(albumName);
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        dialogChangePassword.show((manager), "Change Password Dialog");
+    }
+
+    public void openRemovePasswordDialog(String albumName){
+        DialogRemovePassword dialogRemovePassword = new DialogRemovePassword(albumName);
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        dialogRemovePassword.show((manager), "Remove Password Dialog");
+    }
+
+    public boolean checkExistedPassword(String albumName){
+        SQLiteDatabase db;
+        File storagePath = context.getFilesDir();
+        String myDbPath = storagePath + "/" + "group01";
+        db = SQLiteDatabase.openDatabase(myDbPath, null, SQLiteDatabase.CREATE_IF_NECESSARY);
+        String albumPath = Environment.getExternalStorageDirectory() +"/ONEUS/" + albumName;
+
+        db.beginTransaction();
+        try {
+            db.execSQL("create table if not exists password ("
+                    + " albumPath text PRIMARY KEY, "
+                    + " hashedPassword text); " );
+            db.setTransactionSuccessful();
+        }
+        catch (SQLiteException e) {
+
+        }
+        finally { db.endTransaction(); }
+
+        Cursor c1 = db.rawQuery("select * from password where albumPath = '" + albumPath + "'", null);
+        int resultNum = c1.getCount();
+
+        return resultNum != 0;
     }
     // Khang
 }

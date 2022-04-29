@@ -2706,12 +2706,14 @@ drawable icon_add
 drawable icon_add_small_size
 drawable icon_back
 drawable icon_cancel
+drawable icon_change
 drawable icon_check
 drawable icon_circle_back
 drawable icon_circle_back_brown
 drawable icon_close
 drawable icon_contrast
 drawable icon_crop
+drawable icon_del_pass
 drawable icon_delete
 drawable icon_delete_01
 drawable icon_edit
@@ -2719,7 +2721,6 @@ drawable icon_effect
 drawable icon_fav_30
 drawable icon_favorite
 drawable icon_favpic
-drawable icon_flip
 drawable icon_green_back
 drawable icon_home
 drawable icon_home_screen
@@ -3251,10 +3252,12 @@ id jumpToEnd
 id jumpToStart
 id labeled
 id layout
+id layoutChangePassword
 id layoutCreatePassword
 id layoutDeleteAlbum
 id layoutEditAlbum
 id layoutMoveAlbum
+id layoutRemovePassword
 id lbl_count
 id left
 id leftToRight
@@ -3514,6 +3517,8 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id txtNewPassword
+id txtOldPassword
 id txtPassword
 id txtPasswordConfirm
 id txvDeleteAlbum
@@ -3666,6 +3671,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_add_image_bottom_layout
+layout dialog_change_password
 layout dialog_create_password
 layout dialog_del_album
 layout dialog_delete_album_layout
@@ -3674,6 +3680,7 @@ layout dialog_enter_password
 layout dialog_enter_time
 layout dialog_layout
 layout dialog_modify_album_layout
+layout dialog_remove_password
 layout factor_spinner_row
 layout fragment_bright
 layout fragment_ds_photo_editor_filters
