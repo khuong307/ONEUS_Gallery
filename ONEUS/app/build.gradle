@@ -12,6 +12,8 @@ android {
         versionCode 1
         versionName "1.0"
 
+        renderscriptTargetApi 21
+        renderscriptSupportModeEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -46,6 +48,7 @@ dependencies {
     annotationProcessor 'androidx.annotation:annotation:1.0.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
     implementation 'com.android.volley:volley:1.2.1'
-
+    implementation files('libs/ds-photo-editor-sdk.aar')
     implementation 'com.github.chrisbanes:PhotoView:2.3.0'
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
 }

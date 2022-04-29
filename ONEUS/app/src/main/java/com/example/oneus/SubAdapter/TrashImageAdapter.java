@@ -1,5 +1,4 @@
 package com.example.oneus.SubAdapter;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.net.Uri;
@@ -12,25 +11,21 @@ import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
 import com.example.oneus.R;
 import com.example.oneus.fragment.TrashFragment;
-import com.example.oneus.subClasses.FavImage;
-import com.example.oneus.subClasses.TrashImage;
-
+import com.example.oneus.subClasses.Image;
 import java.io.File;
 import java.util.List;
 
 public class TrashImageAdapter extends RecyclerView.Adapter<TrashImageAdapter.MyViewHolder> {
 
     Context context;
-    List<TrashImage> mList;
+    List<Image> mList;
     TrashFragment trashFragment;
 
-    public TrashImageAdapter(Context context, List<TrashImage> mList,TrashFragment trashFragment) {
+    public TrashImageAdapter(Context context, List<Image> mList,TrashFragment trashFragment) {
         this.context = context;
         this.mList = mList;
         this.trashFragment = trashFragment;
@@ -46,7 +41,19 @@ public class TrashImageAdapter extends RecyclerView.Adapter<TrashImageAdapter.My
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        holder.checkImgChosen.setVisibility(View.GONE);
+        if (trashFragment.isActionMode){
+            holder.checkImgChosen.setVisibility(View.VISIBLE);
+            holder.delBtn.setVisibility(View.GONE);
+            if(trashFragment.selectionList.contains(mList.get(position)) == true){
+                holder.checkImgChosen.setChecked(true);
+            }else{
+                holder.checkImgChosen.setChecked(false);
+            }
+        }else{
+            holder.delBtn.setVisibility(View.VISIBLE);
+            holder.checkImgChosen.setChecked(false);
+            holder.checkImgChosen.setVisibility(View.GONE);
+        }
         holder.imageView.setImageURI(Uri.fromFile(new File(String.valueOf(mList.get(position).getImage()))));
         holder.delBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -142,6 +149,6 @@ public class TrashImageAdapter extends RecyclerView.Adapter<TrashImageAdapter.My
 
     private void remove(int position) {
         mList.remove(position);
-        notifyItemRemoved(position);
+        notifyDataSetChanged();
     }
 }

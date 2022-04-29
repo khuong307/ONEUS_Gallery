@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_crop"
+        android:icon="@drawable/icon_crop"
+        android:title="CẮT">
+    </item>
+
+    <item
+        android:id="@+id/action_sun"
+        android:icon="@drawable/icon_sun"
+        android:title="ĐỘ SÁNG">
+    </item>
+
+    <item
+        android:id="@+id/action_contrast"
+        android:icon="@drawable/icon_contrast"
+        android:title="TƯƠNG PHẢN">
+    </item>
+
+    <item
+        android:id="@+id/action_flip"
+        android:icon="@drawable/icon_flip"
+        android:title="LẬT">
+    </item>
+
+    <item
+        android:id="@+id/action_effect"
+        android:icon="@drawable/icon_effect"
+        android:title="HIỆU ỨNG">
+    </item>
+</menu>

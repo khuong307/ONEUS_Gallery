@@ -2,6 +2,7 @@ package com.example.oneus.SubAdapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
@@ -17,7 +18,9 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.FragmentActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.oneus.MainActivity;
 import com.example.oneus.R;
+import com.example.oneus.fragment.FavoriteFragment;
 import com.example.oneus.subClasses.FavImage;
 
 import java.io.File;
@@ -51,6 +54,10 @@ public class FavoriteImageAdapter extends RecyclerView.Adapter<FavoriteImageAdap
                 mList.get(position).getImage().delete();
                 remove(position);
                 Toast.makeText(context.getApplicationContext(), "Remove " + imageName, Toast.LENGTH_SHORT).show();
+                if(mList.size() == 0){
+                    Intent intent = new Intent(context, MainActivity.class);
+                    context.startActivity(intent);
+                }
             }
         });
     }
@@ -129,6 +136,6 @@ public class FavoriteImageAdapter extends RecyclerView.Adapter<FavoriteImageAdap
 
     private void remove(int position) {
         mList.remove(position);
-        notifyItemRemoved(position);
+        notifyDataSetChanged();
     }
 }

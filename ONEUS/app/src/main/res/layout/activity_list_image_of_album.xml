@@ -1,70 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".ListImageOfAlbum"
     android:orientation="vertical">
-    <androidx.appcompat.widget.Toolbar
+    <LinearLayout
         android:layout_width="match_parent"
-        android:background="@color/dark_brown"
-        android:id="@+id/toolbar"
-        android:layout_height="?attr/actionBarSize">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageButton
-                android:background="@color/dark_brown"
-                android:layout_width="wrap_content"
-                android:id="@+id/btnBack"
-                android:layout_weight="1"
-                android:src="@drawable/icon_cancel"
-                android:layout_height="match_parent">
-            </ImageButton>
-            <TextView
-                android:layout_weight="1"
-                android:padding="10dp"
-                android:textAlignment="center"
-                android:gravity="center"
-                android:id="@+id/text_toolbar"
-                android:text="0 item selected"
-                android:textSize="20dp"
-                android:fontFamily="@font/icielbccubano"
-                android:textColor="@color/white"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-            </TextView>
-            <ImageButton
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:src="@drawable/icon_move"
-                android:backgroundTint="@color/dark_brown"
-                android:id="@+id/item_move"
-                android:layout_height="match_parent">
-            </ImageButton>
-            <ImageButton
-                android:layout_weight="1"
-                android:layout_gravity="right"
-                android:layout_width="wrap_content"
-                android:src="@drawable/icon_delete"
-                android:backgroundTint="@color/dark_brown"
-                android:id="@+id/item_delete"
-                android:layout_height="match_parent">
-            </ImageButton>
-        </LinearLayout>
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="wrap_content"
-        android:id="@+id/recycle_view_list_image_of_album"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
         android:layout_height="wrap_content">
-    </androidx.recyclerview.widget.RecyclerView>
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            android:layout_height="?attr/actionBarSize">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@color/dark_brown"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageButton
+                    android:layout_weight="1"
+                    android:background="@color/dark_brown"
+                    android:layout_width="wrap_content"
+                    android:id="@+id/btnBack"
+                    android:src="@drawable/icon_cancel"
+                    android:layout_height="match_parent">
+                </ImageButton>
+                <TextView
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:id="@+id/text_toolbar"
+                    android:text="Selected: 1"
+                    android:textSize="20dp"
+                    android:fontFamily="@font/icielbccubano"
+                    android:textColor="@color/white"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+                </TextView>
+                <ImageButton
+                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/icon_move"
+                    android:backgroundTint="@color/dark_brown"
+                    android:id="@+id/item_move"
+                    android:layout_height="match_parent">
+                </ImageButton>
+                <ImageButton
+                    android:layout_weight="1"
+                    android:layout_gravity="right"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/icon_delete"
+                    android:backgroundTint="@color/dark_brown"
+                    android:id="@+id/item_delete"
+                    android:layout_height="match_parent">
+                </ImageButton>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+        <Button
+            android:id="@+id/chooseAllBtn"
+            android:layout_width="wrap_content"
+            android:layout_gravity="right"
+            android:text="Choose All"
+            android:textSize="15dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/dark_brown"
+            android:textColor="@color/white"
+            android:fontFamily="@font/icielbccubano"
+            android:layout_height="wrap_content">
+        </Button>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:id="@+id/recycle_view_list_image_of_album"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_height="wrap_content">
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:id="@+id/btnInfo"
+        android:layout_gravity="end|bottom"
+        android:backgroundTint="@color/dark_brown"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:maxImageSize="40dp"
+        android:scaleType="center"
+        android:src="@drawable/icon_question"
+        android:layout_margin="15dp"
+        android:layout_height="match_parent">
+    </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

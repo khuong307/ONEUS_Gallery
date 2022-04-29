@@ -5,6 +5,16 @@
     android:orientation="vertical"
     android:gravity="center"
     android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:text="Change Album's Name"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:fontFamily="@font/icielbccubano"
+        android:textColor="@color/green_deep"
+        android:layout_height="wrap_content">
+    </TextView>
     <EditText
         android:layout_width="match_parent"
         android:id="@+id/changeAlbumName"
@@ -15,35 +25,4 @@
         android:hint="Enter album's name"
         android:layout_height="wrap_content">
     </EditText>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:padding="10dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_height="wrap_content">
-        <Button
-            android:layout_gravity="center"
-            android:id="@+id/btnChangeAvatar"
-            android:fontFamily="@font/icielbccubano"
-            android:text="Choose Image"
-            android:textSize="15dp"
-            android:background="@drawable/custom_search_button"
-            android:textColor="@color/white"
-            android:layout_width="100dp"
-            android:layout_height="60dp">
-        </Button>
-        <com.google.android.material.imageview.ShapeableImageView
-            android:layout_gravity="center"
-            android:layout_marginLeft="20dp"
-            android:id="@+id/changeImageChosen"
-            android:layout_width="150dp"
-            android:background="@color/green_deep"
-            android:src="@drawable/icon_image"
-            android:scaleType="centerCrop"
-            app:shapeAppearanceOverlay="@style/RoundImage"
-            android:layout_height="150dp">
-        </com.google.android.material.imageview.ShapeableImageView>
-    </LinearLayout>
-
 </LinearLayout>

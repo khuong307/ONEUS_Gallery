@@ -15,13 +15,14 @@
         android:layout_height="70dp">
     </com.google.android.material.imageview.ShapeableImageView>
     <TextView
+        android:layout_marginLeft="20dp"
         android:id="@+id/album_name"
         android:text="Name"
         android:fontFamily="@font/icielbccubano"
         android:gravity="center"
         android:textSize="20dp"
         android:textColor="@color/black"
-        android:layout_width="70dp"
+        android:layout_width="wrap_content"
         android:layout_height="70dp">
     </TextView>
 

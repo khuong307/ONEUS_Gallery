@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bottomSheetAlbum"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -16,19 +17,22 @@
         android:orientation="horizontal"
         android:padding="12dp">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_marginStart="10dp"
+            android:background="@color/green_deep"
+            app:shapeAppearanceOverlay="@style/RoundImage"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_baseline_edit"/>
+            android:src="@drawable/icon_edit"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="25dp"
-            android:text="Edit Album"
+            android:text="Edit Name"
+            android:textColor="@color/green_deep"
             android:fontFamily="@font/icielbccubano"
             android:textSize="30dp"/>
     </LinearLayout>
@@ -44,19 +48,22 @@
         android:orientation="horizontal"
         android:padding="12dp">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            android:background="@color/green_deep"
+            android:layout_height="40dp"
             android:layout_marginStart="10dp"
+            app:shapeAppearanceOverlay="@style/RoundImage"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_file_move"/>
+            android:src="@drawable/icon_add_small_size"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="25dp"
-            android:text="Move album to"
+            android:text="Add Images"
+            android:textColor="@color/green_deep"
             android:fontFamily="@font/icielbccubano"
             android:textSize="30dp"/>
     </LinearLayout>
@@ -72,12 +79,14 @@
         android:orientation="horizontal"
         android:padding="12dp">
 
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+        <com.google.android.material.imageview.ShapeableImageView
+            android:layout_width="40dp"
+            app:shapeAppearanceOverlay="@style/RoundImage"
+            android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_baseline_delete"/>
+            android:background="@color/green_deep"
+            android:src="@drawable/icon_delete_01"/>
 
         <TextView
             android:layout_width="match_parent"
@@ -86,9 +95,8 @@
             android:layout_marginEnd="25dp"
             android:text="Delete album"
             android:fontFamily="@font/icielbccubano"
+            android:textColor="@color/green_deep"
             android:textSize="30dp"/>
     </LinearLayout>
-
-
 
 </LinearLayout>

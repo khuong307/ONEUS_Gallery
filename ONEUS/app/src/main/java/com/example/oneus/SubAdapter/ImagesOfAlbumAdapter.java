@@ -1,8 +1,10 @@
 package com.example.oneus.SubAdapter;
 
 import android.annotation.SuppressLint;
-import android.app.ListActivity;
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.GestureDetector;
@@ -10,13 +12,10 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
 import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,23 +23,32 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.bumptech.glide.Glide;
+import com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity;
+import com.dsphotoeditor.sdk.utils.DsPhotoEditorConstants;
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
-import com.example.oneus.subClasses.DialogAddImage;
-import com.example.oneus.subClasses.DialogNewAlbum;
-import com.example.oneus.subClasses.FavImage;
+import com.example.oneus.subClasses.Dialog.DialogAddImage;
 import com.example.oneus.subClasses.Image;
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdapter.MyViewHolder> {
 
     ListImageOfAlbum context;
     List<Image> mList;
+    LayoutInflater layoutInflater;
+    public static List<Image> selectionList;
+    public static List<Image> getSelectionList(){
+        return selectionList;
+    }
+
 
     public ImagesOfAlbumAdapter(ListImageOfAlbum context, List<Image> mList) {
+        setHasStableIds(true);
+        layoutInflater = LayoutInflater.from(context);
         this.context = context;
         this.mList = mList;
     }
@@ -48,9 +56,8 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
     @NonNull
     @Override
     public ImagesOfAlbumAdapter.MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        LayoutInflater layoutInflater = LayoutInflater.from(context);
         View itemView;
-        if(viewType == R.layout.custom_images_in_album){
+        if(viewType < mList.size()){
             itemView = layoutInflater.inflate(R.layout.custom_images_in_album, parent, false);
         }
         else {
@@ -62,6 +69,8 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         if(position == mList.size()) {
+            if(ListImageOfAlbum.isActionMode == true)
+                holder.addImgBtn.setVisibility(View.GONE);
             holder.addImgBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -70,12 +79,52 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
             });
         }
         else{
-            holder.checkImgChosen.setVisibility(View.GONE);
+            if(ListImageOfAlbum.isActionMode == true){
+                holder.checkImgChosen.setVisibility(View.VISIBLE);
+                holder.editBtn.setVisibility(View.GONE);
+                if(ListImageOfAlbum.selectionList.contains(mList.get(position)) == true){
+                    holder.checkImgChosen.setChecked(true);
+                }else{
+                    holder.checkImgChosen.setChecked(false);
+                }
+            }else{
+                holder.editBtn.setVisibility(View.VISIBLE);
+                holder.checkImgChosen.setChecked(false);
+                holder.checkImgChosen.setVisibility(View.GONE);
+            }
+
             holder.imageView.setImageURI(Uri.fromFile(new File(String.valueOf(mList.get(position).getImage()))));
             holder.editBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    Toast.makeText(context, "Edit", Toast.LENGTH_SHORT).show();
+                    Intent dsPhotoEditorIntent = new Intent(context, DsPhotoEditorActivity.class);
+                    String URI = String.valueOf(mList.get(position).getImage());
+                    int lastForwardSlash = URI.lastIndexOf("/");
+                    int beginPath = findTheIndexOfNthOccurence(URI, "/", 4);
+                    String currentPath = URI.substring(beginPath+1, lastForwardSlash);
+
+                    int pos = findTheIndexOfNthOccurence(URI, "/", 5);
+                    String firstPart = URI.substring(0, pos+1);
+                    DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss");
+                    LocalDateTime now = LocalDateTime.now();
+                    String currentTime = dtf.format(now);
+                    currentTime = currentTime.replaceAll("\\W", "");
+                    String originalPath = firstPart + "Original/" + currentTime + ".png";
+
+                    String PREFNAME = "myPrefFile";
+                    SharedPreferences myPrefContainer = context.getSharedPreferences(PREFNAME, Activity.MODE_PRIVATE);
+                    SharedPreferences.Editor myPrefEditor = myPrefContainer.edit();
+                    myPrefEditor.putString("quantityImage", String.valueOf(mList.size()));
+                    myPrefEditor.putString("URISource", URI);
+                    myPrefEditor.putString("URIDestination", originalPath);
+                    myPrefEditor.commit();
+
+                    Uri pictureURI = Uri.fromFile(new File(URI));
+                    dsPhotoEditorIntent.setData(pictureURI);
+                    int[] toolsToHide = {};
+                    dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_TOOLS_TO_HIDE, toolsToHide);
+                    dsPhotoEditorIntent.putExtra(DsPhotoEditorConstants.DS_PHOTO_EDITOR_OUTPUT_DIRECTORY, currentPath);
+                    context.startActivity(dsPhotoEditorIntent);
                 }
             });
 
@@ -83,15 +132,35 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
                 @Override
                 public void onClick(View view) {
                     context.check(view, position);
+                    notifyDataSetChanged();
                 }
             });
         }
     }
 
+
     @Override
     public int getItemCount() {
         return mList.size() + 1;
     }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    public int findTheIndexOfNthOccurence(String str, String sub, int n){
+        int count = 1;
+        int index = -1;
+        while (true){
+            index = str.indexOf(sub, index+1);
+            if (index == -1 || count == n)
+                break;
+            count++;
+        }
+        return index;
+    }
+
 
     public class MyViewHolder  extends RecyclerView.ViewHolder{
 
@@ -105,16 +174,15 @@ public class ImagesOfAlbumAdapter extends RecyclerView.Adapter<ImagesOfAlbumAdap
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.image_in_album);
-            editBtn = (ImageButton) itemView.findViewById(R.id.editBtn);
-            addImgBtn = (ImageButton) itemView.findViewById(R.id.addImgBtn);
-            checkImgChosen = (CheckBox) itemView.findViewById(R.id.itemIMGChoose);
-
+            editBtn = itemView.findViewById(R.id.editBtn);
+            addImgBtn = itemView.findViewById(R.id.addImgBtn);
+            checkImgChosen = itemView.findViewById(R.id.itemIMGChoose);
             linearLayout = itemView.findViewById(R.id.listImages);
         }
     }
     @Override
     public int getItemViewType(int position) {
-        return (position == mList.size()) ? R.layout.add_image_button : R.layout.custom_images_in_album;
+        return position;
     }
 
 

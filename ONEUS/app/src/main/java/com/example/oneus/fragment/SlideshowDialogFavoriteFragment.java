@@ -1,12 +1,17 @@
 package com.example.oneus.fragment;
 
+import android.app.WallpaperManager;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.DialogFragment;
 import androidx.viewpager.widget.PagerAdapter;
@@ -18,6 +23,8 @@ import com.example.oneus.subClasses.FavImage;
 import com.example.oneus.subClasses.Image;
 import com.github.chrisbanes.photoview.PhotoView;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.Date;
 import java.util.List;
 
@@ -28,6 +35,9 @@ public class SlideshowDialogFavoriteFragment extends DialogFragment {
     private MyViewPagerAdapter myViewPagerAdapter;
     private TextView lblCount, lblTitle, lblDate;
     private int selectedPosition = 0;
+    private ImageButton replayBtn;
+    private ImageButton favBtn;
+    private ImageButton screenBtn;
 
 
     static public SlideshowDialogFavoriteFragment newInstance() {
@@ -43,6 +53,11 @@ public class SlideshowDialogFavoriteFragment extends DialogFragment {
         lblCount = (TextView) v.findViewById(R.id.lbl_count);
         lblTitle = (TextView) v.findViewById(R.id.title);
         lblDate = (TextView) v.findViewById(R.id.date);
+        replayBtn = (ImageButton) v.findViewById(R.id.btnReplay);
+        favBtn = (ImageButton) v.findViewById(R.id.favBtn);
+        screenBtn = (ImageButton) v.findViewById(R.id.screenBtn);
+        favBtn.setVisibility(View.GONE);
+        replayBtn.setVisibility(View.GONE);
 
         final ImageView imageViewPreview = (ImageView) v.findViewById(R.id.image_preview);
 
@@ -89,6 +104,21 @@ public class SlideshowDialogFavoriteFragment extends DialogFragment {
 
         Date date = new Date(image.getImage().lastModified());
         lblDate.setText(date.toString());
+
+        screenBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                File currentImage = image.getImage();
+                Bitmap bitmap = BitmapFactory.decodeFile(currentImage.getPath());
+                WallpaperManager wpm = WallpaperManager.getInstance(getActivity().getApplicationContext());
+                try {
+                    wpm.setBitmap(bitmap);
+                    Toast.makeText(getActivity(), "Set wallpaper successfully!", Toast.LENGTH_SHORT).show();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     @Override
