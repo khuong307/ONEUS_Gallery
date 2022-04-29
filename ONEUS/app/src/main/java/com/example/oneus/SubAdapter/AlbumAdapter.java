@@ -120,8 +120,16 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         viewDialog.findViewById(R.id.layoutEditAlbum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openModifyDialog(albumName);
-                bottomSheetDialog.dismiss();
+                // Khang
+                if (isExistedPassword){
+                    openEnterPasswordDialog(albumName, 2);
+                    bottomSheetDialog.dismiss();
+                }
+                else{
+                    openModifyDialog(albumName);
+                    bottomSheetDialog.dismiss();
+                }
+                // Khang
             }
         });
 
@@ -136,8 +144,16 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         viewDialog.findViewById(R.id.layoutDeleteAlbum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openDeleteDialog(albumName);
-                bottomSheetDialog.dismiss();
+                // Khang
+                if (isExistedPassword){
+                    openEnterPasswordDialog(albumName, 3);
+                    bottomSheetDialog.dismiss();
+                }
+                else{
+                    openDeleteDialog(albumName);
+                    bottomSheetDialog.dismiss();
+                }
+                // Khang
             }
         });
 
@@ -182,9 +198,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
             context.startActivity(intent);
         }
         else{
-            DialogEnterPassword dialogEnterPasswordPassword = new DialogEnterPassword(albumName);
-            FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
-            dialogEnterPasswordPassword.show((manager), "Create Password Dialog");
+            openEnterPasswordDialog(albumName, 1);
         }
         // Khang
     }
@@ -271,6 +285,12 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         DialogRemovePassword dialogRemovePassword = new DialogRemovePassword(albumName);
         FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
         dialogRemovePassword.show((manager), "Remove Password Dialog");
+    }
+
+    public void openEnterPasswordDialog(String albumName, int activityCode){
+        DialogEnterPassword dialogEnterPasswordPassword = new DialogEnterPassword(albumName, activityCode);
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        dialogEnterPasswordPassword.show((manager), "Create Password Dialog");
     }
 
     public boolean checkExistedPassword(String albumName){

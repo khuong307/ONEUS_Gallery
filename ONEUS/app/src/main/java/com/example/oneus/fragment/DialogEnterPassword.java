@@ -17,7 +17,9 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.ListImageOfAlbum;
@@ -32,10 +34,12 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 public class DialogEnterPassword extends DialogFragment {
     private EditText txtPassword;
     private String albumName;
+    private int activityCode;
     SQLiteDatabase db;
 
-    public DialogEnterPassword(String albumName) {
-        this.albumName=albumName;
+    public DialogEnterPassword(String albumName, int activityCode) {
+        this.activityCode = activityCode;
+        this.albumName = albumName;
     }
 
     @NonNull
@@ -93,11 +97,25 @@ public class DialogEnterPassword extends DialogFragment {
                         BCrypt.Result result = BCrypt.verifyer().verify(password.toCharArray(), hashedPassword);
                         if (result.verified){
                             dialog.dismiss();
-                            Intent intent = new Intent(getContext(), ListImageOfAlbum.class);
-                            Bundle bundle = new Bundle();
-                            bundle.putString("AlbumName", albumName);
-                            intent.putExtras(bundle);
-                            getContext().startActivity(intent);
+                            switch (activityCode){
+                                case 1:
+                                    Intent intent = new Intent(getContext(), ListImageOfAlbum.class);
+                                    Bundle bundle = new Bundle();
+                                    bundle.putString("AlbumName", albumName);
+                                    intent.putExtras(bundle);
+                                    getContext().startActivity(intent);
+                                    break;
+                                case 2:
+                                    DialogModifyAlbum dialogModifyAlbum = new DialogModifyAlbum(albumName);
+                                    FragmentManager managerModify = ((AppCompatActivity)getActivity()).getSupportFragmentManager();
+                                    dialogModifyAlbum.show((managerModify), "Modify Album Dialog");
+                                    break;
+                                case 3:
+                                    DialogDeleteAlbum dialogDeleteAlbum = new DialogDeleteAlbum(albumName);
+                                    FragmentManager managerDelete = ((AppCompatActivity)getActivity()).getSupportFragmentManager();
+                                    dialogDeleteAlbum.show((managerDelete), "Delete Album Dialog");
+                                    break;
+                            }
                         }
                         else{
                             Toast.makeText(getActivity(), "Incorrect Password!", Toast.LENGTH_SHORT).show();
