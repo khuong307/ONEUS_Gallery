@@ -130,6 +130,9 @@ public class DialogNewAlbum extends DialogFragment {
                     String albumName = newAlbumName.getText().toString();
                     if (albumName.isEmpty()==true){
                         Toast.makeText(getActivity(), "Please enter album's name!", Toast.LENGTH_SHORT).show();
+                    }
+                    if (albumName.length() > 20){
+                        Toast.makeText(getActivity(), "Maximum 20 characters!", Toast.LENGTH_SHORT).show();
                     }else{
                         if (multiImages.size() == 0){
                             Toast.makeText(getActivity(), "You haven't picked Image!", Toast.LENGTH_SHORT).show();

@@ -336,7 +336,6 @@ public class ListImageOfAlbum extends AppCompatActivity {
         dialogDeleteAlbum.show((manager), "Delete Album");
     }
 
-    // Khang
     @Override
     protected void onResume() {
         super.onResume();

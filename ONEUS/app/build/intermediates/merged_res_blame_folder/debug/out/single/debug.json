@@ -4,12 +4,20 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_favorite_image.xml"
     },
     {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_remove_password.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_remove_password.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_trash_image.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_trash_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_choose_screen.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_choose_screen.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_add_small_size.xml.flat",
@@ -22,6 +30,10 @@
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_multi_images.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_multi_images.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_change_password.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_change_password.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
@@ -56,6 +68,10 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\font\\icielbccubano.otf"
     },
     {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_key.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_key.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_action_bar_layout.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\action_bar_layout.xml"
     },
@@ -78,6 +94,10 @@
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_trash.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_trash.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_change.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_change.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
@@ -120,12 +140,12 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_bottom_sheet_info.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\layout_bottom_sheet_info.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_fav_30.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_fav_30.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_layout_bottom_sheet_info.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\layout_bottom_sheet_info.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_double_click_icon.png.flat",
@@ -170,6 +190,10 @@
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_time_spinner_row.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\time_spinner_row.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_enter_password.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_enter_password.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_crop.xml.flat",
@@ -236,6 +260,10 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable-v24\\test.jpg"
     },
     {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_create_password.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_create_password.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_bottom_sheet_info.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\bottom_sheet_info.xml"
     },
@@ -298,6 +326,10 @@
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_replay.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_replay.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_del_pass.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_del_pass.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",

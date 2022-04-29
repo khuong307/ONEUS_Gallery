@@ -15,12 +15,15 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
 import com.example.oneus.R;
+import com.example.oneus.subClasses.Dialog.DialogChooseScreen;
 import com.example.oneus.subClasses.Image;
 import com.example.oneus.subClasses.Path;
 import com.github.chrisbanes.photoview.PhotoView;
@@ -141,14 +144,9 @@ public class SlideshowDialogFragment extends DialogFragment {
             @Override
             public void onClick(View view) {
                 File currentImage = image.getImage();
-                        Bitmap bitmap = BitmapFactory.decodeFile(currentImage.getPath());
-                WallpaperManager wpm = WallpaperManager.getInstance(getActivity().getApplicationContext());
-                try {
-                    wpm.setBitmap(bitmap);
-                    Toast.makeText(getActivity(), "Set wallpaper successfully!", Toast.LENGTH_SHORT).show();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
+                DialogChooseScreen dialogChooseScreen = new DialogChooseScreen(currentImage.getPath());
+                FragmentManager manager = ((AppCompatActivity)getActivity()).getSupportFragmentManager();
+                dialogChooseScreen.show((manager), "Choose Screen Dialog");
             }
         });
     }
