@@ -95,10 +95,12 @@ id btnBack
 id btnBackAlbumList
 id btnChoose
 id btnInfo
+id btnLock
 id btnPlay
 id btnReplay
 id btnRestore
 id btnSearch
+id btnWallpaper
 id changeAlbumName
 id chooseAllBtn
 id date
@@ -176,6 +178,7 @@ layout custom_multi_images
 layout custom_trash_image
 layout dialog_add_image_bottom_layout
 layout dialog_change_password
+layout dialog_choose_screen
 layout dialog_create_password
 layout dialog_del_album
 layout dialog_delete_album_layout

@@ -2919,10 +2919,12 @@ id btnBack
 id btnBackAlbumList
 id btnChoose
 id btnInfo
+id btnLock
 id btnPlay
 id btnReplay
 id btnRestore
 id btnSearch
+id btnWallpaper
 id buttonPanel
 id cache_measures
 id callMeasure
@@ -3672,6 +3674,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout dialog_add_image_bottom_layout
 layout dialog_change_password
+layout dialog_choose_screen
 layout dialog_create_password
 layout dialog_del_album
 layout dialog_delete_album_layout

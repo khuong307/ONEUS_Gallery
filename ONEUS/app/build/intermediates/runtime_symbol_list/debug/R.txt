@@ -2918,10 +2918,12 @@ int id btnBack 0x7f09007b
 int id btnBackAlbumList 0x7f09007c
 int id btnChoose 0x7f09007d
 int id btnInfo 0x7f09007e
+int id btnLock 0x7f0902f2
 int id btnPlay 0x7f09007f
 int id btnReplay 0x7f090080
 int id btnRestore 0x7f090081
 int id btnSearch 0x7f090082
+int id btnWallpaper 0x7f0902f3
 int id buttonPanel 0x7f090083
 int id cache_measures 0x7f090084
 int id callMeasure 0x7f090085
@@ -3671,6 +3673,7 @@ int layout design_text_input_end_icon 0x7f0c0041
 int layout design_text_input_start_icon 0x7f0c0042
 int layout dialog_add_image_bottom_layout 0x7f0c0043
 int layout dialog_change_password 0x7f0c00af
+int layout dialog_choose_screen 0x7f0c00b1
 int layout dialog_create_password 0x7f0c00ad
 int layout dialog_del_album 0x7f0c0044
 int layout dialog_delete_album_layout 0x7f0c0045
