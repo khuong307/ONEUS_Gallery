@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
@@ -52,6 +53,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 public class DialogAddImage extends DialogFragment {
@@ -60,6 +62,10 @@ public class DialogAddImage extends DialogFragment {
     private MultiImagesAdapter multiImagesAdapter;
     private List<Image> multiImages = new ArrayList<>();
     int PICK_IMAGE_MULTIPLE = 1;
+
+    // Minh
+    // Minh
+    private Button btnCapture;
 
     @NonNull
     @Override
@@ -71,6 +77,17 @@ public class DialogAddImage extends DialogFragment {
         recyclerView = (RecyclerView) view.findViewById(R.id.recycler_images_chosen);
 
 
+        btnCapture = (Button) view.findViewById(R.id.btnCapture);
+
+
+        btnCapture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                startActivityForResult(intent,100);
+            }
+        });
+
         btnChoose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,6 +98,8 @@ public class DialogAddImage extends DialogFragment {
                 mGetContent.launch(intent);
             }
         });
+
+
 
 
         builder.setView(view);
@@ -181,4 +200,45 @@ public class DialogAddImage extends DialogFragment {
             }
         }
     });
+
+    // Minh
+    @Override
+    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode==100){
+            Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+            String parentFolder = getArguments().getString("ParentFolder");
+            File bitmapFile=SaveBitmap(parentFolder,bitmap);
+            if (bitmapFile.exists()){
+                Uri bitmapUri= convertBitmapToUri(bitmapFile);
+                final AlertDialog dialog = (AlertDialog)getDialog();
+                dialog.dismiss();
+            }
+            else
+                Toast.makeText(getActivity(),"Capture image is unsuccesfully",Toast.LENGTH_SHORT).show();
+        }
+    }
+
+
+    public static Uri convertBitmapToUri(File file){
+        Uri bitmapUri = Uri.fromFile(file);
+        return bitmapUri;
+    }
+
+    public static File SaveBitmap(String folderName,Bitmap bitmap){
+        String path = folderName;
+        File dir = new File(path);
+        if (!dir.exists())
+            return null;
+        File file=new File(dir,Long.toString(new Date().getTime())+".jpg");
+        try {
+            FileOutputStream fOut = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 85, fOut);
+            fOut.flush();
+            fOut.close();
+        }
+        catch (Exception ex) {
+            return null;
+        }
+        return file;
+    }
 }
