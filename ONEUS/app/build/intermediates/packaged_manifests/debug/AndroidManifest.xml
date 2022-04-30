@@ -64,6 +64,10 @@
             android:screenOrientation="portrait" />
 
         <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.example.oneus.com.squareup.picasso"
+            android:exported="false" />
+        <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.example.oneus.androidx-startup"
             android:exported="false" >

@@ -5,27 +5,19 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.content.ClipData;
-import android.content.ContentUris;
-import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
-import android.provider.DocumentsContract;
 import android.provider.MediaStore;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
@@ -34,27 +26,22 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
-import com.example.oneus.SubAdapter.AlbumAdapter;
-import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 import com.example.oneus.SubAdapter.MultiImagesAdapter;
 import com.example.oneus.subClasses.Image;
 import com.example.oneus.subClasses.Path;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class DialogAddImage extends DialogFragment {
@@ -65,6 +52,8 @@ public class DialogAddImage extends DialogFragment {
     int PICK_IMAGE_MULTIPLE = 1;
 
     private ImageButton btnCapture;
+    private ImageButton btnDownload;
+
 
     @NonNull
     @Override
@@ -96,6 +85,17 @@ public class DialogAddImage extends DialogFragment {
             }
         });
 
+        btnDownload = view.findViewById(R.id.btnDownload);
+        btnDownload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String parentFolder = getArguments().getString("ParentFolder");
+                openDownloadDialog(parentFolder);
+                final AlertDialog dialog = (AlertDialog)getDialog();
+                dialog.dismiss();
+            }
+        });
+
 
         builder.setView(view);
         builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
@@ -121,8 +121,10 @@ public class DialogAddImage extends DialogFragment {
         if(dialog != null) {
             if (multiImages.size() > 0){
                 btnCapture.setVisibility(View.GONE);
+                btnDownload.setVisibility(View.GONE);
             }else{
                 btnCapture.setVisibility(View.VISIBLE);
+                btnDownload.setVisibility(View.VISIBLE);
             }
             Button positiveButton = (Button) dialog.getButton(Dialog.BUTTON_POSITIVE);
             dialog.getButton(AlertDialog.BUTTON_NEGATIVE).setTextColor(Color.rgb(153, 69, 0));
@@ -221,5 +223,11 @@ public class DialogAddImage extends DialogFragment {
     public static Uri convertBitmapToUri(File file){
         Uri bitmapUri = Uri.fromFile(file);
         return bitmapUri;
+    }
+
+    public void openDownloadDialog(String albumName){
+        DialogDownloadImage dialogDownloadImage = new DialogDownloadImage(albumName);
+        FragmentManager manager = ((AppCompatActivity)getContext()).getSupportFragmentManager();
+        dialogDownloadImage.show((manager), "Download Image Dialog");
     }
 }

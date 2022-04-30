@@ -2922,13 +2922,13 @@ int id btnBack 0x7f09007b
 int id btnBackAlbumList 0x7f09007c
 int id btnCapture 0x7f0902f8
 int id btnChoose 0x7f09007e
+int id btnDownload 0x7f0902fb
 int id btnInfo 0x7f09007f
 int id btnLock 0x7f0902ef
 int id btnPlay 0x7f090080
 int id btnReplay 0x7f090081
 int id btnRestore 0x7f090082
 int id btnSearch 0x7f090083
-int id btnURl 0x7f0902f9
 int id btnWallpaper 0x7f0902f0
 int id buttonPanel 0x7f090084
 int id cache_measures 0x7f090085
@@ -3185,6 +3185,7 @@ int id easeOut 0x7f09017f
 int id east 0x7f090180
 int id editBtn 0x7f090181
 int id edit_query 0x7f090182
+int id edtDownload 0x7f0902fc
 int id elastic 0x7f090183
 int id end 0x7f090184
 int id endToStart 0x7f090185
@@ -3242,6 +3243,7 @@ int id image_preview 0x7f0901b9
 int id image_trash 0x7f0901ba
 int id images_multi 0x7f0901bb
 int id immediateStop 0x7f0901bc
+int id imvDownload 0x7f0902fd
 int id included 0x7f0901bd
 int id info 0x7f0901be
 int id invisible 0x7f0901bf
@@ -3684,6 +3686,8 @@ int layout dialog_choose_screen 0x7f0c00ae
 int layout dialog_create_password 0x7f0c00af
 int layout dialog_del_album 0x7f0c0043
 int layout dialog_delete_album_layout 0x7f0c0044
+int layout dialog_display_download_image 0x7f0c00b2
+int layout dialog_download_image 0x7f0c00b3
 int layout dialog_ds_photo_editor_text_sticker 0x7f0c0045
 int layout dialog_enter_password 0x7f0c00b0
 int layout dialog_enter_time 0x7f0c0046

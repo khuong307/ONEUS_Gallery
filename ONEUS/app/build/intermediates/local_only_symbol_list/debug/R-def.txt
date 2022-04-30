@@ -99,13 +99,13 @@ id btnBack
 id btnBackAlbumList
 id btnCapture
 id btnChoose
+id btnDownload
 id btnInfo
 id btnLock
 id btnPlay
 id btnReplay
 id btnRestore
 id btnSearch
-id btnURl
 id btnWallpaper
 id changeAlbumName
 id chooseAllBtn
@@ -114,6 +114,7 @@ id delAlbumName
 id delBtn
 id delThumbnail
 id editBtn
+id edtDownload
 id factor
 id favBtn
 id full_image
@@ -123,6 +124,7 @@ id image_in_album
 id image_preview
 id image_trash
 id images_multi
+id imvDownload
 id itemIMGChoose
 id item_delete
 id item_move
@@ -189,6 +191,8 @@ layout dialog_choose_screen
 layout dialog_create_password
 layout dialog_del_album
 layout dialog_delete_album_layout
+layout dialog_display_download_image
+layout dialog_download_image
 layout dialog_enter_password
 layout dialog_enter_time
 layout dialog_layout

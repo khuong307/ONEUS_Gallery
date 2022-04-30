@@ -2923,13 +2923,13 @@ id btnBack
 id btnBackAlbumList
 id btnCapture
 id btnChoose
+id btnDownload
 id btnInfo
 id btnLock
 id btnPlay
 id btnReplay
 id btnRestore
 id btnSearch
-id btnURl
 id btnWallpaper
 id buttonPanel
 id cache_measures
@@ -3186,6 +3186,7 @@ id easeOut
 id east
 id editBtn
 id edit_query
+id edtDownload
 id elastic
 id end
 id endToStart
@@ -3243,6 +3244,7 @@ id image_preview
 id image_trash
 id images_multi
 id immediateStop
+id imvDownload
 id included
 id info
 id invisible
@@ -3685,6 +3687,8 @@ layout dialog_choose_screen
 layout dialog_create_password
 layout dialog_del_album
 layout dialog_delete_album_layout
+layout dialog_display_download_image
+layout dialog_download_image
 layout dialog_ds_photo_editor_text_sticker
 layout dialog_enter_password
 layout dialog_enter_time

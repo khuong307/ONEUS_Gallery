@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:text="result:"
+        android:textStyle="bold"
+        android:fontFamily="@font/icielbccubano"
+        android:textSize="20dp"
+        android:textColor="@color/dark_brown"
+        android:layout_height="wrap_content">
+    </TextView>
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="match_parent"
+        android:id="@+id/imvDownload"
+        android:src="@drawable/test"
+        android:layout_height="wrap_content">
+    </com.google.android.material.imageview.ShapeableImageView>
+</LinearLayout>
