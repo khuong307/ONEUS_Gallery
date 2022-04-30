@@ -8,6 +8,10 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_remove_password.xml"
     },
     {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_share.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_share.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
@@ -244,6 +248,10 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\circle_textview.xml"
     },
     {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_url.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_url.xml"
+    },
+    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle_edit_pencil_image.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\circle_edit_pencil_image.xml"
     },
@@ -322,6 +330,10 @@
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_back.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_camera.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_camera.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_replay.xml.flat",

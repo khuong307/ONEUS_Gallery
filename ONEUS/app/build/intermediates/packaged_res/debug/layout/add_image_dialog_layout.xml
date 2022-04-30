@@ -22,17 +22,38 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_height="wrap_content">
-        <Button
+        <ImageButton
+            android:src="@drawable/icon_image"
+            android:layout_weight="1"
             android:layout_gravity="center"
             android:id="@+id/btnChoose"
-            android:fontFamily="@font/icielbccubano"
-            android:text="Choose Image"
-            android:textSize="15dp"
+            android:scaleType="fitCenter"
             android:backgroundTint="@color/dark_brown"
-            android:textColor="@color/white"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-        </Button>
+            android:layout_height="60dp">
+        </ImageButton>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:id="@+id/btnCapture"
+            android:backgroundTint="@color/dark_brown"
+            android:src="@drawable/icon_camera"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+        </ImageButton>
+
+        <ImageButton
+            android:layout_weight="1"
+            android:scaleType="fitCenter"
+            android:layout_gravity="center"
+            android:id="@+id/btnURl"
+            android:backgroundTint="@color/dark_brown"
+            android:src="@drawable/icon_url"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp">
+        </ImageButton>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_images_chosen"

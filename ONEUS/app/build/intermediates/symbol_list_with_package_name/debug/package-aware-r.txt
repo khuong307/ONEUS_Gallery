@@ -2705,6 +2705,7 @@ drawable ic_mtrl_chip_close_circle
 drawable icon_add
 drawable icon_add_small_size
 drawable icon_back
+drawable icon_camera
 drawable icon_cancel
 drawable icon_change
 drawable icon_check
@@ -2737,9 +2738,11 @@ drawable icon_radio_check
 drawable icon_radio_uncheck
 drawable icon_replay
 drawable icon_search
+drawable icon_share
 drawable icon_sun
 drawable icon_trash
 drawable icon_uncheck
+drawable icon_url
 drawable m3_appbar_background
 drawable m3_popupmenu_background_overlay
 drawable m3_radiobutton_ripple
@@ -2918,6 +2921,7 @@ id bounceStart
 id btnAdd
 id btnBack
 id btnBackAlbumList
+id btnCapture
 id btnChoose
 id btnInfo
 id btnLock
@@ -2925,6 +2929,7 @@ id btnPlay
 id btnReplay
 id btnRestore
 id btnSearch
+id btnURl
 id btnWallpaper
 id buttonPanel
 id cache_measures
@@ -3250,6 +3255,7 @@ id item4
 id itemIMGChoose
 id item_delete
 id item_move
+id item_share
 id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart

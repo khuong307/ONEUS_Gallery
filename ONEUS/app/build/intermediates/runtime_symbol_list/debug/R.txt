@@ -2704,6 +2704,7 @@ int drawable ic_mtrl_chip_close_circle 0x7f070121
 int drawable icon_add 0x7f070122
 int drawable icon_add_small_size 0x7f070123
 int drawable icon_back 0x7f070124
+int drawable icon_camera 0x7f07017b
 int drawable icon_cancel 0x7f070125
 int drawable icon_change 0x7f070178
 int drawable icon_check 0x7f070126
@@ -2736,9 +2737,11 @@ int drawable icon_radio_check 0x7f07013d
 int drawable icon_radio_uncheck 0x7f07013e
 int drawable icon_replay 0x7f07013f
 int drawable icon_search 0x7f070140
+int drawable icon_share 0x7f07017d
 int drawable icon_sun 0x7f070141
 int drawable icon_trash 0x7f070142
 int drawable icon_uncheck 0x7f070143
+int drawable icon_url 0x7f07017c
 int drawable m3_appbar_background 0x7f070144
 int drawable m3_popupmenu_background_overlay 0x7f070145
 int drawable m3_radiobutton_ripple 0x7f070146
@@ -2917,6 +2920,7 @@ int id bounceStart 0x7f090079
 int id btnAdd 0x7f09007a
 int id btnBack 0x7f09007b
 int id btnBackAlbumList 0x7f09007c
+int id btnCapture 0x7f0902f8
 int id btnChoose 0x7f09007e
 int id btnInfo 0x7f09007f
 int id btnLock 0x7f0902ef
@@ -2924,6 +2928,7 @@ int id btnPlay 0x7f090080
 int id btnReplay 0x7f090081
 int id btnRestore 0x7f090082
 int id btnSearch 0x7f090083
+int id btnURl 0x7f0902f9
 int id btnWallpaper 0x7f0902f0
 int id buttonPanel 0x7f090084
 int id cache_measures 0x7f090085
@@ -3249,6 +3254,7 @@ int id item4 0x7f0901c5
 int id itemIMGChoose 0x7f0901c6
 int id item_delete 0x7f0901c7
 int id item_move 0x7f0901c8
+int id item_share 0x7f0902fa
 int id item_touch_helper_previous_elevation 0x7f0901c9
 int id jumpToEnd 0x7f0901ca
 int id jumpToStart 0x7f0901cb

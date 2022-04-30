@@ -13,8 +13,10 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.StrictMode;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -53,6 +55,8 @@ public class ListImageOfAlbum extends AppCompatActivity {
     ImageButton btnMove;
     Button chooseAllBtn;
     String albumName;
+
+    ImageButton btnShare;
 
 
     public void setAlbumName(){
@@ -244,6 +248,36 @@ public class ListImageOfAlbum extends AppCompatActivity {
                         int index = findIndexInList(selectionList.get(i));
                         remove(index);
                     }
+                    updateToolbarText(0);
+                    clearActionMode();
+                }
+            }
+        });
+
+        btnShare = findViewById(R.id.item_share);
+        btnShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (selectionList.size() == 0){
+                    Toast.makeText(ListImageOfAlbum.this, "Choose at least 1 image!", Toast.LENGTH_SHORT).show();
+                }else{
+                    StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
+                    StrictMode.setVmPolicy(builder.build());
+                    Intent intentShare = new Intent(Intent.ACTION_SEND_MULTIPLE);
+                    intentShare.setType("image/*");
+                    ArrayList<Uri> files=new ArrayList<>();
+
+                    for (int i = 0; i < selectionList.size(); i++) {
+                        String filePath = selectionList.get(i).getImage().toString();
+                        File file = new File(filePath);
+                        if(!file.exists()){
+                            Toast.makeText(ListImageOfAlbum.this,"File does not existed!",Toast.LENGTH_SHORT).show();
+                        }
+                        Uri uri= Uri.fromFile(file);
+                        files.add(uri);
+                    }
+                    intentShare.putParcelableArrayListExtra(Intent.EXTRA_STREAM,files);
+                    startActivity(Intent.createChooser(intentShare,"Share image...."));
                     updateToolbarText(0);
                     clearActionMode();
                 }

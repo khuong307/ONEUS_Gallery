@@ -29,6 +29,7 @@ drawable ic_launcher_foreground
 drawable icon_add
 drawable icon_add_small_size
 drawable icon_back
+drawable icon_camera
 drawable icon_cancel
 drawable icon_change
 drawable icon_check
@@ -61,9 +62,11 @@ drawable icon_radio_check
 drawable icon_radio_uncheck
 drawable icon_replay
 drawable icon_search
+drawable icon_share
 drawable icon_sun
 drawable icon_trash
 drawable icon_uncheck
+drawable icon_url
 drawable oneus
 drawable test
 font custom_fonts
@@ -94,6 +97,7 @@ id bottom_nav
 id btnAdd
 id btnBack
 id btnBackAlbumList
+id btnCapture
 id btnChoose
 id btnInfo
 id btnLock
@@ -101,6 +105,7 @@ id btnPlay
 id btnReplay
 id btnRestore
 id btnSearch
+id btnURl
 id btnWallpaper
 id changeAlbumName
 id chooseAllBtn
@@ -121,6 +126,7 @@ id images_multi
 id itemIMGChoose
 id item_delete
 id item_move
+id item_share
 id layoutChangePassword
 id layoutCreatePassword
 id layoutDeleteAlbum

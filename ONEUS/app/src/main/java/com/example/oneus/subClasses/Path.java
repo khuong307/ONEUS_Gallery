@@ -3,6 +3,7 @@ package com.example.oneus.subClasses;
 import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.DocumentsContract;
@@ -25,6 +26,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Scanner;
 
@@ -200,6 +202,24 @@ public class Path {
             }
         }
         return 0;
+    }
+
+    public static File SaveBitmap(String folderName, Bitmap bitmap){
+        String path = folderName;
+        File dir = new File(path);
+        if (!dir.exists())
+            return null;
+        File file=new File(dir,Long.toString(new Date().getTime())+".jpg");
+        try {
+            FileOutputStream fOut = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 85, fOut);
+            fOut.flush();
+            fOut.close();
+        }
+        catch (Exception ex) {
+            return null;
+        }
+        return file;
     }
 
 }
