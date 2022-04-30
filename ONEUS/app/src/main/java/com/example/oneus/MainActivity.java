@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity{
             createSubsDirectory("Favorite");
             createSubsDirectory("Trash");
             createSubsDirectory("Original");
+            createSubsDirectory("All");
         }else{
             askPermission();
         }
