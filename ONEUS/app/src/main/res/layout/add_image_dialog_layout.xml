@@ -50,6 +50,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
         </Button>
+
+        <Button
+            android:layout_gravity="center"
+            android:id="@+id/btnDownload"
+            android:fontFamily="@font/icielbccubano"
+            android:text="Download Image"
+            android:textSize="15dp"
+            android:backgroundTint="@color/dark_brown"
+            android:textColor="@color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </Button>
         </LinearLayout>
     </LinearLayout>
     <androidx.recyclerview.widget.RecyclerView

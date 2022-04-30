@@ -33,8 +33,10 @@ import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import androidx.fragment.app.DialogFragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -43,6 +45,7 @@ import com.example.oneus.R;
 import com.example.oneus.SubAdapter.AlbumAdapter;
 import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;
 import com.example.oneus.SubAdapter.MultiImagesAdapter;
+import com.example.oneus.fragment.DialogDeleteAlbum;
 import com.example.oneus.subClasses.Image;
 import com.example.oneus.subClasses.Path;
 
@@ -64,8 +67,8 @@ public class DialogAddImage extends DialogFragment {
     int PICK_IMAGE_MULTIPLE = 1;
 
     // Minh
-    // Minh
     private Button btnCapture;
+    private Button btnDownload;
 
     @NonNull
     @Override
@@ -78,13 +81,23 @@ public class DialogAddImage extends DialogFragment {
 
 
         btnCapture = (Button) view.findViewById(R.id.btnCapture);
-
+        btnDownload = (Button) view.findViewById(R.id.btnDownload);
 
         btnCapture.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
                 startActivityForResult(intent,100);
+            }
+        });
+
+        btnDownload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String parentFolder = getArguments().getString("ParentFolder");
+                openDownloadDialog(parentFolder);
+                final AlertDialog dialog = (AlertDialog)getDialog();
+                dialog.dismiss();
             }
         });
 
@@ -240,5 +253,12 @@ public class DialogAddImage extends DialogFragment {
             return null;
         }
         return file;
+    }
+
+    // Minh
+    public void openDownloadDialog(String albumName){
+        DialogDownloadImage dialogDownloadImage = new DialogDownloadImage(albumName);
+        FragmentManager manager = ((AppCompatActivity)getContext()).getSupportFragmentManager();
+        dialogDownloadImage.show((manager), "Download Image Dialog");
     }
 }
