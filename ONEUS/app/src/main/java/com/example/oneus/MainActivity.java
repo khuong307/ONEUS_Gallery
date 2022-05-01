@@ -9,6 +9,7 @@ import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.os.Environment;
@@ -16,6 +17,7 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity{
     public static final String App_Name = "ONEUS";
 
     public ImageButton btnSort;
+    public ImageButton btnAllImg;
 
 
     private ViewPager viewPager;
@@ -46,6 +49,13 @@ public class MainActivity extends AppCompatActivity{
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.action_bar_layout);
         btnSort = getSupportActionBar().getCustomView().findViewById(R.id.btnSort);
+        btnAllImg = getSupportActionBar().getCustomView().findViewById(R.id.btnAllIMG);
+        btnAllImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, AllImages.class));
+            }
+        });
 
         // yêu cầu người dùng cho phép truy cập bộ nhớ.
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
@@ -68,6 +78,7 @@ public class MainActivity extends AppCompatActivity{
                     case R.id.action_home:
                         viewPager.setCurrentItem(0);
                         btnSort.setVisibility(View.VISIBLE);
+                        btnAllImg.setVisibility(View.VISIBLE);
                         Toast toast = Toast.makeText(MainActivity.this, "Home", Toast.LENGTH_SHORT);
                         toast.setGravity(Gravity.CENTER, 0, 0);
                         toast.show();
@@ -76,6 +87,7 @@ public class MainActivity extends AppCompatActivity{
                     case R.id.action_favorite:
                         viewPager.setCurrentItem(1);
                         btnSort.setVisibility(View.GONE);
+                        btnAllImg.setVisibility(View.GONE);
                         Toast toast_1 = Toast.makeText(MainActivity.this, "Favorite", Toast.LENGTH_SHORT);
                         toast_1.setGravity(Gravity.CENTER, 0, 0);
                         toast_1.show();
@@ -83,6 +95,7 @@ public class MainActivity extends AppCompatActivity{
 
                     case R.id.action_search:
                         btnSort.setVisibility(View.GONE);
+                        btnAllImg.setVisibility(View.GONE);
                         viewPager.setCurrentItem(2);
                         Toast toast_2 = Toast.makeText(MainActivity.this, "Search", Toast.LENGTH_SHORT);
                         toast_2.setGravity(Gravity.CENTER, 0, 0);
@@ -91,6 +104,7 @@ public class MainActivity extends AppCompatActivity{
 
                     case R.id.action_trash:
                         btnSort.setVisibility(View.GONE);
+                        btnAllImg.setVisibility(View.GONE);
                         viewPager.setCurrentItem(3);
                         Toast toast_3 = Toast.makeText(MainActivity.this, "Trash", Toast.LENGTH_SHORT);
                         toast_3.setGravity(Gravity.CENTER, 0, 0);

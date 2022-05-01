@@ -29,6 +29,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.ONEUS" >
         <activity
+            android:name="com.example.oneus.AllImages"
+            android:exported="false" />
+        <activity
             android:name="com.example.oneus.EditActivity"
             android:exported="false" />
         <activity

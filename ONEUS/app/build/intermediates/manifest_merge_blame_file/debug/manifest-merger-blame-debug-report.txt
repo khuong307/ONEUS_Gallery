@@ -23,14 +23,14 @@
 15-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:7:5-80
 15-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:7:22-77
 16    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-16-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:8:5-78
+16-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:8:5-79
 16-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:8:22-76
 17    <uses-permission android:name="android.permission.SET_WALLPAPER" />
-17-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:9:5-71
+17-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:9:5-72
 17-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:9:22-69
 18
 19    <application
-19-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:11:5-58:19
+19-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:11:5-56:19
 20        android:allowBackup="true"
 20-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:12:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -42,111 +42,117 @@
 25        android:label="@string/app_name"
 25-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:14:9-41
 26        android:largeHeap="true"
-26-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:17:9-33
+26-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:15:9-33
 27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:15:9-54
+27-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:16:9-54
 28        android:supportsRtl="true"
-28-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:16:9-35
+28-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:17:9-35
 29        android:testOnly="true"
 30        android:theme="@style/Theme.ONEUS" >
 30-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:18:9-43
 31        <activity
 31-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:19:9-21:40
-32            android:name="com.example.oneus.EditActivity"
-32-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:20:13-41
+32            android:name="com.example.oneus.AllImages"
+32-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:20:13-38
 33            android:exported="false" />
 33-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:21:13-37
 34        <activity
 34-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:22:9-24:40
-35            android:name="com.example.oneus.ListImageOfAlbum"
-35-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:23:13-45
+35            android:name="com.example.oneus.EditActivity"
+35-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:23:13-41
 36            android:exported="false" />
 36-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:24:13-37
 37        <activity
-37-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:25:9-33:20
-38            android:name="com.example.oneus.SplashActivity"
-38-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:26:13-43
-39            android:exported="true" >
-39-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:27:13-36
-40            <intent-filter>
-40-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:28:13-32:29
-41                <action android:name="android.intent.action.MAIN" />
-41-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:29:17-69
-41-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:29:25-66
-42
-43                <category android:name="android.intent.category.LAUNCHER" />
-43-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:17-77
-43-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:27-74
-44            </intent-filter>
-45        </activity>
-46        <activity
-46-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:34:9-36:40
-47            android:name="com.example.oneus.MainActivity"
-47-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:35:13-41
-48            android:exported="false" />
-48-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:36:13-37
+37-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:25:9-27:40
+38            android:name="com.example.oneus.ListImageOfAlbum"
+38-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:26:13-45
+39            android:exported="false" />
+39-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:27:13-37
+40        <activity
+40-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:28:9-36:20
+41            android:name="com.example.oneus.SplashActivity"
+41-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:29:13-43
+42            android:exported="true" >
+42-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:30:13-36
+43            <intent-filter>
+43-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:31:13-35:29
+44                <action android:name="android.intent.action.MAIN" />
+44-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:32:17-69
+44-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:32:25-66
+45
+46                <category android:name="android.intent.category.LAUNCHER" />
+46-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:34:17-77
+46-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:34:27-74
+47            </intent-filter>
+48        </activity>
 49        <activity
-49-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:38:9-40:51
-50            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity"
-50-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:39:13-80
-51            android:screenOrientation="portrait" />
-51-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:40:13-49
+49-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:37:9-39:40
+50            android:name="com.example.oneus.MainActivity"
+50-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:38:13-41
+51            android:exported="false" />
+51-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:39:13-37
 52        <activity
-52-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:42:9-44:51
-53            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorStickerActivity"
-53-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:43:13-87
+52-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:40:9-42:52
+53            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorActivity"
+53-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:41:13-80
 54            android:screenOrientation="portrait" />
-54-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:44:13-49
+54-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:42:13-49
 55        <activity
-55-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:46:9-49:55
-56            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorTextActivity"
-56-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:47:13-84
-57            android:screenOrientation="portrait"
-57-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:48:13-49
-58            android:windowSoftInputMode="adjustPan" />
-58-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:49:13-52
-59        <activity
-59-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:51:9-53:51
-60            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorCropActivity"
-60-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:52:13-84
-61            android:screenOrientation="portrait" />
-61-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:53:13-49
+55-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:43:9-45:52
+56            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorStickerActivity"
+56-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:44:13-87
+57            android:screenOrientation="portrait" />
+57-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:45:13-49
+58        <activity
+58-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:46:9-49:55
+59            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorTextActivity"
+59-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:47:13-84
+60            android:screenOrientation="portrait"
+60-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:48:13-49
+61            android:windowSoftInputMode="adjustPan" />
+61-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:49:13-52
 62        <activity
-62-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:55:9-57:52
-63            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorDrawActivity"
-63-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:56:13-84
+62-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:50:9-52:52
+63            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorCropActivity"
+63-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:51:13-84
 64            android:screenOrientation="portrait" />
-64-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:57:13-49
-65
-66        <provider
-66-->[com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-3\d16aa534d2bf8745f1347a6c46d3e145\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
-67            android:name="com.squareup.picasso.PicassoProvider"
-67-->[com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-3\d16aa534d2bf8745f1347a6c46d3e145\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
-68            android:authorities="com.example.oneus.com.squareup.picasso"
-68-->[com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-3\d16aa534d2bf8745f1347a6c46d3e145\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
-69            android:exported="false" />
-69-->[com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-3\d16aa534d2bf8745f1347a6c46d3e145\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
-70        <provider
-70-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
-71            android:name="androidx.startup.InitializationProvider"
-71-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
-72            android:authorities="com.example.oneus.androidx-startup"
-72-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
-73            android:exported="false" >
-73-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
-74            <meta-data
-74-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
-75                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-75-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
-76                android:value="androidx.startup" />
-76-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+64-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:52:13-49
+65        <activity
+65-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:53:9-55:52
+66            android:name="com.dsphotoeditor.sdk.activity.DsPhotoEditorDrawActivity"
+66-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:54:13-84
+67            android:screenOrientation="portrait" />
+67-->C:\Users\user\Desktop\ONEUS_Gallery\ONEUS\app\src\main\AndroidManifest.xml:55:13-49
+68
+69        <provider
+69-->[com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-3\d16aa534d2bf8745f1347a6c46d3e145\transformed\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+70            android:name="com.squareup.picasso.PicassoProvider"
+70-->[com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-3\d16aa534d2bf8745f1347a6c46d3e145\transformed\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+71            android:authorities="com.example.oneus.com.squareup.picasso"
+71-->[com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-3\d16aa534d2bf8745f1347a6c46d3e145\transformed\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+72            android:exported="false" />
+72-->[com.squareup.picasso:picasso:2.71828] C:\Users\user\.gradle\caches\transforms-3\d16aa534d2bf8745f1347a6c46d3e145\transformed\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+73        <provider
+73-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+74            android:name="androidx.startup.InitializationProvider"
+74-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+75            android:authorities="com.example.oneus.androidx-startup"
+75-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+76            android:exported="false" >
+76-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
 77            <meta-data
-77-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\user\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
-78                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-78-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\user\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+77-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+78                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+78-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
 79                android:value="androidx.startup" />
-79-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\user\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
-80        </provider>
-81    </application>
-82
-83</manifest>
+79-->[androidx.emoji2:emoji2:1.0.0] C:\Users\user\.gradle\caches\transforms-3\a041a9a952b29f6964d85f5771c8e429\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+80            <meta-data
+80-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\user\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+81                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+81-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\user\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+82                android:value="androidx.startup" />
+82-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\user\.gradle\caches\transforms-3\2d2b81fd1f5d13f7e9fe71a47a19c028\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+83        </provider>
+84    </application>
+85
+86</manifest>

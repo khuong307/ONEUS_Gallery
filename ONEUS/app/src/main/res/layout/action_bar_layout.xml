@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:orientation="horizontal"
     android:background="#03989E"
+    android:gravity="center"
     android:layout_height="wrap_content">
 
     <ImageButton
@@ -12,12 +13,14 @@
         android:layout_width="50dp"
         android:backgroundTint="@color/green_deep"
         android:scaleType="fitCenter"
+        android:layout_weight="1"
         android:layout_height="50dp">
     </ImageButton>
 
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:id="@+id/Title"
+        android:layout_weight="8"
         android:text="ONEUS"
         android:layout_gravity="center"
         android:gravity="center"
@@ -26,8 +29,17 @@
         android:textStyle="bold"
         android:textColor="@color/white"
         style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-        android:layout_height="match_parent">
-
+        android:layout_height="wrap_content">
     </TextView>
+
+    <ImageButton
+        android:id="@+id/btnAllIMG"
+        android:src="@drawable/icon_all"
+        android:layout_width="50dp"
+        android:backgroundTint="@color/green_deep"
+        android:scaleType="fitCenter"
+        android:layout_weight="1"
+        android:layout_height="50dp">
+    </ImageButton>
 
 </LinearLayout>

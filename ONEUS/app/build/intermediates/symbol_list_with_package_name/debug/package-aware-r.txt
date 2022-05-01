@@ -2704,6 +2704,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable icon_add
 drawable icon_add_small_size
+drawable icon_all
 drawable icon_alpha
 drawable icon_back
 drawable icon_camera
@@ -2925,6 +2926,7 @@ id bounceBoth
 id bounceEnd
 id bounceStart
 id btnAdd
+id btnAllIMG
 id btnBack
 id btnBackAlbumList
 id btnCapture
@@ -3655,6 +3657,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout action_bar_layout
 layout action_bar_view_images
+layout activity_all_images
 layout activity_ds_photo_editor
 layout activity_ds_photo_editor_crop
 layout activity_ds_photo_editor_draw
@@ -3673,6 +3676,7 @@ layout animation_spinner_row
 layout bottom_sheet_album
 layout bottom_sheet_sort
 layout custom_album_image
+layout custom_all_images
 layout custom_dialog
 layout custom_favorite_image
 layout custom_images_in_album
@@ -5162,6 +5166,7 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 styleable scv_CropImageView scv_animation_duration scv_animation_enabled scv_background_color scv_crop_enabled scv_crop_mode scv_frame_color scv_frame_stroke_weight scv_guide_color scv_guide_show_mode scv_guide_stroke_weight scv_handle_color scv_handle_shadow_enabled scv_handle_show_mode scv_handle_size scv_img_src scv_initial_frame_scale scv_min_frame_size scv_overlay_color scv_touch_padding
+xml image
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end
 xml standalone_badge_gravity_bottom_start

@@ -28,6 +28,7 @@ drawable ic_baseline_arrow_circle_left_24
 drawable ic_launcher_foreground
 drawable icon_add
 drawable icon_add_small_size
+drawable icon_all
 drawable icon_alpha
 drawable icon_back
 drawable icon_camera
@@ -101,6 +102,7 @@ id bottomSheetSort
 id bottom_edit_nav
 id bottom_nav
 id btnAdd
+id btnAllIMG
 id btnBack
 id btnBackAlbumList
 id btnCapture
@@ -181,6 +183,7 @@ id view_pager
 id viewpager
 layout action_bar_layout
 layout action_bar_view_images
+layout activity_all_images
 layout activity_edit
 layout activity_list_image_of_album
 layout activity_main
@@ -193,6 +196,7 @@ layout animation_spinner_row
 layout bottom_sheet_album
 layout bottom_sheet_sort
 layout custom_album_image
+layout custom_all_images
 layout custom_favorite_image
 layout custom_images_in_album
 layout custom_multi_images
@@ -235,3 +239,4 @@ style BottomSheetDialogTheme
 style BottomSheetStyle
 style RoundImage
 style Theme.ONEUS
+xml image
