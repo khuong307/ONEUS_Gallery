@@ -14,6 +14,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -49,6 +50,7 @@ public class TrashFragment extends Fragment {
     ImageButton btnBack;
     ImageButton btnDelete;
     ImageButton btnMove;
+
 
     public static boolean isActionMode = false;
     public static  List<Image> selectionList = new ArrayList<>();

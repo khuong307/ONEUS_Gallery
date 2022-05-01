@@ -2704,6 +2704,7 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable icon_add
 drawable icon_add_small_size
+drawable icon_alpha
 drawable icon_back
 drawable icon_camera
 drawable icon_cancel
@@ -2711,6 +2712,7 @@ drawable icon_change
 drawable icon_check
 drawable icon_circle_back
 drawable icon_circle_back_brown
+drawable icon_clock
 drawable icon_close
 drawable icon_contrast
 drawable icon_crop
@@ -2733,12 +2735,15 @@ drawable icon_move
 drawable icon_play
 drawable icon_play_fav
 drawable icon_press
+drawable icon_quantity
 drawable icon_question
 drawable icon_radio_check
 drawable icon_radio_uncheck
 drawable icon_replay
 drawable icon_search
 drawable icon_share
+drawable icon_size
+drawable icon_sort
 drawable icon_sun
 drawable icon_trash
 drawable icon_uncheck
@@ -2912,6 +2917,7 @@ id blocking
 id bottom
 id bottomSheetAlbum
 id bottomSheetInfo
+id bottomSheetSort
 id bottom_edit_nav
 id bottom_nav
 id bounce
@@ -2930,6 +2936,7 @@ id btnPlay
 id btnReplay
 id btnRestore
 id btnSearch
+id btnSort
 id btnWallpaper
 id buttonPanel
 id cache_measures
@@ -3443,6 +3450,10 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id sortLastModified
+id sortName
+id sortQuantity
+id sortSize
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -3660,6 +3671,7 @@ layout add_image_dialog_layout
 layout album_spinner_row
 layout animation_spinner_row
 layout bottom_sheet_album
+layout bottom_sheet_sort
 layout custom_album_image
 layout custom_dialog
 layout custom_favorite_image

@@ -12,6 +12,7 @@
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable-v24/favorite_click.xml" value="0.1365" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable-v24/icon_play_fav.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable-v24/trash_click.xml" value="0.1365" />
+        <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/bottom_sheet_info.xml" value="0.1045" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/circle.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/circle_black.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/drawable/circle_edit_pencil_image.xml" value="0.1" />
@@ -62,6 +63,7 @@
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/album_spinner_row.xml" value="0.13467293715262932" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/animation_spinner_row.xml" value="0.14749893116716545" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/bottom_sheet_album.xml" value="0.1796875" />
+        <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/bottom_sheet_sort.xml" value="0.15572916666666667" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/circel_textview.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/custom_album_image.xml" value="0.2876404494382023" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery/ONEUS/app/src/main/res/layout/custom_favorite_image.xml" value="0.22" />

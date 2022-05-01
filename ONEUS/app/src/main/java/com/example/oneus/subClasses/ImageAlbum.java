@@ -5,6 +5,8 @@ import android.util.Log;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class ImageAlbum {
@@ -71,4 +73,45 @@ public class ImageAlbum {
         }
         return mList;
     }
+
+    public static List<ImageAlbum> sortFolder(int type){
+        List<ImageAlbum> mList = new ArrayList<>();
+        String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS";
+        File directory = new File (path);
+        File[] listFoler = directory.listFiles();
+        if (type == 1){
+            Arrays.sort(listFoler, new Comparator<File>() { // sort by name
+                public int compare(File f1, File f2) {
+                    return f1.getName().compareToIgnoreCase(f2.getName());
+                }
+            });
+        }else if (type == 2){
+            Arrays.sort(listFoler, new Comparator<File>() { //sort by size
+                public int compare(File f1, File f2) {
+                    return Long.compare(Path.getFileSize(f2), Path.getFileSize(f1));
+                }
+            });
+        }else if (type == 3){
+            Arrays.sort(listFoler, new Comparator<File>() { // sort by quantity
+                public int compare(File f1, File f2) {
+                    return Long.compare(f2.listFiles().length, f1.listFiles().length);
+                }
+            });
+        }else if (type == 4){ // sort by last modified
+            Arrays.sort(listFoler, new Comparator<File>() {
+                public int compare(File f1, File f2) {
+                    return Long.compare(f2.lastModified(), f1.lastModified());
+                }
+            });
+        }
+        for (int i = 0; i < listFoler.length; i++){
+            if(listFoler[i].isDirectory() == true && listFoler[i].getName().compareTo("Trash") != 0 && listFoler[i].getName().compareTo("Favorite") != 0){
+                File[] images = listFoler[i].listFiles();
+                if (images.length != 0)
+                    mList.add(new ImageAlbum(listFoler[i].getName(),images[0]));
+            }
+        }
+        return mList;
+    }
+
 }

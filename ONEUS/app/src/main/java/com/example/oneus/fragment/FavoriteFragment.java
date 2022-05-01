@@ -3,6 +3,7 @@ package com.example.oneus.fragment;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -19,6 +20,7 @@ import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.oneus.MainActivity;
 import com.example.oneus.R;
 import com.example.oneus.SubAdapter.FavoriteImageAdapter;
 import com.example.oneus.SubAdapter.ImagesOfAlbumAdapter;

@@ -2703,6 +2703,7 @@ int drawable ic_mtrl_chip_checked_circle 0x7f070120
 int drawable ic_mtrl_chip_close_circle 0x7f070121
 int drawable icon_add 0x7f070122
 int drawable icon_add_small_size 0x7f070123
+int drawable icon_alpha 0x7f07017f
 int drawable icon_back 0x7f070124
 int drawable icon_camera 0x7f07017b
 int drawable icon_cancel 0x7f070125
@@ -2710,6 +2711,7 @@ int drawable icon_change 0x7f070178
 int drawable icon_check 0x7f070126
 int drawable icon_circle_back 0x7f070127
 int drawable icon_circle_back_brown 0x7f070128
+int drawable icon_clock 0x7f070180
 int drawable icon_close 0x7f070129
 int drawable icon_contrast 0x7f07012a
 int drawable icon_crop 0x7f07012b
@@ -2732,12 +2734,15 @@ int drawable icon_move 0x7f070138
 int drawable icon_play 0x7f070139
 int drawable icon_play_fav 0x7f07013a
 int drawable icon_press 0x7f07013b
+int drawable icon_quantity 0x7f070181
 int drawable icon_question 0x7f07013c
 int drawable icon_radio_check 0x7f07013d
 int drawable icon_radio_uncheck 0x7f07013e
 int drawable icon_replay 0x7f07013f
 int drawable icon_search 0x7f070140
 int drawable icon_share 0x7f07017d
+int drawable icon_size 0x7f070182
+int drawable icon_sort 0x7f07017e
 int drawable icon_sun 0x7f070141
 int drawable icon_trash 0x7f070142
 int drawable icon_uncheck 0x7f070143
@@ -2911,6 +2916,7 @@ int id blocking 0x7f090070
 int id bottom 0x7f090071
 int id bottomSheetAlbum 0x7f090072
 int id bottomSheetInfo 0x7f090073
+int id bottomSheetSort 0x7f0902ff
 int id bottom_edit_nav 0x7f090074
 int id bottom_nav 0x7f090075
 int id bounce 0x7f090076
@@ -2929,6 +2935,7 @@ int id btnPlay 0x7f090080
 int id btnReplay 0x7f090081
 int id btnRestore 0x7f090082
 int id btnSearch 0x7f090083
+int id btnSort 0x7f0902fe
 int id btnWallpaper 0x7f0902f0
 int id buttonPanel 0x7f090084
 int id cache_measures 0x7f090085
@@ -3442,6 +3449,10 @@ int id snackbar_action 0x7f09027a
 int id snackbar_text 0x7f09027b
 int id snap 0x7f09027c
 int id snapMargins 0x7f09027d
+int id sortLastModified 0x7f090300
+int id sortName 0x7f090301
+int id sortQuantity 0x7f090302
+int id sortSize 0x7f090303
 int id south 0x7f09027e
 int id spacer 0x7f09027f
 int id special_effects_controller_view_tag 0x7f090280
@@ -3659,6 +3670,7 @@ int layout add_image_dialog_layout 0x7f0c002a
 int layout album_spinner_row 0x7f0c002b
 int layout animation_spinner_row 0x7f0c002c
 int layout bottom_sheet_album 0x7f0c002d
+int layout bottom_sheet_sort 0x7f0c00b4
 int layout custom_album_image 0x7f0c002e
 int layout custom_dialog 0x7f0c002f
 int layout custom_favorite_image 0x7f0c0030
