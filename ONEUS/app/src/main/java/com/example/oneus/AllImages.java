@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
 import android.view.View;
@@ -69,35 +71,63 @@ public class AllImages extends AppCompatActivity {
         }));
     }
     private List<Image> FindFiles() {
-        List<Image> imageList = new ArrayList<>();
-        String SD_CARD_ROOT;
-        File mFile = Environment.getExternalStorageDirectory();
-        SD_CARD_ROOT=mFile.toString();
+        List<Image> mList = new ArrayList<>();
+        String albumPath = Environment.getExternalStorageDirectory().toString() + "/ONEUS";
+        String cameraPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DCIM).getAbsolutePath() + "/Camera";
+        String downloadPath = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
 
-        final List<String> tFileList = new ArrayList<String>();
-        Resources resources = getResources();
-        // array of valid image file extensions
-        String[] imageTypes = {"jpeg", "png", "jpg"};
-        FilenameFilter[] filter = new FilenameFilter[imageTypes.length];
+        File albumDirectory = new File(albumPath);
+        File cameraDirectory = new File(cameraPath);
+        File downloadDirectory = new File(downloadPath);
 
-        int i = 0;
-        for (final String type : imageTypes) {
-            filter[i] = new FilenameFilter() {
-                public boolean accept(File dir, String name) {
-                    return name.endsWith("." + type);
+        List<Bitmap> bmps = new ArrayList<>();
+
+        if (cameraDirectory.exists()){
+            File[] cameraSubFolder = cameraDirectory.listFiles();
+            for (int i = 0; i < cameraSubFolder.length; i++){
+                String path = cameraSubFolder[i].getPath();
+                Bitmap bmp = BitmapFactory.decodeFile(path);
+                if (checkDiffImage(bmps, bmp)){
+                    bmps.add(bmp);
+                    mList.add(new Image(cameraSubFolder[i], cameraSubFolder[i].getName()));
                 }
-            };
-            i++;
+            }
         }
 
-        FileUtils fileUtils = new FileUtils();
-        File[] allMatchingFiles = fileUtils.listFilesAsArray(
-                new File(SD_CARD_ROOT), filter, -1);
-        for (File f : allMatchingFiles) {
-            tFileList.add(f.getAbsolutePath());
-            File tmp = new File(f.getAbsolutePath());
-            imageList.add(new Image(tmp, tmp.getName()));
+        if (downloadDirectory.exists()){
+            File[] downloadSubFolder = downloadDirectory.listFiles();
+            for (int i = 0; i < downloadSubFolder.length; i++){
+                String path = downloadSubFolder[i].getPath();
+                Bitmap bmp = BitmapFactory.decodeFile(path);
+                if (checkDiffImage(bmps, bmp)){
+                    bmps.add(bmp);
+                    mList.add(new Image(downloadSubFolder[i], downloadSubFolder[i].getName()));
+                }
+            }
         }
-        return imageList;
+
+        if (albumDirectory.exists()){
+            File[] albumSubFolder = albumDirectory.listFiles();
+            for (int i = 0; i < albumSubFolder.length; i++){
+                File[] tmp = albumSubFolder[i].listFiles();
+                for (int j = 0; j < tmp.length; j++){
+                    String path = tmp[j].getPath();
+                    Bitmap bmp = BitmapFactory.decodeFile(path);
+                    if (checkDiffImage(bmps, bmp)){
+                        bmps.add(bmp);
+                        mList.add(new Image(tmp[j], tmp[j].getName()));
+                    }
+                }
+            }
+        }
+
+        return mList;
+    }
+    public boolean checkDiffImage(List<Bitmap> bmps, Bitmap inputBmp){
+        for (int i = 0; i < bmps.size(); i++){
+            if (bmps.get(i).sameAs(inputBmp))
+                return false;
+        }
+        return true;
     }
 }
