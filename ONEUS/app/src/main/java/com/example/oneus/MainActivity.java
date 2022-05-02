@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity{
     private static final int PERMISSION_REQUEST_CODE = 7;
     public static final String App_Name = "ONEUS";
 
-
+    // view page
     private ViewPager viewPager;
     private BottomNavigationView navigationView;
     @Override
