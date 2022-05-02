@@ -23,7 +23,7 @@ public class FavImage {
     public String getText() {
         return text;
     }
-
+        //set Text
     public void setText(String text) {
         this.text = text;
     }
