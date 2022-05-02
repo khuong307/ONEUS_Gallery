@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:background="@color/green_deep"
+    android:layout_height="wrap_content">
+
+    <ImageButton
+        android:id="@+id/btnBackAlbumList"
+        android:layout_width="wrap_content"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_gravity="left"
+        android:backgroundTint="@color/green_deep"
+        android:src="@drawable/ic_baseline_arrow_circle_left_24">
+    </ImageButton>
+    <TextView
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_weight="15"
+        android:background="@color/green_deep"
+        android:id="@+id/albumTitle"
+        android:layout_width="match_parent"
+        android:fontFamily="@font/icielbccubano"
+        android:text="ONEUS-"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:layout_height="match_parent">
+    </TextView>
+
+    <ImageButton
+        android:id="@+id/btnPlay"
+        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:backgroundTint="@color/green_deep"
+        android:src="@drawable/icon_play">
+    </ImageButton>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black" />
+    <ImageButton
+        android:layout_margin="20dp"
+        android:id="@+id/favBtn"
+        android:layout_width="40dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/circle"
+        android:src="@drawable/icon_fav_30"
+        android:layout_height="40dp">
+    </ImageButton>
+
+    <TextView
+        android:id="@+id/lbl_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/icielbccubano"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginBottom="20dp"
+        >
+        <ImageButton
+            android:id="@+id/btnReplay"
+            android:layout_width="50dp"
+            android:text="Replay"
+            android:background="@drawable/circle"
+            android:src="@drawable/icon_replay"
+            android:backgroundTint="@color/white"
+            android:layout_height="50dp">
+        </ImageButton>
+        <TextView
+            android:id="@+id/title"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:text=""
+            android:textSize="16dp"
+            android:fontFamily="@font/icielbccubano"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/icielbccubano"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</RelativeLayout>

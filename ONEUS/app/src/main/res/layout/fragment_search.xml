@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:orientation="vertical"
-    tools:context=".fragment.HomeFragment">
+    tools:context=".fragment.SearchFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,6 +14,7 @@
         android:padding="20dp"
         android:orientation="horizontal">
         <EditText
+            android:id="@+id/inputAlbum"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="6">
@@ -31,5 +32,15 @@
     </LinearLayout>
 
     <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/recycle_search_album">
+    </androidx.recyclerview.widget.RecyclerView>
 
 </LinearLayout>

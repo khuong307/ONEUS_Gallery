@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title_moveImage"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:textSize="20dp"
+        android:fontFamily="@font/icielbccubano"
+        android:textAlignment="center"
+        android:text="Move Image To Another Album"
+        android:textColor="@color/dark_brown"
+        android:layout_height="wrap_content">
+    </TextView>
+
+    <Spinner
+        android:id="@+id/spinner_albumList"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:layout_height="wrap_content">
+    </Spinner>
+    <ImageButton
+        android:id="@+id/newAlbumBtn"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        android:backgroundTint="@color/dark_brown"
+        android:src="@drawable/icon_add_small_size"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ImageButton>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <ImageButton
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:id="@+id/btnBack"
+            android:gravity="left"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/icon_circle_back_brown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </ImageButton>
+        <EditText
+            android:id="@+id/newAlb"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:layout_width="match_parent"
+            android:hint="Enter album name"
+            android:fontFamily="@font/icielbccubano"
+            android:layout_height="wrap_content">
+        </EditText>
+    </LinearLayout>
+</LinearLayout>
