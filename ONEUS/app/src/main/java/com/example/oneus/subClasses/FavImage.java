@@ -11,7 +11,7 @@ public class FavImage {
         this.image = image;
         this.text = text;
     }
-
+            // get image
     public File getImage() {
         return image;
     }
