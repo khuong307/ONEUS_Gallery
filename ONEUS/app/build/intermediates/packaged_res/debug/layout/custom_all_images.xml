@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="20dp"
+    android:paddingBottom="20dp"
+    android:id="@+id/listImages"
+    android:paddingHorizontal="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_in_album"
+        android:background="@null"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:src="@drawable/test"
+        android:scaleType="centerCrop"
+        app:shapeAppearanceOverlay="@style/RoundImage"
+        tools:ignore="MissingConstraints">
+    </com.google.android.material.imageview.ShapeableImageView>
+</LinearLayout>

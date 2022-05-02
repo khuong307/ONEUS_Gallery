@@ -34,8 +34,6 @@ import com.example.oneus.subClasses.Path;
 import java.io.File;
 import java.io.IOException;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
-
 public class DialogModifyAlbum extends DialogFragment {
     private EditText newAlbumName;
     private Button btnChoose;
@@ -92,7 +90,6 @@ public class DialogModifyAlbum extends DialogFragment {
                     else {
                         if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                             if (createSubsDirectory(albumName) == true){
-                                // Khang
                                 SQLiteDatabase db = null;
                                 try{
                                     File storagePath = (getActivity()).getFilesDir();
@@ -113,7 +110,6 @@ public class DialogModifyAlbum extends DialogFragment {
 
                                 }
                                 finally { db.endTransaction(); }
-                                // Khang
 
                                 RecyclerView recyclerView = getActivity().findViewById(R.id.recycle_view_album);
                                 AlbumAdapter albumAdapter = new AlbumAdapter(getContext(), ImageAlbum.setAlbumList());

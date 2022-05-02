@@ -4,6 +4,7 @@
     android:id="@+id/bottomSheetAlbum"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/green_deep"
     android:orientation="vertical">
 
     <LinearLayout
@@ -21,8 +22,6 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
-            android:background="@color/green_deep"
-            app:shapeAppearanceOverlay="@style/RoundImage"
             android:contentDescription="@string/app_name"
             android:src="@drawable/icon_edit"/>
 
@@ -32,9 +31,9 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="25dp"
             android:text="Edit Name"
-            android:textColor="@color/green_deep"
+            android:textColor="@color/white"
             android:fontFamily="@font/icielbccubano"
-            android:textSize="30dp"/>
+            android:textSize="25dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -50,10 +49,8 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="40dp"
-            android:background="@color/green_deep"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
-            app:shapeAppearanceOverlay="@style/RoundImage"
             android:contentDescription="@string/app_name"
             android:src="@drawable/icon_add_small_size"/>
 
@@ -63,9 +60,9 @@
             android:layout_marginStart="15dp"
             android:layout_marginEnd="25dp"
             android:text="Add Images"
-            android:textColor="@color/green_deep"
+            android:textColor="@color/white"
             android:fontFamily="@font/icielbccubano"
-            android:textSize="30dp"/>
+            android:textSize="25dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -81,11 +78,9 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="40dp"
-            app:shapeAppearanceOverlay="@style/RoundImage"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/app_name"
-            android:background="@color/green_deep"
             android:src="@drawable/icon_delete_01"/>
 
         <TextView
@@ -95,11 +90,10 @@
             android:layout_marginEnd="25dp"
             android:text="Delete album"
             android:fontFamily="@font/icielbccubano"
-            android:textColor="@color/green_deep"
-            android:textSize="30dp"/>
+            android:textColor="@color/white"
+            android:textSize="25dp"/>
     </LinearLayout>
 
-    <!--Khang-->
     <LinearLayout
         android:id="@+id/layoutCreatePassword"
         android:layout_width="match_parent"
@@ -113,11 +107,9 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="40dp"
-            app:shapeAppearanceOverlay="@style/RoundImage"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/app_name"
-            android:background="@color/green_deep"
             android:src="@drawable/icon_key"/>
 
         <TextView
@@ -127,8 +119,8 @@
             android:layout_marginEnd="25dp"
             android:text="Create Password"
             android:fontFamily="@font/icielbccubano"
-            android:textColor="@color/green_deep"
-            android:textSize="30dp"/>
+            android:textColor="@color/white"
+            android:textSize="25dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -144,11 +136,9 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="40dp"
-            app:shapeAppearanceOverlay="@style/RoundImage"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/app_name"
-            android:background="@color/green_deep"
             android:src="@drawable/icon_change"/>
 
         <TextView
@@ -158,8 +148,8 @@
             android:layout_marginEnd="25dp"
             android:text="Change Password"
             android:fontFamily="@font/icielbccubano"
-            android:textColor="@color/green_deep"
-            android:textSize="30dp"/>
+            android:textColor="@color/white"
+            android:textSize="25dp"/>
     </LinearLayout>
 
     <LinearLayout
@@ -175,11 +165,9 @@
 
         <com.google.android.material.imageview.ShapeableImageView
             android:layout_width="40dp"
-            app:shapeAppearanceOverlay="@style/RoundImage"
             android:layout_height="40dp"
             android:layout_marginStart="10dp"
             android:contentDescription="@string/app_name"
-            android:background="@color/green_deep"
             android:src="@drawable/icon_del_pass"/>
 
         <TextView
@@ -189,8 +177,7 @@
             android:layout_marginEnd="25dp"
             android:text="Remove Password"
             android:fontFamily="@font/icielbccubano"
-            android:textColor="@color/green_deep"
-            android:textSize="30dp"/>
+            android:textColor="@color/white"
+            android:textSize="25dp"/>
     </LinearLayout>
-    <!--Khang-->
 </LinearLayout>

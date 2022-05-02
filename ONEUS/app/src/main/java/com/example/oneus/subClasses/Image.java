@@ -1,8 +1,12 @@
 package com.example.oneus.subClasses;
 
+import android.content.res.Resources;
 import android.os.Environment;
 
+import com.example.oneus.R;
+
 import java.io.File;
+import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -62,5 +66,10 @@ public class Image {
         }
 
         return -1;
+    }
+
+    public static List<Image> getAllImages(){
+        List<Image> imageList = new ArrayList<>();
+        return imageList;
     }
 }

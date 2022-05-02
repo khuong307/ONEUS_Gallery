@@ -3,6 +3,7 @@ package com.example.oneus.subClasses;
 import android.content.ContentUris;
 import android.content.Context;
 import android.database.Cursor;
+import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Environment;
 import android.provider.DocumentsContract;
@@ -25,6 +26,8 @@ import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.Date;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -200,6 +203,48 @@ public class Path {
             }
         }
         return 0;
+    }
+
+    public static File SaveBitmap(String folderName, Bitmap bitmap){
+        String path = folderName;
+        File dir = new File(path);
+        if (!dir.exists())
+            return null;
+        File file=new File(dir,Long.toString(new Date().getTime())+".jpg");
+        try {
+            FileOutputStream fOut = new FileOutputStream(file);
+            bitmap.compress(Bitmap.CompressFormat.PNG, 85, fOut);
+            fOut.flush();
+            fOut.close();
+        }
+        catch (Exception ex) {
+            return null;
+        }
+        return file;
+    }
+
+    public static long getFileSize(final File file) {
+        if (file == null || !file.exists())
+            return 0;
+        if (!file.isDirectory())
+            return file.length();
+        final List<File> dirs = new LinkedList<>();
+        dirs.add(file);
+        long result = 0;
+        while (!dirs.isEmpty()) {
+            final File dir = dirs.remove(0);
+            if (!dir.exists())
+                continue;
+            final File[] listFiles = dir.listFiles();
+            if (listFiles == null || listFiles.length == 0)
+                continue;
+            for (final File child : listFiles) {
+                result += child.length();
+                if (child.isDirectory())
+                    dirs.add(child);
+            }
+        }
+        return result;
     }
 
 }

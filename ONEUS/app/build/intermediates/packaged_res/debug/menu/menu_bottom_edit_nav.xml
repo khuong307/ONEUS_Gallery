@@ -20,7 +20,7 @@
 
     <item
         android:id="@+id/action_flip"
-        android:icon="@drawable/icon_change"
+        android:icon="@drawable/icon_flip"
         android:title="LẬT">
     </item>
 

@@ -16,7 +16,6 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,15 +24,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
-import com.example.oneus.fragment.DialogChangePassword;
-import com.example.oneus.fragment.DialogCreatePassword;
-import com.example.oneus.fragment.DialogDeleteAlbum;
-import com.example.oneus.fragment.DialogEnterPassword;
 import com.example.oneus.fragment.DialogModifyAlbum;
-import com.example.oneus.fragment.DialogRemovePassword;
-import com.example.oneus.subClasses.Dialog.DialogAddImage;
 import com.example.oneus.subClasses.Dialog.DialogAddImageBottom;
+import com.example.oneus.subClasses.Dialog.DialogChangePassword;
+import com.example.oneus.subClasses.Dialog.DialogCreatePassword;
+import com.example.oneus.fragment.DialogDeleteAlbum;
+import com.example.oneus.subClasses.Dialog.DialogEnterPassword;
 import com.example.oneus.subClasses.Dialog.DialogNewAlbum;
+import com.example.oneus.subClasses.Dialog.DialogRemovePassword;
 import com.example.oneus.subClasses.ImageAlbum;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
 
@@ -120,7 +118,6 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         viewDialog.findViewById(R.id.layoutEditAlbum).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Khang
                 if (isExistedPassword){
                     openEnterPasswordDialog(albumName, 2);
                     bottomSheetDialog.dismiss();
@@ -157,7 +154,6 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
             }
         });
 
-        // Khang
         viewDialog.findViewById(R.id.layoutCreatePassword).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -181,26 +177,23 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
                 bottomSheetDialog.dismiss();
             }
         });
-        // Khang
 
         bottomSheetDialog.setContentView(viewDialog);
         bottomSheetDialog.show();
     }
 
     private void onClickViewListImage(String albumName){
-        // Khang
         boolean isExistedPassword = checkExistedPassword(albumName);
-        if (!isExistedPassword){
+        if (isExistedPassword){
+            openEnterPasswordDialog(albumName, 4);
+        }
+        else {
             Intent intent = new Intent(context, ListImageOfAlbum.class);
             Bundle bundle = new Bundle();
             bundle.putString("AlbumName", albumName);
             intent.putExtras(bundle);
             context.startActivity(intent);
         }
-        else{
-            openEnterPasswordDialog(albumName, 1);
-        }
-        // Khang
     }
 
     @Override
@@ -268,6 +261,7 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
         dialogDeleteAlbum.show((manager), "Delete Album Dialog");
     }
 
+
     // Khang
     public void openCreatePasswordDialog(String albumName){
         DialogCreatePassword dialogCreatePassword = new DialogCreatePassword(albumName);
@@ -317,5 +311,4 @@ public class AlbumAdapter extends RecyclerView.Adapter<AlbumAdapter.MyViewHolder
 
         return resultNum != 0;
     }
-    // Khang
 }

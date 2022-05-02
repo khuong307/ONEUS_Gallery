@@ -138,12 +138,16 @@ public class SlideshowDialogTrashFragment extends DialogFragment {
                 String[] parent = currentImage.getImage().getName().split("_");
                 Toast.makeText(getActivity(), "Restore Image To " +parent[0] , Toast.LENGTH_SHORT).show();
                 try {
+                    String parentPath = Environment.getExternalStorageDirectory().toString() + "/ONEUS/"+parent[0];
+                    if (new File(parentPath).exists() == false){
+                        Path.createSubsDirectory(parent[0]);
+                    }
                     Date date = Calendar.getInstance().getTime();
                     DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
                     String strDate = dateFormat.format(date);
                     String sortName = strDate.replace(':', '_').replace('-','_');
                     String extension = Path.getExtension(currentImage.getImage());
-                    Path.copy(currentImage.getImage(), new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/"+parent[0]+"/"+sortName+"."+extension));
+                    Path.copy(currentImage.getImage(), new File(parentPath+"/"+sortName+"."+extension));
                 } catch (IOException e) {
                     e.printStackTrace();
                 }

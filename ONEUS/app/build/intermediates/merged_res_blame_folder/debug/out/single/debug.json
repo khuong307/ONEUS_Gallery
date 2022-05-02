@@ -24,6 +24,14 @@
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_change.xml"
     },
     {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_quantity.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_quantity.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_all_images.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_all_images.xml"
+    },
+    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_factor_spinner_row.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\factor_spinner_row.xml"
     },
@@ -44,6 +52,10 @@
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_close.xml"
     },
     {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_size.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_size.xml"
+    },
+    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_images_in_album.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_images_in_album.xml"
     },
@@ -54,6 +66,10 @@
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_favorite.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\fragment_favorite.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_flip.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_flip.xml"
     },
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_trash_slider.xml.flat",
@@ -88,12 +104,12 @@
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\circle_textview.xml"
     },
     {
-        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_layout.xml.flat",
-        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_del_pass.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_del_pass.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_layout.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_layout.xml"
     },
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_cancel.xml.flat",
@@ -106,6 +122,10 @@
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_image.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_all.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_all.xml"
     },
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_icon_press.jpg.flat",
@@ -192,8 +212,16 @@
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_favpic.xml"
     },
     {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_clock.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_clock.xml"
+    },
+    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_circle_back_brown.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_circle_back_brown.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_display_download_image.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_display_download_image.xml"
     },
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_enter_time.xml.flat",
@@ -212,12 +240,24 @@
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_delete_01.xml"
     },
     {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_url.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_url.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_all_images.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\activity_all_images.xml"
+    },
+    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_move.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_move.xml"
     },
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_home.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\fragment_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_bottom_sheet_sort.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\bottom_sheet_sort.xml"
     },
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_home.xml.flat",
@@ -256,6 +296,10 @@
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\action_bar_layout.xml"
     },
     {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_sort.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_sort.xml"
+    },
+    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\color_custom_color_bottom_nav.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\color\\custom_color_bottom_nav.xml"
     },
@@ -272,12 +316,12 @@
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_key.xml"
     },
     {
-        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_bottom_edit_nav.xml.flat",
-        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\menu\\menu_bottom_edit_nav.xml"
-    },
-    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_create_password.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_create_password.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_bottom_edit_nav.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\menu\\menu_bottom_edit_nav.xml"
     },
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
@@ -336,6 +380,10 @@
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_favorite_image.xml"
     },
     {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_download_image.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_download_image.xml"
+    },
+    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_home_screen.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_home_screen.xml"
     },
@@ -352,16 +400,24 @@
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_add_small_size.xml"
     },
     {
-        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_radio_check.xml.flat",
-        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_radio_check.xml"
-    },
-    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_change_password.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_change_password.xml"
     },
     {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_radio_check.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_radio_check.xml"
+    },
+    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_delete.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_delete.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\xml_image.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\xml\\image.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_share.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_share.xml"
     },
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_time_spinner_row.xml.flat",
@@ -370,6 +426,10 @@
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_bottom_nav.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\menu\\menu_bottom_nav.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_alpha.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_alpha.xml"
     },
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_icon_play_fav.xml.flat",
@@ -388,12 +448,12 @@
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_return_images_dialog_layout.xml.flat",
-        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\return_images_dialog_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_replay.xml.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_replay.xml"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_return_images_dialog_layout.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\return_images_dialog_layout.xml"
     },
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_uncheck.xml.flat",
@@ -422,5 +482,9 @@
     {
         "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable-v24_test.jpg.flat",
         "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable-v24\\test.jpg"
+    },
+    {
+        "merged": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_camera.xml.flat",
+        "source": "C:\\Users\\HUY\\Documents\\GitHub\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_camera.xml"
     }
 ]

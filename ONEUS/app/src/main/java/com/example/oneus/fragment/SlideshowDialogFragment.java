@@ -23,6 +23,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.bumptech.glide.Glide;
 import com.example.oneus.R;
+import com.example.oneus.subClasses.Dialog.DialogChooseScreen;
 import com.example.oneus.subClasses.Image;
 import com.example.oneus.subClasses.Path;
 import com.github.chrisbanes.photoview.PhotoView;

@@ -82,7 +82,6 @@ public class DialogDeleteAlbum extends DialogFragment {
                 @Override
                 public void onClick(View v) {
                     RemoveAlbum();
-                    // Khang
                     SQLiteDatabase db = null;
                     try{
                         File storagePath = (getActivity()).getFilesDir();
@@ -102,7 +101,6 @@ public class DialogDeleteAlbum extends DialogFragment {
 
                     }
                     finally { db.endTransaction(); }
-                    // Khang
                     RecyclerView recyclerView = getActivity().findViewById(R.id.recycle_view_album);
                     AlbumAdapter albumAdapter = new AlbumAdapter(getContext(), ImageAlbum.setAlbumList());
                     recyclerView.setAdapter(albumAdapter);
