@@ -59,7 +59,7 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
         holder.name.setText("Album Name: "+ mList.get(position).getAlbum());
         holder.quantity.setText("Quantity: "+ mList.get(position).getQuantity());
         File tmp=new File(Environment.getExternalStorageDirectory().toString() + "/ONEUS/"+mList.get(position).getAlbum());
-        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
         String d = sdf.format(tmp.lastModified()).toString();
         //Date d = new Date(tmp.lastModified());
         holder.lastModify.setText(d.toString());

@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity{
     private static final int PERMISSION_REQUEST_CODE = 7;
     public static final String App_Name = "ONEUS";
 
-    // view page
+
     private ViewPager viewPager;
     private BottomNavigationView navigationView;
     @Override
@@ -35,11 +35,11 @@ public class MainActivity extends AppCompatActivity{
 
         setContentView(R.layout.activity_main);
 
-        //center ONEUS in Action Bar done
+        //center ONEUS in Action Bar
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.action_bar_layout);
 
-        // yêu cầu người dùng cho phép truy cập bộ nhớ. memory
+        // yêu cầu người dùng cho phép truy cập bộ nhớ.
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
             createDirectory(this.App_Name);
             createSubsDirectory("Favorite");

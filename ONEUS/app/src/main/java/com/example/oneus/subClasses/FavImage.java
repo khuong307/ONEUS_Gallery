@@ -11,11 +11,11 @@ public class FavImage {
         this.image = image;
         this.text = text;
     }
-            // get image
+
     public File getImage() {
         return image;
     }
-            // get image
+
     public void setImage(File image) {
         this.image = image;
     }
@@ -23,7 +23,7 @@ public class FavImage {
     public String getText() {
         return text;
     }
-        //set Text
+
     public void setText(String text) {
         this.text = text;
     }

@@ -22,7 +22,7 @@ public class EditActivity extends AppCompatActivity {
     private ImageButton btnBack;
     private BottomNavigationView navigationView;
     private PhotoView img;
-
+    // img view
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
