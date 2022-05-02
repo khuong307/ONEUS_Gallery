@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity{
         getSupportActionBar().setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
         getSupportActionBar().setCustomView(R.layout.action_bar_layout);
 
-        // yêu cầu người dùng cho phép truy cập bộ nhớ.
+        // yêu cầu người dùng cho phép truy cập bộ nhớ. memory
         if(ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
             createDirectory(this.App_Name);
             createSubsDirectory("Favorite");
