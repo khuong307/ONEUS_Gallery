@@ -15,7 +15,7 @@ public class FavImage {
     public File getImage() {
         return image;
     }
-
+            // get image
     public void setImage(File image) {
         this.image = image;
     }
