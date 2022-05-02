@@ -10,5 +10,8 @@
     <color name="green_deep">#03989E</color>
     <color name="red_deep">#ad1111</color>
     <color name="dark_brown">#994500</color>
+    <color name="dark_yellow">#f0d54d</color>
+    <color name="dark_blue">#364c87</color>
+    <color name="grey">#9ba1b0</color>
 
 </resources>

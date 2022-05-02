@@ -1251,7 +1251,9 @@ int color cardview_shadow_start_color 0x7f05002d
 int color checkbox_themeable_attribute_color 0x7f05002e
 int color custom_color_bottom_edit_nav 0x7f05002f
 int color custom_color_bottom_nav 0x7f050030
+int color dark_blue 0x7f05025b
 int color dark_brown 0x7f050031
+int color dark_yellow 0x7f05025c
 int color design_bottom_navigation_shadow_color 0x7f050032
 int color design_box_stroke_color 0x7f050033
 int color design_dark_default_color_background 0x7f050034
@@ -1300,6 +1302,7 @@ int color error_color_material_light 0x7f05005e
 int color foreground_material_dark 0x7f05005f
 int color foreground_material_light 0x7f050060
 int color green_deep 0x7f050061
+int color grey 0x7f05025d
 int color highlighted_text_material_dark 0x7f050062
 int color highlighted_text_material_light 0x7f050063
 int color ic_launcher_background 0x7f050064
@@ -3255,6 +3258,7 @@ int id immediateStop 0x7f0901bc
 int id imvDownload 0x7f0902fd
 int id included 0x7f0901bd
 int id info 0x7f0901be
+int id inputAlbum 0x7f090305
 int id invisible 0x7f0901bf
 int id inward 0x7f0901c0
 int id italic 0x7f0901c1
@@ -3358,6 +3362,7 @@ int id neverCompleteToStart 0x7f09021e
 int id newAlb 0x7f09021f
 int id newAlbumBtn 0x7f090220
 int id newAlbumName 0x7f090221
+int id noResult 0x7f090306
 int id noScroll 0x7f090222
 int id noState 0x7f090223
 int id none 0x7f090224
@@ -3398,6 +3403,7 @@ int id ratio_3_4 0x7f090246
 int id ratio_4_3 0x7f090247
 int id ratio_9_16 0x7f090248
 int id rectangles 0x7f090249
+int id recycle_search_album 0x7f090307
 int id recycle_view 0x7f09024a
 int id recycle_view_album 0x7f09024b
 int id recycle_view_list_image_of_album 0x7f09024c
@@ -3506,6 +3512,9 @@ int id test_radiobutton_app_button_tint 0x7f0902ad
 int id text 0x7f0902ae
 int id text2 0x7f0902af
 int id textEnd 0x7f0902b0
+int id textLastModify 0x7f090308
+int id textName 0x7f090309
+int id textQuantity 0x7f09030a
 int id textSpacerNoButtons 0x7f0902b1
 int id textSpacerNoTitle 0x7f0902b2
 int id textStart 0x7f0902b3
@@ -3680,6 +3689,7 @@ int layout custom_dialog 0x7f0c002f
 int layout custom_favorite_image 0x7f0c0030
 int layout custom_images_in_album 0x7f0c0031
 int layout custom_multi_images 0x7f0c0032
+int layout custom_search_album 0x7f0c00b8
 int layout custom_trash_image 0x7f0c0033
 int layout design_bottom_navigation_item 0x7f0c0034
 int layout design_bottom_sheet_dialog 0x7f0c0035

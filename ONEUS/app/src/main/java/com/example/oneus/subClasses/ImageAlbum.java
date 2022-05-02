@@ -2,11 +2,14 @@ package com.example.oneus.subClasses;
 
 import android.os.Environment;
 import android.util.Log;
+import android.widget.Toast;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
 
 public class ImageAlbum {
@@ -79,6 +82,7 @@ public class ImageAlbum {
         String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS";
         File directory = new File (path);
         File[] listFoler = directory.listFiles();
+
         if (type == 1){
             Arrays.sort(listFoler, new Comparator<File>() { // sort by name
                 public int compare(File f1, File f2) {
@@ -109,6 +113,30 @@ public class ImageAlbum {
                 File[] images = listFoler[i].listFiles();
                 if (images.length != 0)
                     mList.add(new ImageAlbum(listFoler[i].getName(),images[0]));
+            }
+        }
+        return mList;
+    }
+
+    public static List<ImageAlbum> setSearchAlbumList(String content){
+        List<ImageAlbum> mList = new ArrayList<>();
+        String path = Environment.getExternalStorageDirectory().toString() + "/ONEUS";
+        File directory = new File (path);
+        if (directory.exists()){
+            File[] folder = directory.listFiles();
+            for (int i = 0; i < folder.length; i++){
+                if(folder[i].isDirectory() == true && folder[i].getName().compareTo("Trash") != 0 && folder[i].getName().compareTo("Favorite") != 0 ) {
+                    String tmp = Integer.toString(folder[i].listFiles().length);
+                    SimpleDateFormat sdf = new SimpleDateFormat("MM/dd/yyyy");
+                    String date = sdf.format(folder[i].lastModified());
+                    if(folder[i].getName().toLowerCase().contains(content.toLowerCase())
+                            ||tmp.compareTo(content)== 0
+                            ||date.compareTo(content) == 0){
+                        File[] images = folder[i].listFiles();
+                        if (images.length != 0)
+                            mList.add(new ImageAlbum(folder[i].getName(),images[0]));
+                    }
+                }
             }
         }
         return mList;

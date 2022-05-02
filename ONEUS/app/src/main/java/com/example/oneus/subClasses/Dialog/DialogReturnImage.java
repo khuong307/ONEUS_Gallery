@@ -27,6 +27,7 @@ import com.example.oneus.MainActivity;
 import com.example.oneus.R;
 import com.example.oneus.SubAdapter.SpinnerAdapter;
 import com.example.oneus.fragment.TrashFragment;
+import com.example.oneus.subClasses.Image;
 import com.example.oneus.subClasses.ImageAlbum;
 import com.example.oneus.subClasses.TrashImage;
 
@@ -101,7 +102,7 @@ public class DialogReturnImage extends DialogFragment {
                 public void onClick(View v) {
                     if (ContextCompat.checkSelfPermission(getActivity(), Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                         Toast.makeText(getContext(), destination, Toast.LENGTH_SHORT).show();
-                        List<TrashImage> selectedItem = (List<TrashImage>) getArguments().getSerializable("SelectedItems");
+                        List<Image> selectedItem = (List<Image>) getArguments().getSerializable("SelectedItems");
 
                         for(int i = 0; i < selectedItem.size(); i++){
                             try {

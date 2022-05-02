@@ -1252,7 +1252,9 @@ color cardview_shadow_start_color
 color checkbox_themeable_attribute_color
 color custom_color_bottom_edit_nav
 color custom_color_bottom_nav
+color dark_blue
 color dark_brown
+color dark_yellow
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1301,6 +1303,7 @@ color error_color_material_light
 color foreground_material_dark
 color foreground_material_light
 color green_deep
+color grey
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color ic_launcher_background
@@ -3256,6 +3259,7 @@ id immediateStop
 id imvDownload
 id included
 id info
+id inputAlbum
 id invisible
 id inward
 id italic
@@ -3359,6 +3363,7 @@ id neverCompleteToStart
 id newAlb
 id newAlbumBtn
 id newAlbumName
+id noResult
 id noScroll
 id noState
 id none
@@ -3399,6 +3404,7 @@ id ratio_3_4
 id ratio_4_3
 id ratio_9_16
 id rectangles
+id recycle_search_album
 id recycle_view
 id recycle_view_album
 id recycle_view_list_image_of_album
@@ -3507,6 +3513,9 @@ id test_radiobutton_app_button_tint
 id text
 id text2
 id textEnd
+id textLastModify
+id textName
+id textQuantity
 id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
@@ -3681,6 +3690,7 @@ layout custom_dialog
 layout custom_favorite_image
 layout custom_images_in_album
 layout custom_multi_images
+layout custom_search_album
 layout custom_trash_image
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
