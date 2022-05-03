@@ -102,11 +102,7 @@ public class ImageAlbum {
                 }
             });
         }else if (type == 4){ // sort by last modified
-            Arrays.sort(listFoler, new Comparator<File>() {
-                public int compare(File f1, File f2) {
-                    return Long.compare(f2.lastModified(), f1.lastModified());
-                }
-            });
+            Arrays.sort(listFoler, Comparator.comparingLong(File::lastModified).reversed());
         }
         for (int i = 0; i < listFoler.length; i++){
             if(listFoler[i].isDirectory() == true && listFoler[i].getName().compareTo("Trash") != 0 && listFoler[i].getName().compareTo("Favorite") != 0){

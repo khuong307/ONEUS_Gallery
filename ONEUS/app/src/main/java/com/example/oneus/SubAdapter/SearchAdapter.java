@@ -2,6 +2,9 @@ package com.example.oneus.SubAdapter;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -12,9 +15,12 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.example.oneus.ListImageOfAlbum;
 import com.example.oneus.R;
+import com.example.oneus.subClasses.Dialog.DialogEnterPassword;
 import com.example.oneus.subClasses.ImageAlbum;
 
 import java.io.File;
@@ -58,11 +64,16 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
     }
 
     private void onClickViewListImage(String albumName){
-        Intent intent = new Intent(context, ListImageOfAlbum.class);
-        Bundle bundle = new Bundle();
-        bundle.putString("AlbumName", albumName);
-        intent.putExtras(bundle);
-        context.startActivity(intent);
+        boolean isExistedPassword = checkExistedPassword(albumName);
+        if (isExistedPassword){
+            openEnterPasswordDialog(albumName, 4);
+        }else{
+            Intent intent = new Intent(context, ListImageOfAlbum.class);
+            Bundle bundle = new Bundle();
+            bundle.putString("AlbumName", albumName);
+            intent.putExtras(bundle);
+            context.startActivity(intent);
+        }
     }
 
     @Override
@@ -93,5 +104,36 @@ public class SearchAdapter extends RecyclerView.Adapter<SearchAdapter.MyViewHold
     @Override
     public int getItemViewType(int position) {
         return R.layout.custom_album_image;
+    }
+
+    public boolean checkExistedPassword(String albumName){
+        SQLiteDatabase db;
+        File storagePath = context.getFilesDir();
+        String myDbPath = storagePath + "/" + "group01";
+        db = SQLiteDatabase.openDatabase(myDbPath, null, SQLiteDatabase.CREATE_IF_NECESSARY);
+        String albumPath = Environment.getExternalStorageDirectory() +"/ONEUS/" + albumName;
+
+        db.beginTransaction();
+        try {
+            db.execSQL("create table if not exists password ("
+                    + " albumPath text PRIMARY KEY, "
+                    + " hashedPassword text); " );
+            db.setTransactionSuccessful();
+        }
+        catch (SQLiteException e) {
+
+        }
+        finally { db.endTransaction(); }
+
+        Cursor c1 = db.rawQuery("select * from password where albumPath = '" + albumPath + "'", null);
+        int resultNum = c1.getCount();
+
+        return resultNum != 0;
+    }
+
+    public void openEnterPasswordDialog(String albumName, int activityCode){
+        DialogEnterPassword dialogEnterPasswordPassword = new DialogEnterPassword(albumName, activityCode);
+        FragmentManager manager = ((AppCompatActivity)context).getSupportFragmentManager();
+        dialogEnterPasswordPassword.show((manager), "Create Password Dialog");
     }
 }

@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_remove_password.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_remove_password.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_favorite_image.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_favorite_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_remove_password.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_remove_password.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_share.xml.flat",
@@ -16,36 +16,36 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_trash_image.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_trash_image.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_choose_screen.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_choose_screen.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_trash_image.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_trash_image.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_add_small_size.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_add_small_size.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_change_password.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_change_password.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_enter_time.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_enter_time.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_custom_multi_images.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\custom_multi_images.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_enter_time.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_enter_time.xml"
-    },
-    {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_uncheck.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_uncheck.xml"
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_change_password.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_change_password.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_uncheck.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_uncheck.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_custom_checkbox.xml.flat",
@@ -64,12 +64,12 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\return_images_dialog_layout.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\font_icielbccubano.otf.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\font\\icielbccubano.otf"
-    },
-    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_circle.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\circle.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\font_icielbccubano.otf.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\font\\icielbccubano.otf"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_key.xml.flat",
@@ -88,24 +88,24 @@
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\circle_black.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_move.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_move.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\layout_dialog_download_image.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\layout\\dialog_download_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_move.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_move.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\color_custom_color_bottom_edit_nav.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\color\\custom_color_bottom_edit_nav.xml"
     },
     {
-        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_change.xml.flat",
-        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_change.xml"
-    },
-    {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_trash.xml.flat",
         "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_trash.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\drawable_icon_change.xml.flat",
+        "source": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\src\\main\\res\\drawable\\icon_change.xml"
     },
     {
         "merged": "C:\\Users\\user\\Desktop\\ONEUS_Gallery\\ONEUS\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
