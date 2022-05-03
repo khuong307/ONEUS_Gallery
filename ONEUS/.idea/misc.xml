@@ -3,6 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/HUY/Documents/GitHub/ONEUS_Gallery/ONEUS/app/src/main/res/layout/dialog_change_password.xml" value="0.18432971014492755" />
+        <entry key="..\:/Users/HUY/Documents/GitHub/ONEUS_Gallery/ONEUS/app/src/main/res/layout/dialog_create_password.xml" value="0.18432971014492755" />
+        <entry key="..\:/Users/HUY/Documents/GitHub/ONEUS_Gallery/ONEUS/app/src/main/res/layout/dialog_enter_password.xml" value="0.264" />
+        <entry key="..\:/Users/HUY/Documents/GitHub/ONEUS_Gallery/ONEUS/app/src/main/res/layout/dialog_remove_password.xml" value="0.18432971014492755" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery-Khuong/ONEUS/app/src/main/res/drawable-v24/icon_back_brown.xml" value="0.1045" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery-Khuong/ONEUS/app/src/main/res/drawable/icon_add_small_size.xml" value="0.1" />
         <entry key="..\:/Users/user/Desktop/ONEUS_Gallery-Khuong/ONEUS/app/src/main/res/drawable/icon_back.xml" value="0.1045" />

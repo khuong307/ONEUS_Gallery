@@ -124,6 +124,7 @@ id delBtn
 id delThumbnail
 id editBtn
 id edtDownload
+id etPasswordLayout
 id factor
 id favBtn
 id full_image
